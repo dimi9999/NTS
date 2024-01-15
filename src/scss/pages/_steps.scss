@@ -1,0 +1,390 @@
+ // Steps Page
+ .largeContainer {
+    max-width:1600px!important;
+ }
+ .status {
+    padding:20px!important;
+ }
+ 
+
+ // Application Details
+.ApplicationDetails {
+    @include flexbox;
+    text-align: left;
+
+    & h3 {
+        margin:0;
+        padding:0;
+    }
+
+    & a {
+        color:$blue;
+    }
+
+    & .ApplicationStatusCaseNumber {
+        @include flexbox;
+        flex-direction: column;
+        background-color:$white;
+        @include boxsizing;
+        @include border-radius(7px); 
+        align-items: flex-start;
+        padding:5px 15px;
+        margin-right:20px;
+    }
+
+    & .ApplicationStatusLoggedInUser {
+        @include flexbox;
+        flex-direction: column;
+        background-color:$green;
+        color:$white;
+        @include boxsizing;
+        @include border-radius(7px); 
+        align-items: flex-start;
+        padding:5px 15px;
+        margin-right:20px;
+
+        & h3 {
+            color:$white;
+        }
+    }
+
+    & .ApplicationLogmeOut {
+        @include flexbox;
+        flex-direction: column;
+        background-color:$green;
+        color:$white;
+        @include boxsizing;
+        @include border-radius(7px); 
+        align-items: flex-start;
+        padding:5px 15px;
+        margin-right:0;
+
+        & * {
+            color:$white;
+        }
+    }
+
+    & .ApplicationStatusCaseManager {
+        @include flexbox;
+        flex-direction: column;
+        background-color:$white;
+        @include boxsizing;
+        @include border-radius(7px); 
+        align-items: flex-start;
+        padding:5px 15px;
+    }
+
+    & .logo {
+        @include flexbox;
+        flex-grow:2;
+    }
+}
+
+ // Progress Bar
+
+ .ProgressBarContainer {
+    @include flexbox;
+    .steps {
+        float:left;
+        width:100%;
+        padding-left: 0;
+        list-style: none;
+        font-size: 16px;
+        line-height: 1;
+        margin: 10px auto 20px 0;
+        @include border-radius(7px); 
+        @include boxsizing;
+    & strong {
+            font-size: 14px;
+            display: block;
+            line-height: 1.4;
+        }
+    
+        &>li {
+            position: relative;
+            display: block;
+            /* border: 1px solid #ddd; */
+            padding:12px 30px;
+            width: 16.6%;
+            height: 60px;
+
+            & span {
+                @include flexbox;
+                height:100%;
+            }
+        }
+    }
+    // Arrows
+.steps {
+	>li {
+		float: left;
+        overflow: hidden;
+	}
+	.completed {
+		color: $white;
+		background: $green;
+	}
+	.current {
+		color: $white;
+        background: $lightblue;
+	}
+	.rejected {
+		color:$white;
+		background:$red;
+	}
+	.accepted {
+		color:$white;
+		background:$green;
+	}
+	.remaining {
+		color: $darkgray;
+		background: $gray;
+	}
+	li {
+        & a {
+            color:inherit;
+        }
+		>span {
+			&:after {
+				content: "";
+				display: block;
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: solid transparent;
+				border-left-color: $white;
+				border-width: 30px;
+				top: -5px;
+				z-index: 1;
+				border-left-color: $white;
+				border-width: 35px;
+			}
+			&:before {
+				content: "";
+				display: block;
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: solid transparent;
+				border-left-color: $white;
+				border-width: 30px;
+				z-index: 2;
+			}
+		}
+		&:first-child {
+            @include border-top-left-radius(7px);
+            @include border-bottom-left-radius(7px);
+
+			>span {
+				&:after {
+					display: none;
+				}
+				&:before {
+					display: none;
+				}
+			}
+			i {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: solid transparent;
+				 
+			}
+		}
+		&:last-child {
+            @include border-top-right-radius(7px);
+            @include border-bottom-right-radius(7px);
+			i {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: solid transparent;
+			}
+		}
+	}
+	li.completed {
+		+ {
+			li {
+				>span {
+					&:before {
+						border-left-color: $green;
+					}
+				}
+			}
+		}
+	}
+	li.current {
+		+ {
+			li {
+				>span {
+					&:before {
+						border-left-color: $lightblue;
+					}
+				}
+			}
+		}
+	}
+	li.rejected{
+		+ {
+			li {
+				>span {
+					&:before {
+						border-left-color: $red;
+					}
+				}
+			}
+		}
+	}
+
+	li.accepted{
+		+ {
+			li {
+				>span {
+					&:before {
+						border-left-color: $green;
+					}
+				}
+			}
+		}
+	}
+
+	li.remaining {
+		+ {
+			li {
+				>span {
+					&:before {
+						border-left-color: $gray;
+					}
+				}
+			}
+		}
+	}
+}
+
+  }
+ 
+ 
+// Application Status
+.ApplicationStatusContainer {
+    @include flexbox;
+    text-align: left;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    & .ApplicationStatus {
+        flex-grow: 2;
+        margin-right:20px;
+    }
+    & .ApplicationStatusValue {
+        clear:both;
+        background-color:$white;
+        @include border-radius(7px);
+        padding:15px;
+        font-size: 18px;
+        font-family:$base-font-serif;
+        color:$black;
+        text-align: center;
+
+        & .Rejected {
+            font-family: $headings-font-family;
+            color:$white;
+            background-color: $red;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
+
+        & .CheckingDocuments {
+            font-family: $headings-font-family;
+            color:$white;
+            background-color: $yellow;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
+        & .UnderReview {
+            font-family: $headings-font-family;
+            color:$white;
+            background-color: $orange;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
+
+        & .Confirmed {
+            font-family: $headings-font-family;
+            color:$white;
+            background-color: $lightblue;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
+        
+        & .Awaiting {
+            font-family: $headings-font-family;
+            color:$black;
+            background-color: $paleblue;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
+
+        & .InValuation {
+            font-family: $headings-font-family;
+            color:$white;
+            background-color: $blue;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
+
+        & .Accepted {
+            font-family: $headings-font-family;
+            color:$white;
+            background-color: $green;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
+
+        & .Completed {
+            font-family: $headings-font-family;
+            color:$white;
+            background-color: $green;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
+    }
+
+    & .descriptionContainer {
+        background-color:$white;
+        @include border-radius(7px);
+        padding:15px;
+    }
+
+     
+}
+
+.ApplicationContactDetails {
+        @include flexbox;
+        flex-direction: column;
+        background-color:$white;
+        @include boxsizing;
+        @include border-radius(7px); 
+        align-items: flex-start;
+        padding:15px;   
+
+        & a {
+            color:$blue;
+        }
+
+}
+
+.copyrightContainer {
+    margin-top:15px!important;
+    & h4 {
+        margin-bottom:0;
+    }
+}

@@ -1,0 +1,1067 @@
+@font-face {
+  font-family: GTWalsheimPro;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.eot);
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: GTWalsheimProBold;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.eot);
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.ttf) format("truetype"); }
+@font-face {
+  font-family: GTWalsheimProBlack;
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.eot);
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.ttf) format("truetype"); }
+.relative {
+  position: relative; }
+
+.static {
+  position: static; }
+
+.fixed {
+  position: fixed; }
+
+.absolute {
+  position: absolute; }
+
+/*
+---------------
+floats & blocks
+---------------
+*/
+.float-left {
+  float: left; }
+
+.float-left {
+  float: right; }
+
+.inline {
+  display: inline; }
+
+.inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 100%;
+  *display: inline; }
+
+.block {
+  display: block; }
+
+/*
+----------------------
+alignments and flexbox
+----------------------
+*/
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.marginauto {
+  margin: 0 auto !important; }
+
+.valign-top {
+  vertical-align: top !important; }
+
+.valign-middle, .valign-middle-children > * {
+  vertical-align: middle !important; }
+
+.valign-bottom {
+  vertical-align: bottom !important; }
+
+.fullwidth {
+  width: 100%; }
+
+.fullheight {
+  height: 100%; }
+
+/* Row with equal height columns -------------------------------------------------- */
+.vertical-align-all {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+@media (min-width: 768px) {
+  .vertical-align-no-xs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+@media (max-width: 991px) {
+  .vertical-align-no-md {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+@media (min-width: 992px) {
+  .vertical-align-no-sm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+
+  .row-eq-height-no-sm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+@media (min-width: 1200px) {
+  .row-eq-height, .row-eq-height-no-md {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+@media (min-width: 768px) {
+  .vertical-align-no-xs {
+    margin: 0 auto;
+    /* IE9 */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+@media (min-width: 992px) {
+  .vertical-align-no-sm {
+    /* NO IE9 */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+.only-vertical-align {
+  /* NO IE9 */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  color: #000;
+  background: #fff;
+  font: 18px/1.4 "GTWalsheimPro", sans-serif;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top; }
+
+.gm-style img {
+  max-width: none; }
+
+@media only screen and (min-width: 1025px) {
+  a[href^=tel],
+  a[href^=skype],
+  a[href^=sms] {
+    cursor: default;
+    pointer-events: none; } }
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: url(../../assets/images/EWRFooter-v4.png) bottom left no-repeat, url(../../assets/images/Ewr-t.jpg) bottom left no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  height: 100%;
+  position: relative;
+  font-size: 18px;
+  line-height: 1.4; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "GTWalsheimProBold", sans-serif;
+  margin: 0 0 25px;
+  color: inherit;
+  color: #283282; }
+
+h1 {
+  font-size: 40px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 25px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 17px; }
+
+h6 {
+  font-size: 15px; }
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 35px; }
+
+  h2 {
+    font-size: 25px; }
+
+  h3 {
+    font-size: 20px; }
+
+  h4 {
+    font-size: 13px; }
+
+  h5 {
+    font-size: 12px; }
+
+  h6 {
+    font-size: 11px; } }
+p {
+  margin: 0 0 25px; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s linear; }
+  a:hover, a:focus {
+    text-decoration: none;
+    /* color: darken($default-link-color, 15%); */
+    color: #65b4ff; }
+
+input, select, button, textarea {
+  outline: none; }
+
+ul, ol, li {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  margin: 25px 0; }
+
+ul li {
+  list-style: disc; }
+
+ol li {
+  list-style: decimal; }
+
+ul, li, ol {
+  line-height: 1.4;
+  padding-left: 20px; }
+  ul.unstyled, li.unstyled, ol.unstyled {
+    list-style-type: none; }
+
+dl {
+  border: 3px double #ccc;
+  padding: 0.5em; }
+
+dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: #ff2d46; }
+
+dt::after {
+  content: ":"; }
+
+dd {
+  margin: 0 0 0 110px;
+  padding: 0 0 0.5em 0; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+main .formContainer {
+  background: rgba(233, 242, 255, 0.9);
+  padding: 60px;
+  text-align: center;
+  border-radius: 10px;
+  clear: both;
+  float: left;
+  margin: 0 auto;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 100%;
+  *display: inline;
+  width: 100%;
+  margin-top: 120px; }
+main .formContainer.status {
+  margin-top: 20px !important; }
+main .row {
+  position: relative;
+  margin: 15px 0 0; }
+  main .row .icon {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    color: #283282;
+    font-size: 20px; }
+main .buttonsContainer {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto; }
+main form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px; }
+  main form input[type="text"], main form input[type="password"], main form input[type="tel"], main form input[type="number"], main form input[type="email"] {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    background: #fff;
+    padding: 16px 30px 16px 45px;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    font-family: "GTWalsheimPro", sans-serif; }
+    main form input[type="text"]:hover, main form input[type="password"]:hover, main form input[type="tel"]:hover, main form input[type="number"]:hover, main form input[type="email"]:hover {
+      background-color: #e9f2ff;
+      -moz-transition: 3s ease-in all;
+      -ms-transition: 3s ease-in all;
+      -webkit-transition: 3s ease-in all;
+      transition: 3s ease-in all; }
+
+.btn {
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s linear;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -o-border-radius: 7px; }
+
+.btn-primary {
+  background: #283282; }
+  .btn-primary:hover {
+    background: #65b4ff;
+    color: #fff; }
+  .btn-primary:focus {
+    background: #6ec895;
+    color: #fff; }
+
+.btn-secondary {
+  background: #6ec895; }
+  .btn-secondary:hover {
+    background: #65b4ff;
+    color: #fff; }
+  .btn-secondary:focus {
+    background: #6ec895;
+    color: #fff; }
+
+.btn-error {
+  background: transparent;
+  color: #ff2d46;
+  border: 2px solid #ff2d46; }
+
+.logout {
+  background-color: #6ec895;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 15px; }
+
+.nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #6ec895;
+  color: #fff;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  flex-grow: 1;
+  background-image: url(../../assets/images/EWRStickyHeader.PNG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  max-height: 60px; }
+  .nav .logo {
+    margin: 0 30px 0 0; }
+  .nav ul {
+    list-style-type: none;
+    justify-content: flex-end;
+    flex-grow: 2;
+    text-align: right; }
+    .nav ul li {
+      list-style-type: none;
+      display: inline-block; }
+      .nav ul li a:hover {
+        color: #fff;
+        text-decoration: underline; }
+  .nav .logo img {
+    max-width: 230px; }
+  .nav .logout {
+    color: #fff;
+    flex-grow: 2;
+    text-align: right; }
+
+footer {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 60px;
+  position: fixed;
+  bottom: 0; }
+  footer * {
+    color: #fff; }
+
+#wrapper {
+  width: 100%;
+  position: relative; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: table; }
+  main .wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    padding: 0 25px; }
+  main .logo img {
+    width: 220px;
+    margin: 0 10px; }
+
+.content {
+  text-align: left; }
+  .content a {
+    color: #283282; }
+
+.largeContainer {
+  max-width: 1600px !important; }
+
+.status {
+  padding: 20px !important; }
+
+.ApplicationDetails {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: left; }
+  .ApplicationDetails h3 {
+    margin: 0;
+    padding: 0; }
+  .ApplicationDetails a {
+    color: #283282; }
+  .ApplicationDetails .ApplicationStatusCaseNumber {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    align-items: flex-start;
+    padding: 5px 15px;
+    margin-right: 20px; }
+  .ApplicationDetails .ApplicationStatusCaseManager {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    align-items: flex-start;
+    padding: 5px 15px; }
+  .ApplicationDetails .logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-grow: 2; }
+
+.ProgressBarContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .ProgressBarContainer .steps {
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 1;
+    margin: 10px auto 20px 0;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    -o-border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .ProgressBarContainer .steps strong {
+      font-size: 14px;
+      display: block;
+      line-height: 1.4; }
+    .ProgressBarContainer .steps > li {
+      position: relative;
+      display: block;
+      /* border: 1px solid #ddd; */
+      padding: 12px 30px;
+      width: 16.6%;
+      height: 60px; }
+      .ProgressBarContainer .steps > li span {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        height: 100%; }
+  .ProgressBarContainer .steps > li {
+    float: left;
+    overflow: hidden; }
+  .ProgressBarContainer .steps .completed {
+    color: #fff;
+    background: #6ec895; }
+  .ProgressBarContainer .steps .current {
+    color: #fff;
+    background: #65b4ff; }
+  .ProgressBarContainer .steps .rejected {
+    color: #fff;
+    background: #ff2d46; }
+  .ProgressBarContainer .steps .accepted {
+    color: #fff;
+    background: #6ec895; }
+  .ProgressBarContainer .steps .remaining {
+    color: #ccc;
+    background: #eeeeee; }
+  .ProgressBarContainer .steps li a {
+    color: inherit; }
+  .ProgressBarContainer .steps li > span:after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid transparent;
+    border-left-color: #fff;
+    border-width: 30px;
+    top: -5px;
+    z-index: 1;
+    border-left-color: #fff;
+    border-width: 35px; }
+  .ProgressBarContainer .steps li > span:before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid transparent;
+    border-left-color: #fff;
+    border-width: 30px;
+    z-index: 2; }
+  .ProgressBarContainer .steps li:first-child {
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-top-left-radius: 4px;
+    -ms-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -o-border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-bottom-left-radius: 4px;
+    -ms-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -o-border-bottom-left-radius: 4px; }
+    .ProgressBarContainer .steps li:first-child > span:after {
+      display: none; }
+    .ProgressBarContainer .steps li:first-child > span:before {
+      display: none; }
+    .ProgressBarContainer .steps li:first-child i {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: solid transparent; }
+  .ProgressBarContainer .steps li:last-child {
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    -ms-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -o-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-bottom-right-radius: 4px;
+    -ms-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -o-border-bottom-right-radius: 4px; }
+    .ProgressBarContainer .steps li:last-child i {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: solid transparent; }
+  .ProgressBarContainer .steps li.completed + li > span:before {
+    border-left-color: #6ec895; }
+  .ProgressBarContainer .steps li.current + li > span:before {
+    border-left-color: #65b4ff; }
+  .ProgressBarContainer .steps li.rejected + li > span:before {
+    border-left-color: #ff2d46; }
+  .ProgressBarContainer .steps li.accepted + li > span:before {
+    border-left-color: #6ec895; }
+  .ProgressBarContainer .steps li.remaining + li > span:before {
+    border-left-color: #eeeeee; }
+
+.ApplicationStatusContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: left;
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .ApplicationStatusContainer .ApplicationStatus {
+    flex-grow: 2;
+    margin-right: 20px; }
+  .ApplicationStatusContainer .ApplicationStatusValue {
+    clear: both;
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 15px;
+    font-size: 18px;
+    font-family: "GTWalsheimPro", sans-serif;
+    color: #000;
+    text-align: center; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Rejected {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #ff2d46;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .CheckingDocuments {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #fbb40a;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .UnderReview {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #e7750a;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Confirmed {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #65b4ff;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Awaiting {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #000;
+      background-color: #e9f2ff;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .InValuation {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #283282;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Accepted {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #6ec895;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Completed {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #6ec895;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 3px 15px; }
+  .ApplicationStatusContainer .descriptionContainer {
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 15px; }
+
+.ApplicationContactDetails {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -o-border-radius: 7px;
+  align-items: flex-start;
+  padding: 15px; }
+  .ApplicationContactDetails a {
+    color: #283282; }
+
+.copyrightContainer {
+  margin-top: 15px !important; }
+  .copyrightContainer h4 {
+    margin-bottom: 0; }
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-size: cover !important;
+    font-size: 16px; }
+
+  main .formContainer {
+    margin-top: 25px !important;
+    padding: 25px; } }
+@media (max-width: 767px) {
+  .ApplicationDetails .logo {
+    display: none; }
+
+  .ApplicationDetails {
+    align-items: flex-start;
+    justify-content: space-around; }
+    .ApplicationDetails > div {
+      width: 50%; }
+
+  .ProgressBarContainer .steps {
+    margin: 20px 0 10px; }
+    .ProgressBarContainer .steps > li {
+      position: relative;
+      display: block;
+      /* border: 1px solid #ddd; */
+      padding: 12px 20px;
+      width: 50%;
+      height: 40px;
+      margin-bottom: 10px; }
+      .ProgressBarContainer .steps > li > span:after {
+        content: "";
+        border-width: 20px;
+        border-width: 25px; }
+      .ProgressBarContainer .steps > li > span:before {
+        content: "";
+        display: block;
+        border-width: 20px; }
+      .ProgressBarContainer .steps > li > li:nth-child(2n) {
+        -webkit-border-top-right-radius: 4px;
+        -moz-border-top-right-radius: 4px;
+        -ms-border-top-right-radius: 4px;
+        border-top-right-radius: 4px;
+        -o-border-top-right-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -moz-border-bottom-right-radius: 4px;
+        -ms-border-bottom-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        -o-border-bottom-right-radius: 4px; } }
+@media only screen and (max-width: 1024px) {
+  .ApplicationStatusContainer {
+    flex-direction: column; }
+    .ApplicationStatusContainer .ApplicationStatusValue strong {
+      display: block;
+      width: 100%;
+      padding: 2px 0;
+      font-size: 16px; }
+    .ApplicationStatusContainer .ApplicationStatus {
+      margin-right: 0; }
+      .ApplicationStatusContainer .ApplicationStatus .ApplicationStatusValue {
+        width: 100%; }
+    .ApplicationStatusContainer .ApplicationContactDetails {
+      width: 100%; } }
+
+/*# sourceMappingURL=App.css.map */

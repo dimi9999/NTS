@@ -1,0 +1,16 @@
+ // Footer
+ footer {
+    color: $white;
+    background-color:rgba($black, 0.4);
+    padding:10px;
+    width:100%;
+    text-align: center;
+    font-size: $footer-font-size;
+    margin-top:60px;
+	position:fixed;
+    bottom:0;
+
+     & * {
+        color: $white;
+     }
+ }
