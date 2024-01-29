@@ -5,17 +5,17 @@
     background-color:$green;
     color:$white;
     align-items: center;
-    justify-content: center;
+    justify-content: inherit;
     padding:10px;
     flex-grow: 1;
     background-image:url(../../assets/images/EWRStickyHeader.PNG);
     background-repeat: no-repeat;
     background-position: top right;
-
     max-height: 60px;
 
     & .logo {
         margin:0 30px 0 0;
+        flex-grow:2;
     }
 
     & ul {
@@ -42,5 +42,27 @@
         color: $white;
         flex-grow: 2;
         text-align: right;
+    }
+
+    & .logoutlink {
+        @include flexbox;
+        flex-direction: column;
+        background-color:$green;
+        color:$white;
+        @include boxsizing;
+        @include border-radius(7px); 
+        align-items: center;
+        padding:5px 15px;
+        margin-right:0;
+        flex-direction: row;
+
+        & * {
+            color:$white;
+        }
+
+        &:hover {
+            @include transition(3s);
+            background-color:$red;
+        }
     }
  }

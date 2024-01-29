@@ -1,5 +1,5 @@
-import EWRLogo from '../../src/assets/images/EWR_Logo_CMYK_Black.png';
-import NTSLogo from '../../src/assets/images/EWRNeedToSell2.png';
+import EWRLogo from '../assets/images/EWR_Logo_CMYK_Black.png';
+import NTSLogo from '../assets/images/EWRNeedToSell2.png';
 
 export default function Logos() {
     return (

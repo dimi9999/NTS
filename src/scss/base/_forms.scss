@@ -65,7 +65,13 @@ main {
     margin-right:auto;
 }
 
-& form {
+& .buttonsContainerfullwidth {
+    max-width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+& form, & .form {
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;

@@ -1,0 +1,11 @@
+// Forgotten
+.Forgot {
+    & .Link {
+        background-color: $green;
+        color:$white;
+        @include inline-block;
+        @include border-radius(5px);
+        padding:5px 15px;
+        margin:0 10px;
+    }
+}

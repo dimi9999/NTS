@@ -3,6 +3,7 @@ import React  from 'react';
 import './App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { AuthProvider } from './context/AuthContext';
 
 // 1. Importing Components
 import NavBar from '../src/components/Navbar'
@@ -20,6 +21,7 @@ import Login from './pages/Login';
 import Step from './pages/Step'
 import Logout from './pages/Logout';
 import Forgot from './pages/Forgot';
+import Contact from './pages/Contact';
 import Success from './pages/Success';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
@@ -41,7 +43,6 @@ import { Router, Routes, Route } from 'react-router-dom';
 // 5. Import Fabric UI
 import { setRTL } from '@fluentui/react/lib/Utilities';
 
-
 function App() {
   
   // Header
@@ -50,12 +51,15 @@ function App() {
       {/* Header (to be changed) */}
       <NavBar />
       {/* Main Components */}
+      <AuthProvider>
       <Routes>
+      
           <Route path="/" element={<Login />} />
           <Route path="/step" element={<Step />} />
           
           <Route path="/logout" element={<Logout />} />
           <Route path="/forgot" element={<Forgot />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/success" element={<Success />} />
           {/* Application Steps */}     
           <Route path="/stepB" element={<StepB />} />
@@ -70,7 +74,9 @@ function App() {
 
           <Route path="/Terms" element={<Terms />} />
           <Route path="/Privacy" element={<Privacy />} />
+          
       </Routes>
+      </AuthProvider>
         {/* Footer */}
         <Footer />
     </div>

@@ -1,44 +1,161 @@
-import logo from '../assets/images/EWR_Logo_CMYK_White.png';
-import {Link, useMatch, useResolvedPath } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// 1. Import All Pages
+import { Login } from "../pages/Login";
+import { Step } from "../pages/Step";
+import { Logout } from "../pages/Logout";
+import { Forgot } from "../pages/Forgot";
+import { Contact } from "../pages/Contact";
+import { Success } from "../pages/Success";
+import { Privacy } from "../pages/Privacy";
+import { Terms } from "../pages/Terms";
+import { Account } from "../pages/Account";
 
-// 0. Import FontAwesome Icons
-import { faSignOut } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+/* Static Steps will be Dynamically merged to Step.js} */
+import { StepB } from "../pages/StepB";
+import { StepC } from "../pages/StepC";
+import { StepD } from "../pages/StepD";
+import { StepE } from "../pages/StepE";
+import { StepF } from "../pages/StepF";
 
-// 1. Pull Username with GUID Token from Azure here 
-const username = 'User name';
+/* Desicion States */
+import { Rejected } from "../pages/Rejected";
+import { Accepted } from "../pages/Accepted";
 
-export default function Navbar() {
-     return(
-        <nav className="nav">
-           {/* <Link to="/" className="logo"> */}
-           <span className='logo'> 
-                <img src={logo} alt="East West Rail Need to Sell" />
-            </span>
-           {/*  </Link> /*}
-            {/*}
-            <span><FontAwesomeIcon icon={faUser} /> Welcome: {username} </span>
-            <ul> 
-                {/* <CustomLink to="/step">Application Status</CustomLink>
-                <CustomLink to="/">Home</CustomLink>  
-                <CustomLink to="/logout"> <FontAwesomeIcon icon={faSignOut} /> Logout</CustomLink>
-            </ul>
-            */}
-        </nav>
-     )
-}
+export const nav = [
+  {
+    path: "/",
+    name: "Login",
+    element: <Login />,
+    isMenu: false,
+    isPrivate: false,
+  },
+  {
+    path: "/Terms",
+    name: "Terms",
+    element: <Terms />,
+    isMenu: false,
+    isPrivate: false,
+  },
+  {
+    path: "/Privacy",
+    name: "Privacy",
+    element: <Privacy />,
+    isMenu: false,
+    isPrivate: false,
+  },
 
-// Props For Getting the Links
-function CustomLink({ to, children, ...props }) {
-    const resolvedPath = useResolvedPath(to)
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-  
-    return (
-      <li className={isActive ? "active" : ""}>
-        <Link to={to} {...props}>
-          {children}
-        </Link>
-      </li>
-    )
-  }
+  // Render Our Private (Protected) Routes Pages Please
+  {
+    path: "/Step",
+    name: "Step",
+    element: <Step />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepB",
+    name: "StepB",
+    element: <StepB />,
+    isMenu: true,
+    isPrivate: true,
+  },
+  {
+    path: "/StepC",
+    name: "StepC",
+    element: <StepC />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepD",
+    name: "StepD",
+    element: <StepD />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepE",
+    name: "StepE",
+    element: <StepE />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepF",
+    name: "StepF",
+    element: <StepF />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepF",
+    name: "StepF",
+    element: <StepF />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepF",
+    name: "StepF",
+    element: <StepF />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepF",
+    name: "StepF",
+    element: <StepF />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepF",
+    name: "StepF",
+    element: <StepF />,
+    isMenu: false,
+    isPrivate: true,
+  },
+  {
+    path: "/StepF",
+    name: "StepF",
+    element: <StepF />,
+    isMenu: false,
+    isPrivate: true,
+  },
+
+  {
+    path: "/Contact",
+    name: "Contact",
+    element: <Contact />,
+    isMenu: false,
+    isPrivate: false,
+  },
+  {
+    path: "/Forgot",
+    name: "Forgot",
+    element: <Forgot />,
+    isMenu: false,
+    isPrivate: false,
+  },
+  {
+    path: "/Success",
+    name: "Success",
+    element: <Success />,
+    isMenu: false,
+    isPrivate: false,
+  },
+  {
+    path: "/Logout",
+    name: "Logout",
+    element: <Logout />,
+    isMenu: false,
+    isPrivate: false,
+  },
+  {
+    path: "/Account",
+    name: "Account",
+    element: <Account />,
+    isMenu: false,
+    isPrivate: true,
+  },
+];
+
