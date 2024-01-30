@@ -1,9 +1,9 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
-export default function Footer() {
+export const RenderFooter = () => {
   return (
     <footer>
-      Copyright &copy; 2023 Need to Sell. All Rights Reserved. Proudly Powered
+      Copyright &copy; 2023 - 2024 Need to Sell. All Rights Reserved. Proudly Powered
       by{" "}
       <a target="_blank" href="https://eastwestrail.co.uk">
         {" "}

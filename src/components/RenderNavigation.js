@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import { AuthData } from "../auth/AuthWrapper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from '../assets/images/EWR_Logo_CMYK_White.png';
@@ -7,20 +7,26 @@ import logo from '../assets/images/EWR_Logo_CMYK_White.png';
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { nav } from "./Navbar";
+import { Denied } from "../pages/Denied";
 
 export const RenderRoutes = () => {
   const { user } = AuthData();
 
+ // Autehnticate Private Pages
   return (
     <Routes>
       {nav.map((r, i) => {
-        if (r.isPrivate && user.isAuthenticated) {
+        if (!r.isPrivate) {
           return <Route key={i} path={r.path} element={r.element} />;
-        } else if (!r.isPrivate) {
+        } else if (r.isPrivate && user.isAuthenticated) {
           return <Route key={i} path={r.path} element={r.element} />;
-        } else return false;
+        } else {
+          // Redirect to /Denied if the route is private and the user is not authenticated
+          return <Route key={i} path={r.path} element={<Navigate to="/Denied" />} />;
+        }
       })}
     </Routes>
+ 
   );
 };
 

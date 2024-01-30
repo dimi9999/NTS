@@ -3,10 +3,10 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Logos from "../../src/components/Logos";
 import NavBar from "../../src/components/Navbar";
 
-// export default function Terms() {
+// export default function Terms() :) {
 export const Terms = () => {
   return (
-    <div>
+    <div className="Terms">
       <main>
         <div className="wrapper">
           <div className="container fullwidth">

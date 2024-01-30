@@ -1,6 +1,8 @@
 import { createContext, useContext, useState } from "react";
 import { RenderHeader } from "../components/Header";
+import { RenderMegamenu } from "../components/Megamenu";
 import { RenderMenu, RenderRoutes } from "../components/RenderNavigation";
+import { RenderFooter } from "../components/Footer";
 import pins from "../api/pins.json"; // Import the PINs JSON file
 
 const AuthContext = createContext();
@@ -30,8 +32,10 @@ export const AuthWrapper = () => {
     <AuthContext.Provider value={{ user, login, logout }}>
       <>
         <RenderHeader />
+        <RenderMegamenu />
         <RenderMenu />
         <RenderRoutes />
+        <RenderFooter />
       </>
     </AuthContext.Provider>
   );

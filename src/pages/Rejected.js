@@ -46,7 +46,7 @@ The NTS Panel has rejected NTS application due to insufficient documentation or 
 // export default function Rejected() {
 export const Rejected = () => {
   return (
-    <div>
+    <div className="Rejected">
       <main>
         <div className="wrapper">
           <div className="container largeContainer">

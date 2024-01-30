@@ -1,7 +1,92 @@
 [
-  {"username": "Henry Wright", "pin": "1234"},
-  {"username": "Dimitris", "pin": "5678"},
-  {"username": "Romana", "pin": "9876"},
-  {"username": "Hussain", "pin": "4321"},
-  {"username": "Ben", "pin": "43521"}
+  {
+    "username": "Henry Wright",
+    "pin": "1234",
+    "caseno": "37682uqia",
+    "status": "Application Received",
+    "casemanager": "Manager 1",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  },
+  {
+    "username": "Dimitris",
+    "pin": "5678",
+	 "caseno": "37682uqia",
+    "status": "Checking Documents",
+    "casemanager": "Manager 2",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  },
+  {
+    "username": "Romana",
+    "pin": "9876",
+	 "caseno": "37682uqia",
+    "status": "Application Confirmed",
+    "casemanager": "Manager 3",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  },
+  {
+    "username": "Hussain",
+    "pin": "4321",
+	 "caseno": "37682uqia",
+    "status": "Awaiting Desicion",
+    "casemanager": "Manager 4",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  },
+  {
+    "username": "Ben",
+    "pin": "43521",
+	 "caseno": "37682uqia",
+    "status": "Rejected",
+    "casemanager": "Manager 5",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  },
+  {
+    "username": "Robert",
+    "pin": "2222",
+	 "caseno": "37682uqia",
+    "status": "Accepted",
+    "casemanager": "Manager 6",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  },
+  {
+    "username": "Romana",
+    "pin": "9999",
+	 "caseno": "37682uqia",
+    "status": "In Valuation",
+    "casemanager": "Manager 7",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  },
+  {
+    "username": "John",
+    "pin": "4888",
+	 "caseno": "37682uqia",
+    "status": "Property Acquisition Process",
+    "casemanager": "Manager 8",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  },
+  {
+    "username": "Peter",
+    "pin": "8765",
+	 "caseno": "37682uqia",
+    "status": "Application Received",
+    "casemanager": "Manager 9",
+    "casemanageremail": "manager1@email.com",
+    "casemanagertel": "1238946498",
+    "casemanageraddress": "address 1 NW117SU"
+  }
 ]

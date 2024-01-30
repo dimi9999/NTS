@@ -16,7 +16,7 @@ import {
 // export default function Contact() {
   export const Contact = () => {
   return (
-    <div>
+    <div className="Contact">
       <main>
         <div className="wrapper">
           <div className="container">

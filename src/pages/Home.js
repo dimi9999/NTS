@@ -15,7 +15,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 // export default function Home() {
 export const Home = () => {
   return (
-    <div>
+    <div className="Home">
       <main>
         <div className="wrapper">
           <div className="container">

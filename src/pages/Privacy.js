@@ -6,7 +6,7 @@ import NavBar from "../../src/components/Navbar";
 // export default function Privacy() {
   export const Privacy = () => {
   return (
-    <div>
+    <div className="Privacy">
       <main>
         <div className="wrapper">
           <div className="container fullwidth">

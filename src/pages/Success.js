@@ -6,7 +6,7 @@ import NavBar from "../../src/components/Navbar";
 // export default function Success() {
 export const Success = () => {
   return (
-    <div>
+    <div className="Success">
       <main>
         <div className="wrapper">
           <div className="container">

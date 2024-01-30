@@ -1,0 +1,12 @@
+ {user.isAuthenticated ? (
+          <>
+            <RenderHeader />
+            <RenderMegamenu />
+            <RenderMenu />
+            <RenderRoutes>{children}</RenderRoutes>
+            <RenderFooter />
+          </>
+        ) : (
+          // Redirect to the Access Denied page if not authenticated
+          <Navigate to="/access-denied" replace />
+        )}

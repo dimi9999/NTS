@@ -46,7 +46,7 @@ The NTS Panel is delighted to inform you that your NTS application, has now been
 //export default function Accepted() {
 export const Accepted = () => {
   return (
-    <div>
+    <div className="Steps">
       <main>
         <div className="wrapper">
           <div className="container largeContainer">

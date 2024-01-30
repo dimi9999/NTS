@@ -33,57 +33,59 @@ export const Login = () => {
   };
 
   return (
-    <main>
-      <div className="wrapper">
-        <div className="container">
-          <div className="formContainer">
-            <Logos />
-            <h1>Welcome to NTS Portal login</h1>
+    <div className="Login">
+      <main>
+        <div className="wrapper">
+          <div className="container">
+            <div className="formContainer">
+              <Logos />
+              <h1>Welcome to NTS Portal login</h1>
 
-            {/* Form Begins */}
-            <div className='form'>
-              <div className="row">Please enter your pin to login</div>
-              <div className="buttonsContainer">
-                {/* PIN Input */}
-                <div className="row">
-                  <label htmlFor="password">PIN:</label>
-                  <FontAwesomeIcon icon={faKey} className="icon" />
-                  <input
-                    value={formData.password}
-                    onChange={(e) => setFormData({ password: e.target.value })}
-                    type="password"
-                    placeholder="Please Enter your PIN" required
-                  />
-                </div>
+              {/* Form Begins */}
+              <div className='form'>
+                <div className="row">Please enter your pin to login</div>
+                <div className="buttonsContainer">
+                  {/* PIN Input */}
+                  <div className="row">
+                    <label htmlFor="password">PIN:</label>
+                    <FontAwesomeIcon icon={faKey} className="icon" />
+                    <input
+                      value={formData.password}
+                      onChange={(e) => setFormData({ password: e.target.value })}
+                      type="password"
+                      placeholder="Please Enter your PIN" required
+                    />
+                  </div>
 
-                {/* Error appears here if you input a wrong PIN */}
-                <div className="row">
-                  {errorMessage ? (
-                    <span className="errMsg">
-                      {errorMessage}
-                    </span>
-                  ) : null}
-                </div>
+                  {/* Error appears here if you input a wrong PIN */}
+                  <div className="row">
+                    {errorMessage ? (
+                      <span className="errMsg">
+                        {errorMessage}
+                      </span>
+                    ) : null}
+                  </div>
 
-                {/* Login */}
-                <div className="row">
-                  <button className="btn btn-primary block" onClick={doLogin}>
-                    Login to see your status
-                  </button>
-                </div>
+                  {/* Login */}
+                  <div className="row">
+                    <button className="btn btn-primary block" onClick={doLogin}>
+                      Login to see your status
+                    </button>
+                  </div>
 
-                {/* Forgotten your PIN? */}
-                <div className="row">
-                  <Link className="btn btn-secondary block" to="/forgot">
-                    Forgotten your PIN?
-                  </Link>
+                  {/* Forgotten your PIN? */}
+                  <div className="row">
+                    <Link className="btn btn-secondary block" to="/forgot">
+                      Forgotten your PIN?
+                    </Link>
+                  </div>
                 </div>
               </div>
+              {/* Form Ends */}
             </div>
-            {/* Form Ends */}
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 };

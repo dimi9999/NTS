@@ -47,6 +47,9 @@ const CaseDescription = `
 The NTS Team has now received your application and will update you once they have further feedback. 
 `;
 
+// Import Status]
+const ApplicationStatus = "";
+
 //export default function Step() {
 export const Step = () => {
   

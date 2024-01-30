@@ -8,6 +8,7 @@ import { Success } from "../pages/Success";
 import { Privacy } from "../pages/Privacy";
 import { Terms } from "../pages/Terms";
 import { Account } from "../pages/Account";
+import { Denied } from "../pages/Denied";
 
 /* Static Steps will be Dynamically merged to Step.js} */
 import { StepB } from "../pages/StepB";
@@ -28,6 +29,15 @@ export const nav = [
     isMenu: false,
     isPrivate: false,
   },
+
+  {
+    path: "/Denied",
+    name: "Denied",
+    element: <Denied />,
+    isMenu: false,
+    isPrivate: false,
+  },
+
   {
     path: "/Terms",
     name: "Terms",
@@ -79,6 +89,7 @@ export const nav = [
     isMenu: false,
     isPrivate: true,
   },
+ 
   {
     path: "/StepF",
     name: "StepF",
@@ -154,7 +165,7 @@ export const nav = [
     path: "/Account",
     name: "Account",
     element: <Account />,
-    isMenu: false,
+    isMenu: true,
     isPrivate: true,
   },
 ];

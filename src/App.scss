@@ -1,3 +1,4 @@
+// Base
 @import "scss/base/fonts";
 @import "scss/base/display";
 @import "scss/base/variables";
@@ -7,18 +8,22 @@
 @import "scss/base/helpers";
 @import "scss/base/forms";
 
+// Layouts and Components
 @import "scss/layouts/common";
 @import "scss/layouts/buttons";
 @import "scss/layouts/header";
 @import "scss/layouts/footer";
 
+// Pages
 @import "scss/pages/home";
 @import "scss/pages/content";
 @import "scss/pages/steps";
 @import "scss/pages/contact";
 @import "scss/pages/forgot";
+@import "scss/pages/denied";
 
 @import "scss/components/components";
 
+// Responsive
 @import "scss/base/responsive";
  
