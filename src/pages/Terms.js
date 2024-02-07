@@ -22,7 +22,7 @@ export const Terms = () => {
                   content is permitted. The content may otherwise not be copied
                   or used in any way.
                 </p>
-
+               
                 <p>
                   EastWestRail Company will use reasonable efforts to include
                   up-to-date and accurate information on the site, but make no

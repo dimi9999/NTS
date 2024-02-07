@@ -3,25 +3,30 @@ import Logos from "../../src/components/Logos";
 import NavBar from "../../src/components/Navbar";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { Router, Routes, Route } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-brands-svg-icons";
+import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 
 // export default function Logout() {
 export const Logout = () => {
   return (
-    <div>
+    <div className="Logout">
       <main>
         <div className="wrapper">
           <div className="container">
             <div className="formContainer">
               <Logos />
+              <FontAwesomeIcon icon={faAddressBook} className="icon" />
               <div className="buttonsContainer">
                 <div className="row">
-                  <span className="btn btn-secondary block">
-                    Logout Sucessfull
-                  </span>
+                    <div className="row">
+                        <h1>Logout Succesfull</h1>
+                        <p>You have logged out from NTS.</p>
+                    </div>
                 </div>
                 <div className="row">
                   <Link to="/" className="btn btn-primary block">
-                    Back to login page
+                    Please click here to again
                   </Link>
                 </div>
               </div>

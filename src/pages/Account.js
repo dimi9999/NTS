@@ -23,8 +23,7 @@ export const Account = () => {
               <div className="buttonsContainer">
                 <div className="row">
                     <div className="row">
-                        <h1>Your Account</h1>
-                        
+                        <h1>Welcome to your Account</h1>
                     </div>
                 </div>
               </div>

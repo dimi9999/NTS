@@ -46,6 +46,10 @@
         & h3 {
             color:$white;
         }
+
+        & .icon {
+            @include inline-block;
+        }
     }
 
     & .ApplicationLogmeOut {
@@ -84,7 +88,7 @@
 
  .ProgressBarContainer {
     @include flexbox;
-    .steps {
+    ul {
         float:left;
         width:100%;
         padding-left: 0;
@@ -104,7 +108,7 @@
             position: relative;
             display: block;
             /* border: 1px solid #ddd; */
-            padding:12px 30px;
+            padding:12px 0px 12px 25px;
             width: 16.6%;
             height: 60px;
 
@@ -115,10 +119,12 @@
         }
     }
     // Arrows
-.steps {
+ul {
 	>li {
 		float: left;
         overflow: hidden;
+        color: $darkgray;
+		background: $gray;
 	}
 	.completed {
 		color: $white;
@@ -265,6 +271,18 @@
 			}
 		}
 	}
+
+    li {
+		+ {
+			li {
+				>span {
+					&:before {
+						border-left-color: $gray;
+					}
+				}
+			}
+		}
+	}
 }
 
   }
@@ -294,6 +312,11 @@
         color:$black;
         text-align: center;
 
+        & strong span {
+            font-family: $headings-font-family;
+            @include border-radius(7px);
+            padding: 3px 15px;
+        }
         & .Rejected {
             font-family: $headings-font-family;
             color:$white;
@@ -386,5 +409,634 @@
     margin-top:15px!important;
     & h4 {
         margin-bottom:0;
+    }
+}
+
+// Render the steps based on unordered lists ID
+
+// 1. Application Received 
+#stepApplicationReceived {
+   & #step1 {
+        color: $white;
+        background: $lightblue;
+
+        + {
+			li {
+				>span {
+					&:before {
+						border-left-color: $lightblue;
+					}
+				}
+			}
+		}
+   }
+}
+
+#statusApplicationReceived {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $orange;
+        }
+    }
+}
+
+// 2. Checking Documents
+#stepCheckingDocuments {
+    & #step1 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step2 {
+        color: $white;
+        background: $lightblue;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #statusCheckingDocuments {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $yellow;
+        }
+    }
+}
+
+// 3. Application Confirmed
+#stepApplicationConfirmed {
+    & #step1 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step2 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step3 {
+        color: $white;
+        background: $lightblue;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #statusApplicationConfirmed {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $lightblue;
+        }
+    }
+}
+
+
+// 4. Awaiting Decision
+#stepAwaitingDesicion {
+    & #step1 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step2 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step3 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step4 {
+        color: $white;
+        background: $lightblue;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #statusAwaitingDesicion {
+    & .ApplicationStatusValue {
+        & span {
+            color:$black;
+            background-color: $paleblue;
+        }
+    }
+}
+
+// 5. Rejected
+#stepRejected {
+    & #step1 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step2 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step3 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step4 {
+        color: $white;
+        background: $red;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #statusRejected {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $red;
+        }
+    }
+}
+
+// 6. Accepted
+#stepAccepted {
+    & #step1 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step2 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step3 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step4 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #statusAccepted {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $green;
+        }
+    }
+}
+
+// 7. In Valuation
+#stepInValuation {
+    & #step1 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step2 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step3 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step4 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+	
+	& #step5 {
+        color: $white;
+        background: $lightblue;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #statusInValuation {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $blue;
+        }
+    }
+}
+
+// 8 + 9. Completed
+#stepInValuation {
+    & #step1 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step2 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step3 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step4 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+	
+	& #step5 {
+        color: $white;
+        background: $lightblue;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #statusInValuation {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $blue;
+        }
+    }
+}
+
+// 8 + 9. Completed
+#stepCompleted {
+    & #step1 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step2 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step3 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    & #step4 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+	
+	& #step5 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+	
+	& #step6 {
+        color: $white;
+        background: $green;
+
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    #statusCompleted {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $green;
+        }
     }
 }

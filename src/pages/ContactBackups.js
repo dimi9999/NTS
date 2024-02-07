@@ -1,6 +1,5 @@
 // 1. Importing Components
 import { useRef } from "react";
-import emailjs from '@emailjs/browser';
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Logos from "../../src/components/Logos";
 import NavBar from "../../src/components/Navbar";

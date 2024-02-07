@@ -1,8 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { AuthWrapper } from './auth/AuthWrapper';
 
-
-
 import logo from './logo.svg';
 import React  from 'react';
 import './App.scss';

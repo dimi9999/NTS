@@ -15,22 +15,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const RenderMegamenu = () => {
-  const [menuVisible, setMenuVisible] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(true);
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
-    // Get the body element
-    const body = document.body;
-
-    // If the menu is visible, push the body to the left by 300px with animation
-    if (!menuVisible) {
-      body.style.transition = 'margin-left 0.3s ease';
-      body.style.marginLeft = '300px';
-    } else {
-      // If the menu is hidden, reset the margin with animation
-      body.style.transition = 'margin-left 0.3s ease';
-      body.style.marginLeft = '0';
-    }
   };
 
   return (
@@ -50,6 +38,12 @@ const RenderMegamenu = () => {
           <Link to="/" className="menu-item">
             <FontAwesomeIcon icon={faHome} className="icon" />
             Home
+          </Link>
+        </div>
+        <div>
+          <Link to="/About" className="menu-item">
+            <FontAwesomeIcon icon={faInfoCircle} className="icon" />
+            About
           </Link>
         </div>
         <div>

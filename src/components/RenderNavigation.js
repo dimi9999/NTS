@@ -9,6 +9,8 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { nav } from "./Navbar";
 import { Denied } from "../pages/Denied";
 
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 export const RenderRoutes = () => {
   const { user } = AuthData();
 
@@ -40,8 +42,11 @@ export const RenderMenu = () => {
       </div>
     );
   };
+
+  
   return (
     <nav className="nav">
+      
     <Link to="/" className="logo"> 
       <span className="logo">
         <img src={logo} alt="East West Rail Need to Sell" />

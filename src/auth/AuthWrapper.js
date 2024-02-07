@@ -1,8 +1,12 @@
 import { createContext, useContext, useState } from "react";
 import { RenderHeader } from "../components/Header";
-import { RenderMegamenu } from "../components/Megamenu";
+import   RenderMegamenu    from "../components/Megamenu";
 import { RenderMenu, RenderRoutes } from "../components/RenderNavigation";
 import { RenderFooter } from "../components/Footer";
+
+
+/* *********************** USE Graph API to Merge your Changes START *************************** */
+
 import pins from "../api/pins.json"; // Import the PINs JSON file
 
 const AuthContext = createContext();
@@ -14,9 +18,9 @@ export const AuthWrapper = () => {
   const login = (pin) => {
     return new Promise((resolve, reject) => {
       const matchingUser = pins.find((user) => user.pin === pin);
-
+  
       if (matchingUser) {
-        setUser({ name: matchingUser.username, isAuthenticated: true });
+        setUser({ ...matchingUser, isAuthenticated: true });
         resolve("success");
       } else {
         reject("You have entered an Incorrect PIN. Please try again.");
@@ -27,6 +31,8 @@ export const AuthWrapper = () => {
   const logout = () => {
     setUser({ ...user, isAuthenticated: false });
   };
+
+  /* *********************** USE Graph API to Merge your Changes END *************************** */
 
   return (
     <AuthContext.Provider value={{ user, login, logout }}>

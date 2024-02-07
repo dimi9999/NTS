@@ -1,0 +1,73 @@
+// Buttons
+.btn {
+    border: none;
+    color: $white;
+    text-decoration: none;
+    padding: 10px 30px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s linear;
+    @include border-radius(7px); 
+}
+// Error Message
+.errMsg {
+    background: transparent;
+    color:$red;
+    border:2px solid $red;
+    text-decoration: none;
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s linear;
+    @include border-radius(7px); 
+    display: block;
+}
+
+.offscreen {
+    display: none;
+}
+
+// Primary
+.btn-primary {
+    background: $blue;
+    &:hover {
+        background:$lightblue;
+        color:$white;
+    }
+
+    &:focus {
+        background:$green;
+        color:$white;
+    }
+}
+
+// Secondary
+    .btn-secondary {
+        background: $green;
+        &:hover {
+            background:$lightblue;
+            color:$white;
+        }
+
+        &:focus {
+            background:$green;
+            color:$white;
+    }
+}
+
+// Secondary
+.btn-error {
+    background: transparent;
+    color:$red;
+    border:2px solid $red;
+}
+ 
+
+// Logout Message
+.logout {
+    background-color: $green;
+    color:$white;
+    @include border-radius(5px);
+    padding:5px 15px;
+}
+

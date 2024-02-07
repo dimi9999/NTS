@@ -9,8 +9,8 @@ export const RenderFooter = () => {
         {" "}
         EastWest Rail Company{" "}
       </a>
-      <Link to="/Terms"> Terms of Use </Link>|
-      <Link to="/Privacy"> Privacy</Link>
+        <Link to="/Terms"> Terms of Use </Link>|
+        <Link to="/Privacy"> Privacy</Link>
     </footer>
   );
 }

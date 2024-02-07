@@ -1,1 +1,15 @@
 // Contact us
+.Contact {
+    & .Link {
+        background-color: $green;
+        color:$white;
+        @include border-radius(5px);
+        padding:5px 15px;
+        margin:0 10px;
+
+        &:hover {
+            background-color: $lightblue;
+            transition: 0.3s ease-in all;
+        }
+    }
+}

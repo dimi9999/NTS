@@ -11,11 +11,6 @@ import { Account } from "../pages/Account";
 import { Denied } from "../pages/Denied";
 
 /* Static Steps will be Dynamically merged to Step.js} */
-import { StepB } from "../pages/StepB";
-import { StepC } from "../pages/StepC";
-import { StepD } from "../pages/StepD";
-import { StepE } from "../pages/StepE";
-import { StepF } from "../pages/StepF";
 
 /* Desicion States */
 import { Rejected } from "../pages/Rejected";
@@ -61,77 +56,6 @@ export const nav = [
     isMenu: false,
     isPrivate: true,
   },
-  {
-    path: "/StepB",
-    name: "StepB",
-    element: <StepB />,
-    isMenu: true,
-    isPrivate: true,
-  },
-  {
-    path: "/StepC",
-    name: "StepC",
-    element: <StepC />,
-    isMenu: false,
-    isPrivate: true,
-  },
-  {
-    path: "/StepD",
-    name: "StepD",
-    element: <StepD />,
-    isMenu: false,
-    isPrivate: true,
-  },
-  {
-    path: "/StepE",
-    name: "StepE",
-    element: <StepE />,
-    isMenu: false,
-    isPrivate: true,
-  },
- 
-  {
-    path: "/StepF",
-    name: "StepF",
-    element: <StepF />,
-    isMenu: false,
-    isPrivate: true,
-  },
-  {
-    path: "/StepF",
-    name: "StepF",
-    element: <StepF />,
-    isMenu: false,
-    isPrivate: true,
-  },
-  {
-    path: "/StepF",
-    name: "StepF",
-    element: <StepF />,
-    isMenu: false,
-    isPrivate: true,
-  },
-  {
-    path: "/StepF",
-    name: "StepF",
-    element: <StepF />,
-    isMenu: false,
-    isPrivate: true,
-  },
-  {
-    path: "/StepF",
-    name: "StepF",
-    element: <StepF />,
-    isMenu: false,
-    isPrivate: true,
-  },
-  {
-    path: "/StepF",
-    name: "StepF",
-    element: <StepF />,
-    isMenu: false,
-    isPrivate: true,
-  },
 
   {
     path: "/Contact",
@@ -165,8 +89,24 @@ export const nav = [
     path: "/Account",
     name: "Account",
     element: <Account />,
-    isMenu: true,
-    isPrivate: true,
+    isMenu: false,
+    isPrivate: false,
+  },
+
+  {
+    path: "/Rejected",
+    name: "Rejected",
+    element: <Rejected />,
+    isMenu: false,
+    isPrivate: false,
+  },
+
+  {
+    path: "/Accepted",
+    name: "Accepted",
+    element: <Accepted />,
+    isMenu: false,
+    isPrivate: false,
   },
 ];
 

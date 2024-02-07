@@ -1,0 +1,44 @@
+Always Use
+
+git checkout main
+git pull
+
+git checkout 
+git checkout -b Dimitris-20221116
+then create a new branch
+
+To push changes
+
+git add .
+git commit -m "changes"
+git push
+
+Commit them om the top left branch
+
+git add. Moves changes from the working directory to the staging area. ...
+git branch. This command is your general-purpose branch administration tool. ...
+git checkout. ...
+git clean. ...
+git clone. ...
+git commit. ...
+git commit --amend. ...
+git config.
+
+https://www.atlassian.com/git/glossary
+
+REMEMBER:
+*********
+
+In source control press commit changea and add the message
+The sync changes
+
+document.designMode = "on"
+
+
+//DESKTOP MODE 
+1. Ellipsis if name/jobTitle/whatever is longer than with of card (add tooltip, title="blah")
+2. Fix height of card - find a card with a mobile phone, email, photo + name, inspect and calculate height and set minimum height
+
+//MOBILE MODE
+1. No ellipsis - use wordWrap or wordBreak
+2. minheight = auto (height = auto)

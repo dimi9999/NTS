@@ -6,10 +6,10 @@ import { AuthData } from "../auth/AuthWrapper";
 import { Link } from "react-router-dom";
 import Logos from '../components/Logos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faKey, faSignOut } from '@fortawesome/free-solid-svg-icons';
+import { faKey, faSignOut, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-
+ /* *********************** USE Graph API to Merge your Changes START *************************** */
 export const Login = () => {
   const navigate = useNavigate();
   const { login } = AuthData();
@@ -32,6 +32,8 @@ export const Login = () => {
     }
   };
 
+   /* *********************** USE Graph API to Merge your Changes END *************************** */
+
   return (
     <div className="Login">
       <main>
@@ -39,7 +41,8 @@ export const Login = () => {
           <div className="container">
             <div className="formContainer">
               <Logos />
-              <h1>Welcome to NTS Portal login</h1>
+              <FontAwesomeIcon icon={faUserCircle} className="LoginImage" />
+              <h1>Welcome to NTS Portal</h1>
 
               {/* Form Begins */}
               <div className='form'>
@@ -68,7 +71,7 @@ export const Login = () => {
 
                   {/* Login */}
                   <div className="row">
-                    <button className="btn btn-primary block" onClick={doLogin}>
+                    <button type="submit" className="btn btn-primary block" onClick={doLogin}>
                       Login to see your status
                     </button>
                   </div>
