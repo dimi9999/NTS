@@ -84,11 +84,26 @@
 	body main .row .icon {
 		top:12px;
 	}
+
+	// Steps remove line on mobile
+	.ProgressBarContainer ul {
+		margin-left:3px;
+	}
+	.ProgressBarContainer ul > li {
+		margin-left:-3px;
+	}
 }
 
 // 2. Header
 
-// 3. Hide Steps Logo 
+// 3. Hide Steps Logo
+
+@media only screen and (min-width: $large-screens) {
+	.ApplicationStatusContainer .descriptionContainer {
+		min-height: 260px;
+	}
+}
+
 @media only screen and (max-width: $large-screens) {
 	body {
 		background-size:cover!important;
@@ -231,3 +246,4 @@
 		margin:10px;
 	}
  }
+

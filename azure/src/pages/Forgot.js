@@ -35,9 +35,7 @@ export const Forgot = () => {
                       please <Link to="/Contact" className="Link"> click here </Link></li>
                       </ul>
                       </p>
-                     
                   </div>
-                  
                 <div className="row">
                   <Link to="/" className="btn btn-primary block">
                     Please click here to go back to the Login Page

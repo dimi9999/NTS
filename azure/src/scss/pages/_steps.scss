@@ -42,6 +42,7 @@
         align-items: flex-start;
         padding:5px 15px;
         margin-right:20px;
+        min-height:70px;
  
         & h3 {
             color:$white;
@@ -719,7 +720,7 @@ ul {
  
  
 // 5.1 Rejected
-#stepApplicationrejected.ReferredtoDfT {
+#stepApplicationrejectedandreferredtoDfT {
     & #step1 {
         color: $white;
         background: $green;
@@ -782,7 +783,7 @@ ul {
 }
  
  
-    #statusApplicationrejected.ReferredtoDfT {
+    #statusApplicationrejectedandreferredtoDfT {
     & .ApplicationStatusValue {
         & span {
             color:$white;
