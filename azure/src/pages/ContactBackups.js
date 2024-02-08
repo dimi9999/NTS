@@ -1,6 +1,5 @@
 // 1. Importing Components
-import { useRef, useState } from "react";
-import emailjs from '@emailjs/browser';
+import { useRef } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Logos from "../../src/components/Logos";
 import NavBar from "../../src/components/Navbar";
@@ -18,29 +17,9 @@ import { useReducer } from "react";
 
 // export default function Contact() {
   export const Contact = () => {
-
-    const [Message, setMessage] = useState(null);
     const form = useRef()
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs
-        .sendForm('service_ehr7f59', 'template_ty15vh5', form.current, {
-          publicKey: 'AzGz4b9yswpTcLCD4',
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!');
-            setMessage("Your request has been sent");
-            {}
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
-        e.target.reset();
-    };
+    const sendEmail = () => {};
 
   return (
     <div className="Contact">
@@ -57,99 +36,68 @@ import { useReducer } from "react";
                         You case manager will arrange a callback with you to verify your identity and authorise a PIN reset request. 
                         You will then receive your new PIN from your case manager.</p>
                     </div>
-
-                    {/*
                     <div className="row">
                         <div className="seperator"> Or </div>
                     </div>
-
-                     */}
-                    {/*  
                     <div className="row">
                       <p> 
                         Alternatively complete the following form to request a new pin
                       </p>
                     </div>
-                  
-
-                    {/* Last Name  
+                    {/* First Name */}
                     <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faPerson} className="icon" />
                       <input
-                        name="user_lastname"
+                        name="fname"
                         type="text"
-                        placeholder="* Please enter your last name (required)"
+                        placeholder="Please enter your first name"
                         required
                       />
                     </div>
 
-                      {/* First Name  
-                      <div className="row float-left halfwidth padding-right">
+                    {/* Email Address */}
+                    <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faPerson} className="icon" />
                       <input
-                        name="user_name"
+                        name="lname"
                         type="text"
-                        placeholder="* Please enter your first name (required)"
+                        placeholder="Please enter your last name"
                         required
                       />
                     </div>
 
-                     {/* Case Manager  
-                     <div className="row float-left halfwidth padding-right">
-                      <FontAwesomeIcon icon={faAddressBook} className="icon" />
-                      <input
-                        name="user_manager"
-                        type="text"
-                        placeholder="Case Manager name if you remember it"
-                 
-                      />
-                    </div>
-
-                    {/* Email Address  
+                    {/* Email Address */}
                     <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faMailForward} className="icon" />
                       <input
-                        name="user_email"
+                        name="email"
                         type="email"
-                        placeholder="* Please enter your email address (required)"
+                        placeholder="Please enter your email address"
                         required
                       />
                     </div>
 
-                   
-                    {/* Comments  
-                    <div className="row float-left fullwidth padding-right">
-                      <textarea name="message" cols="30" rows="5" placeholder="* Any comments you would like to add"></textarea>
+                    {/* Csse Manager */}
+                    <div className="row float-left halfwidth padding-right">
+                      <FontAwesomeIcon icon={faAddressBook} className="icon" />
+                      <input
+                        name="manager"
+                        type="text"
+                        placeholder="Please enter your case manager name"
+                        required
+                      />
                     </div>
-
-                    {/* Message  
-                    {Message ? (
-                      <div> 
-                        <div className="row float-left fullwidth padding-right"> 
-                          <span className="successMsg">
-                            {Message}
-                          </span>
-                        </div>
-
-                        <div className="row float-left fullwidth padding-right">
-                          <Link to="/" className="btn btn-secondary block">
-                            Please click here to go back to the Login Page
-                          </Link>
-                        </div>
-                      </div>
-                    ) : null}
-                    
-
-                    {/* Submit Button  
+                    {/* Comments */}
+                    <div className="row float-left fullwidth padding-right">
+                      <textarea name="message" cols="30" rows="5" placeholder="Any comments you would like to add"></textarea>
+                    </div>
+                    {/* Submit Button */}
                     <div className="row float-left fullwidth padding-right">
                       <button type="submit" className="btn btn-primary block">
                         Email us to request a new PIN
                       </button>
                     </div>
-                     */}
                   </form>
-
-                  
               </div>
               </section>
             </div>

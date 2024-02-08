@@ -17,10 +17,13 @@ import {
 import { useReducer } from "react";
 
 // export default function Contact() {
-  export const Contact = () => {
+  export const ContactForms = () => {
 
     const [Message, setMessage] = useState(null);
     const form = useRef()
+    
+    {/* ********* 08/02/2024 COMMENT OUT UNTIL FURTHER NOTICE ******** /*}
+
 
     const sendEmail = (e) => {
       e.preventDefault();
@@ -41,6 +44,10 @@ import { useReducer } from "react";
         );
         e.target.reset();
     };
+     
+    {/* ********* 08/02/2024 COMMENT OUT UNTIL FURTHER NOTICE ******** /*}
+
+  */}
 
   return (
     <div className="Contact">
@@ -51,20 +58,16 @@ import { useReducer } from "react";
               <Logos />
               <section>
               <div className="buttonsContainerfullwidth">
-                  <form ref={form} onSubmit={sendEmail}>
+                 {/* <form ref={form} onSubmit={sendEmail}> */}
+                    <form> 
                     <div className="row">
                       <p> If you cannot locate your case manager’s email, please email <a className="Link" href="needtosell@eastwestrail.co.uk"> needtosell@eastwestrail.co.uk </a> to request a new PIN. 
                         You case manager will arrange a callback with you to verify your identity and authorise a PIN reset request. 
                         You will then receive your new PIN from your case manager.</p>
                     </div>
-
-                    {/*
                     <div className="row">
                         <div className="seperator"> Or </div>
                     </div>
-
-                     */}
-                    {/*  
                     <div className="row">
                       <p> 
                         Alternatively complete the following form to request a new pin
@@ -72,7 +75,7 @@ import { useReducer } from "react";
                     </div>
                   
 
-                    {/* Last Name  
+                    {/* Last Name */}
                     <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faPerson} className="icon" />
                       <input
@@ -83,7 +86,7 @@ import { useReducer } from "react";
                       />
                     </div>
 
-                      {/* First Name  
+                      {/* First Name */}
                       <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faPerson} className="icon" />
                       <input
@@ -94,7 +97,7 @@ import { useReducer } from "react";
                       />
                     </div>
 
-                     {/* Case Manager  
+                     {/* Case Manager */}
                      <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faAddressBook} className="icon" />
                       <input
@@ -105,7 +108,7 @@ import { useReducer } from "react";
                       />
                     </div>
 
-                    {/* Email Address  
+                    {/* Email Address */}
                     <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faMailForward} className="icon" />
                       <input
@@ -117,12 +120,12 @@ import { useReducer } from "react";
                     </div>
 
                    
-                    {/* Comments  
+                    {/* Comments */}
                     <div className="row float-left fullwidth padding-right">
                       <textarea name="message" cols="30" rows="5" placeholder="* Any comments you would like to add"></textarea>
                     </div>
 
-                    {/* Message  
+                    {/* Message */}
                     {Message ? (
                       <div> 
                         <div className="row float-left fullwidth padding-right"> 
@@ -140,16 +143,13 @@ import { useReducer } from "react";
                     ) : null}
                     
 
-                    {/* Submit Button  
+                    {/* Submit Button */}
                     <div className="row float-left fullwidth padding-right">
                       <button type="submit" className="btn btn-primary block">
                         Email us to request a new PIN
                       </button>
                     </div>
-                     */}
                   </form>
-
-                  
               </div>
               </section>
             </div>

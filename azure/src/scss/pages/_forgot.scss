@@ -1,0 +1,46 @@
+
+// Forgotten
+.Forgot {
+    & .Link {
+        background-color: $green;
+        color:$white;
+        @include border-radius(5px);
+        padding:5px 15px;
+        margin:0 10px;
+    }
+
+    & .icon {
+        background-color: $green;
+        color:$white;
+        @include inline-block;
+        @include border-radius(50px);
+        padding:5px 15px;
+        margin:0 10px;
+        width:50px;
+        height:70px;
+    }
+
+    & .list {
+        max-width: 900px;
+        text-align: left;
+        margin: 0 auto;
+
+        & li {
+            position: relative;
+            list-style-type: none;
+            padding-left: 40px;
+            &:before {
+                content:'';
+                position: absolute;
+                top:2px;
+                left:0;
+                background-image:url(../../assets/images/EWRBullets.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 18px;
+                width:18px;
+                height:18px;
+            }
+        }
+    }
+}

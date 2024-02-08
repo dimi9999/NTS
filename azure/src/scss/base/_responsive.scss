@@ -1,0 +1,233 @@
+// SMARTPHONES
+// ***********
+// 1. Wrapper and Forms
+@media only screen and (max-width:$mobile-phones) {
+    body {
+        background-size:cover!important;
+		font-size: $mobile-base-font-size;
+    }
+    
+    main {
+        & .formContainer {
+            margin-top:25px!important;
+            padding: 20px!important;
+        }
+    }
+	// Login Page Icon
+	.Login .LoginImage {
+		margin:5px;
+	}
+    // EWR Form Logo
+	main .logo img {
+		max-width:120px;
+	}
+
+	// Access Denied Icon
+	.Denied .icon {
+		width:40px;
+		height:40px;
+	}
+	
+	// Forgot
+	.Forgot .Link {
+		display: block;
+		text-align: center;
+		margin: 10px 0;
+	}
+
+	.Forgot .icon {
+		width:20px;
+		height:40px;
+	}
+    // Contact
+	.Contact .Link {
+		display: block;
+		text-align: center;
+		margin: 10px 0;
+	}
+
+	.Contact .row {
+		width: 100%!important;
+		padding-right:0!important;
+	}
+
+	// Step Status
+	.ApplicationStatusValue span {
+		display: block;
+	}
+
+	// Logout Link
+	.nav .logoutlink {
+		padding:5px 4px!important;
+	}
+
+	// button paddings
+	.btn {
+		padding:10px 15px;
+	}
+
+	button {
+		font-size:16px;
+	}
+
+	// form inputs
+	body input[type="text"], 
+	body input[type="password"], 
+	body input[type="tel"], 
+	body input[type="number"], 
+	body input[type="email"], 
+	body textarea {
+		padding: 12px 30px 12px 45px;
+		font-size: 16px;
+	}
+    
+	body main .row .icon {
+		top:12px;
+	}
+}
+
+// 2. Header
+
+// 3. Hide Steps Logo 
+@media only screen and (max-width: $large-screens) {
+	body {
+		background-size:cover!important;
+		background-position: 50% 162%;
+	}
+	.ApplicationDetails .logo {
+		display: none;
+	}
+	.ApplicationDetails {
+		justify-content: flex-start;
+		& .ApplicationStatusCaseManager {
+			flex-grow: 2;
+			margin-right: 0;
+			margin-bottom:15px;
+		}
+	}
+}
+// 3. Steps
+@media only screen and (max-width: $mobile-phones) {
+	.ApplicationDetails .logo {
+		display: none;
+	}
+	.ApplicationDetails {
+		align-items: flex-start;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		& > div {
+			width:100%;
+			margin-right:0!important;
+			margin-bottom:15px;
+		}
+	}
+
+	.ApplicationStatusContainer {
+	& .descriptionContainer {
+		margin:0 0 20px 0;
+	}
+
+	& .ApplicationStatusValue {
+		// margin-top:10px;
+	}
+}
+	// Logged in 
+	.ApplicationDetails .ApplicationLogmeOut {
+		align-items:center;
+		justify-content: center;
+		margin-bottom:0;
+	}
+
+	// Logout 
+	
+	.ProgressBarContainer {
+		ul {
+			margin:0;
+			&>li {
+				position: relative;
+				display: block;
+				/* border: 1px solid #ddd; */
+				padding:12px 20px;
+				width: 50%;
+				margin-bottom:20px;
+			    @include border-radius(4px);
+				 
+				>span {
+					&:after {
+						content: "";
+						border-width: 33px;
+					}
+					&:before {
+						content: "";
+						display: block;
+						border-width: 28px;
+					}
+				}
+			&>li:nth-child(2n) {
+				@include border-top-right-radius(4px);
+				@include border-bottom-right-radius(4px);
+			}
+		}
+	}
+	}
+}
+
+// TABLETS
+// *******
+
+@media only screen and (max-width:$tablets) {
+
+		.ApplicationStatusContainer {
+			flex-direction: column;
+
+			& .ApplicationStatusValue {
+				& strong {
+					display: block;
+					width:100%;
+					padding:2px 0;
+					font-size:$mobile-base-font-size;
+
+					& span {
+						display: block;
+					}
+
+				}
+			}
+
+			& .ApplicationStatus {
+				margin-right:0;
+				width:100%;
+	
+				& .ApplicationStatusValue {
+					width:100%;
+					}
+				}
+				&  .ApplicationContactDetails {
+					width:100%;
+				
+				}
+				& .descriptionContainer {
+					width: 100%;
+					margin:0 0 25px;
+				}
+		}
+	}
+ 
+ // SMALL SCREENS
+ // *************
+
+ @media only screen and (max-height:$small-screens)  {
+
+	main .logo img {
+		max-width:120px;
+	}
+
+	body main .formContainer {
+		margin-top:30px;
+		padding:30px;
+	}
+	.Login .LoginImage {
+		margin:10px;
+	}
+ }
