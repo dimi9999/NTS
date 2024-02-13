@@ -33,6 +33,7 @@ export const Step = () => {
               <div className="ApplicationDetails">
                 {/* Logged in Username and Welcome Message */}
                 <div className="ApplicationStatusLoggedInUser">
+                  <FontAwesomeIcon icon={faUser} className="icon" />
                   <h3>Welcome!</h3>
                 </div>
                 {/* Case Manager */}

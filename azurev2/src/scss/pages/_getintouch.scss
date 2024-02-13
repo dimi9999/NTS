@@ -1,5 +1,9 @@
 // Get in touch
 .Getintouch {
+    & .mailLink {
+        color:$black;
+        font-weight: bold;
+    }
     & .Link {
         background-color: $green;
         color:$white;
@@ -11,5 +15,13 @@
             background-color: $lightblue;
             transition: 0.3s ease-in all;
         }
+    }
+
+    & h1 {
+        color: $black;       
+    }
+
+    & address {
+        font-style:normal;
     }
 }

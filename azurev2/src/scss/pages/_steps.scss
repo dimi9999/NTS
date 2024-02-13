@@ -34,12 +34,12 @@
  
     & .ApplicationStatusLoggedInUser {
         @include flexbox;
-        flex-direction: column;
+        align-items: center;
+        flex-direction: row;
         background-color:$green;
         color:$white;
         @include boxsizing;
         @include border-radius(7px);
-        align-items: flex-start;
         padding:5px 15px;
         margin-right:20px;
         min-height:70px;
@@ -50,6 +50,7 @@
  
         & .icon {
             @include inline-block;
+            margin-right:10px;
         }
     }
  

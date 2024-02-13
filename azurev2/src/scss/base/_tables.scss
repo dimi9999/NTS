@@ -1,0 +1,64 @@
+$color_1: $white;
+
+/* responsive table */
+/* responsive using desktop first approach */
+.responsiveTbl {
+	table {
+		text-align: center;
+		width: 100%;
+		white-space: normal;
+		word-break: break-all;
+	}
+}
+tr {
+	background: transparent;
+}
+th {
+	padding: 15px 20px;
+	vertical-align: middle;
+	background: $blue;
+	color: $color_1;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 25px 20px;
+	&:nth-child(2) {
+		text-align: left;
+	}
+}
+td {
+	padding: 15px 20px;
+	vertical-align: middle;
+	&:nth-child(2) {
+		text-align: left;
+	}
+}
+.price {
+	border: 1px solid $blue;
+	border-radius: 25px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 8px;
+	min-width: 100px;
+	text-align: center;
+}
+.btn {
+	border: 1px solid $blue;
+	border-radius: 25px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 8px;
+	min-width: 100px;
+	text-align: center;
+	border: none;
+	color: $color_1;
+	background: $blue;
+	transition: box-shadow 0.3s linear;
+}
+@media only screen and (max-width: 767px) {
+	.responsiveTbl {
+		overflow: auto;
+		table {
+			width: 100%;
+		}
+	}
+}

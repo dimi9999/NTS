@@ -9,7 +9,6 @@
   white-space: nowrap;
 }
  
-
 @mixin transform ($value) {
   -moz-transform: $value;
   -ms-transform: $value;

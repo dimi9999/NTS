@@ -19,7 +19,7 @@
 	}
     // EWR Form Logo
 	main .logo img {
-		max-width:120px;
+		max-width:220px;
 	}
 
 	// Access Denied Icon
@@ -102,9 +102,8 @@
 	}
 }
 
-// 2. Header
-
-// 3. Hide Steps Logo
+// Large Screens
+// *************
 
 @media only screen and (min-width: $large-screens) {
 	.ApplicationStatusContainer .descriptionContainer {
@@ -126,6 +125,10 @@
 			flex-grow: 2;
 			margin-right: 0;
 			margin-bottom:15px;
+		}
+
+		& .ApplicationStatusLoggedInUser {
+			margin-bottom: 15px;
 		}
 	}
 }
@@ -151,10 +154,7 @@
 		margin:0 0 20px 0;
 	}
 
-	& .ApplicationStatusValue {
-		// margin-top:10px;
 	}
-}
 	// Logged in 
 	.ApplicationDetails .ApplicationLogmeOut {
 		align-items:center;
@@ -241,9 +241,8 @@
  // *************
 
  @media only screen and (max-height:$small-screens)  {
-
 	main .logo img {
-		max-width:120px;
+		max-width:220px;
 	}
 
 	body main .formContainer {
@@ -253,5 +252,18 @@
 	.Login .LoginImage {
 		margin:10px;
 	}
+ }
+
+
+ // Smart Phones (Vertical viewport)
+ // ********************************
+
+ @media only screen and (max-width:$mobile-phones-vertical) {
+	// Logo
+	.logo {
+		@include flexbox;
+		align-items: center;
+		justify-content: space-between;
+	 }
  }
 

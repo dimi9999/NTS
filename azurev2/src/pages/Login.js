@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Logos from '../components/Logos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faKey, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import spinner from "../assets/images/loading.gif";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -20,13 +21,17 @@ export const Login = () => {
   );
 
   const [errorMessage, setErrorMessage] = useState(null);
+  const [loading, setLoading] = useState(false); // State to manage loading spinner visibility
 
   const doLogin = async () => {
+    setLoading(true); // Show loading spinner while login is in progress
     try {
       await login(formData.password); // Pass only the PIN for login
       navigate("/Step");
     } catch (error) {
       setErrorMessage(error);
+    } finally {
+      setLoading(false); // Hide loading spinner after login attempt
     }
   };
   return (
@@ -54,7 +59,13 @@ export const Login = () => {
                       placeholder="Please Enter your PIN" required
                     />
                   </div>
-
+                  {/* Add spinner images while log in */}
+                   {/* Conditionally render spinner image while logging in */}
+                   {loading && (
+                    <div className="row">
+                      <img className="spinner" src={spinner} alt="Spinner"/>
+                    </div>
+                  )}
                   {/* Error appears here if you input a wrong PIN */}
                   <div className="row">
                     {errorMessage ? (
