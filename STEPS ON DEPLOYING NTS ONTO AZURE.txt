@@ -1,0 +1,25 @@
+PUBLISHING THE APP STEPS
+************************
+https://github.com/Azure/static-web-apps-cli/issues/721
+
+use http://localhost:4280/Step
+swa start on azure apps
+
+1) swa login to open on the terminal
+2) Open youe .ev file in vs code to check details
+3) add the following line:
+4) yml file sjould be in the root folder
+5) type swa build
+6) type swa deploy -i api\bin\Release\net6.0\publish
+
+CAUTION YOU MIGHT GET AN ERROR:
+
+√ Would you like to create a new Azure Static Web Apps project? ... no
+✖ The provided project name "undefined" was not found.
+
+
+Try this command:
+swa deploy --app-name swa-nts-dev -i api\bin\Release\net6.0\publish
+
+	
+Remember to use npm ci for a clean installation in case files do not work.
