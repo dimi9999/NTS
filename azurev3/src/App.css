@@ -1,0 +1,2017 @@
+@font-face {
+  font-family: GTWalsheimPro;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.eot);
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.ttf) format("truetype"); }
+
+@font-face {
+  font-family: GTWalsheimProBold;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.eot);
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.ttf) format("truetype"); }
+
+@font-face {
+  font-family: GTWalsheimProBlack;
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.eot);
+  src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.ttf) format("truetype"); }
+
+.relative {
+  position: relative; }
+
+.static {
+  position: static; }
+
+.fixed {
+  position: fixed; }
+
+.absolute {
+  position: absolute; }
+
+/*
+---------------
+floats & blocks
+---------------
+*/
+.float-left {
+  float: left; }
+
+.float-left {
+  float: right; }
+
+.inline {
+  display: inline; }
+
+.inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 100%;
+  *display: inline; }
+
+.block {
+  display: block; }
+
+/*
+----------------------
+alignments and flexbox
+----------------------
+*/
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.marginauto {
+  margin: 0 auto !important; }
+
+.valign-top {
+  vertical-align: top !important; }
+
+.valign-middle, .valign-middle-children > * {
+  vertical-align: middle !important; }
+
+.valign-bottom {
+  vertical-align: bottom !important; }
+
+.fullwidth {
+  width: 100% !important; }
+
+.halfwidth {
+  width: 50% !important; }
+
+.fullheight {
+  height: 100% !important; }
+
+.padding-right {
+  padding-right: 15px !important; }
+
+/* Row with equal height columns -------------------------------------------------- */
+.vertical-align-all {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+@media (min-width: 768px) {
+  .vertical-align-no-xs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+
+@media (max-width: 991px) {
+  .vertical-align-no-md {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+
+@media (min-width: 992px) {
+  .vertical-align-no-sm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .row-eq-height-no-sm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media (min-width: 1200px) {
+  .row-eq-height, .row-eq-height-no-md {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media (min-width: 768px) {
+  .vertical-align-no-xs {
+    margin: 0 auto;
+    /* IE9 */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+
+@media (min-width: 992px) {
+  .vertical-align-no-sm {
+    /* NO IE9 */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; } }
+
+.only-vertical-align {
+  /* NO IE9 */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  color: #000;
+  background: #fff;
+  font: 18px/1.4 "GTWalsheimPro", sans-serif;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top; }
+
+.gm-style img {
+  max-width: none; }
+
+@media only screen and (min-width: 1025px) {
+  a[href^=tel],
+  a[href^=skype],
+  a[href^=sms] {
+    cursor: default;
+    pointer-events: none; } }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: url(../../assets/images/EWRFooter-v4.png) bottom left no-repeat, url(../../assets/images/Ewr-t.jpg) bottom left no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  height: 100%;
+  position: relative;
+  font-size: 18px;
+  line-height: 1.4; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "GTWalsheimProBold", sans-serif;
+  margin: 0 0 25px;
+  color: inherit;
+  color: #283282; }
+
+h1 {
+  font-size: 40px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 25px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 17px; }
+
+h6 {
+  font-size: 15px; }
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 24px; }
+  h2 {
+    font-size: 21px; }
+  h3 {
+    font-size: 18px; }
+  h4 {
+    font-size: 15px; }
+  h5 {
+    font-size: 12px; }
+  h6 {
+    font-size: 11px; } }
+
+p {
+  margin: 0 0 25px; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s linear; }
+  a:hover, a:focus {
+    text-decoration: none;
+    /* color: darken($default-link-color, 15%); */
+    color: #65b4ff; }
+
+input, select, button, textarea {
+  outline: none; }
+
+ul, ol, li {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  margin: 25px 0; }
+
+ul li {
+  list-style: disc; }
+
+ol li {
+  list-style: decimal; }
+
+ul, li, ol {
+  line-height: 1.4;
+  padding-left: 20px; }
+  ul.unstyled, li.unstyled, ol.unstyled {
+    list-style-type: none; }
+
+dl {
+  border: 3px double #ccc;
+  padding: 0.5em; }
+
+dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: #ff2d46; }
+
+dt::after {
+  content: ":"; }
+
+dd {
+  margin: 0 0 0 110px;
+  padding: 0 0 0.5em 0; }
+
+button {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: "GTWalsheimPro", sans-serif; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* responsive table */
+/* responsive using desktop first approach */
+.responsiveTbl table {
+  text-align: center;
+  width: 100%;
+  white-space: normal;
+  word-break: break-all; }
+
+tr {
+  background: transparent; }
+
+th {
+  padding: 15px 20px;
+  vertical-align: middle;
+  background: #283282;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 25px 20px; }
+  th:nth-child(2) {
+    text-align: left; }
+
+td {
+  padding: 15px 20px;
+  vertical-align: middle; }
+  td:nth-child(2) {
+    text-align: left; }
+
+.price {
+  border: 1px solid #283282;
+  border-radius: 25px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px;
+  min-width: 100px;
+  text-align: center; }
+
+.btn {
+  border: 1px solid #283282;
+  border-radius: 25px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px;
+  min-width: 100px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  background: #283282;
+  transition: box-shadow 0.3s linear; }
+
+@media only screen and (max-width: 767px) {
+  .responsiveTbl {
+    overflow: auto; }
+    .responsiveTbl table {
+      width: 100%; } }
+
+body input[type="text"],
+body input[type="password"],
+body input[type="tel"],
+body input[type="number"],
+body input[type="email"],
+body textarea {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -o-border-radius: 7px;
+  background: #fff;
+  padding: 16px 30px 16px 45px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  font-family: "GTWalsheimPro", sans-serif; }
+  body input[type="text"]:hover,
+  body input[type="password"]:hover,
+  body input[type="tel"]:hover,
+  body input[type="number"]:hover,
+  body input[type="email"]:hover,
+  body textarea:hover {
+    background-color: #e9f2ff;
+    -moz-transition: 0.3s ease-in all;
+    -ms-transition: 0.3s ease-in all;
+    -webkit-transition: 0.3s ease-in all;
+    transition: 0.3s ease-in all; }
+
+body textarea {
+  padding: 15px;
+  resize: none; }
+
+body main .formContainer {
+  background: rgba(233, 242, 255, 0.9);
+  padding: 60px;
+  text-align: center;
+  border-radius: 10px;
+  clear: both;
+  float: left;
+  margin: 0 auto;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 100%;
+  *display: inline;
+  width: 100%;
+  margin-top: 120px; }
+
+body main .formContainer.status {
+  margin-top: 20px !important; }
+
+body main .row {
+  position: relative;
+  margin: 15px 0 0; }
+  body main .row .seperator {
+    padding: 1px; }
+    body main .row .seperator:before {
+      content: '';
+      width: 40%;
+      height: 1px;
+      background: #000;
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 0; }
+    body main .row .seperator:after {
+      content: '';
+      width: 40%;
+      height: 1px;
+      background: #000;
+      display: block;
+      position: absolute;
+      top: 12px;
+      right: 0; }
+  body main .row label {
+    display: none; }
+  body main .row .icon {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    color: #283282;
+    font-size: 20px; }
+
+body main .buttonsContainer {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto; }
+
+body main .buttonsContainerfullwidth {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+body main form, body main .form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px; }
+
+.btn {
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s linear;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -o-border-radius: 7px; }
+
+.errMsg {
+  background: transparent;
+  color: #ff2d46;
+  border: 2px solid #ff2d46;
+  text-decoration: none;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s linear;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -o-border-radius: 7px;
+  display: block; }
+
+.successMsg {
+  background: transparent;
+  color: #6ec895;
+  border: 2px solid #6ec895;
+  text-decoration: none;
+  padding: 10px 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s linear;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -o-border-radius: 7px;
+  display: block; }
+
+.offscreen {
+  display: none; }
+
+.btn-primary {
+  background: #283282; }
+  .btn-primary:hover {
+    background: #65b4ff;
+    color: #fff; }
+  .btn-primary:focus {
+    background: #6ec895;
+    color: #fff; }
+
+.btn-secondary {
+  background: #6ec895; }
+  .btn-secondary:hover {
+    background: #65b4ff;
+    color: #fff; }
+  .btn-secondary:focus {
+    background: #6ec895;
+    color: #fff; }
+
+.btn-error {
+  background: transparent;
+  color: #ff2d46;
+  border: 2px solid #ff2d46; }
+
+.logout {
+  background-color: #6ec895;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 15px; }
+
+.nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #6ec895;
+  color: #fff;
+  align-items: center;
+  justify-content: inherit;
+  padding: 10px 25px;
+  flex-grow: 1;
+  background-image: url(../../assets/images/EWRStickyHeader.PNG);
+  background-repeat: no-repeat;
+  background-position: top right;
+  max-height: 60px; }
+  .nav .logo {
+    margin: 0 0 0 0;
+    flex-grow: 2; }
+  .nav ul {
+    list-style-type: none;
+    justify-content: flex-end;
+    flex-grow: 2;
+    text-align: right; }
+    .nav ul li {
+      list-style-type: none;
+      display: inline-block; }
+      .nav ul li a:hover {
+        color: #fff;
+        text-decoration: underline; }
+  .nav .logo img {
+    max-width: 190px;
+    margin: 0 40px 0; }
+  .nav .logout {
+    color: #fff;
+    flex-grow: 2;
+    text-align: right; }
+  .nav .logoutlink {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-direction: column;
+    background-color: #6ec895;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    align-items: center;
+    padding: 5px 15px;
+    margin-right: 0;
+    flex-direction: row; }
+    .nav .logoutlink * {
+      color: #fff; }
+    .nav .logoutlink:hover {
+      -moz-transition: 3s;
+      -ms-transition: 3s;
+      -webkit-transition: 3s;
+      transition: 3s;
+      background-color: #ff2d46; }
+
+footer {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 60px;
+  position: relative; }
+  footer * {
+    color: #fff; }
+
+#wrapper {
+  width: 100%;
+  position: relative; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: table; }
+  main .wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    padding: 0 25px; }
+  main .logo img {
+    width: 320px;
+    margin: 15px auto; }
+
+.content {
+  text-align: left;
+  white-space: normal;
+  word-break: break-all; }
+  .content a {
+    color: #283282; }
+
+.largeContainer {
+  max-width: 100% !important; }
+
+.status {
+  padding: 20px !important; }
+
+.ApplicationDetails {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: left; }
+  .ApplicationDetails h3 {
+    margin: 0;
+    padding: 0; }
+  .ApplicationDetails a {
+    color: #283282; }
+  .ApplicationDetails .ApplicationStatusCaseNumber {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    align-items: flex-start;
+    padding: 5px 15px;
+    margin-right: 20px; }
+  .ApplicationDetails .ApplicationStatusLoggedInUser {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    flex-direction: row;
+    background-color: #6ec895;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 5px 15px;
+    margin-right: 20px;
+    min-height: 70px; }
+    .ApplicationDetails .ApplicationStatusLoggedInUser h3 {
+      color: #fff; }
+    .ApplicationDetails .ApplicationStatusLoggedInUser .icon {
+      vertical-align: top;
+      display: -moz-inline-stack;
+      display: inline-block;
+      zoom: 100%;
+      *display: inline;
+      margin-right: 10px; }
+  .ApplicationDetails .ApplicationLogmeOut {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-direction: column;
+    background-color: #6ec895;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    align-items: flex-start;
+    padding: 5px 15px;
+    margin-right: 0; }
+    .ApplicationDetails .ApplicationLogmeOut * {
+      color: #fff; }
+  .ApplicationDetails .ApplicationStatusCaseManager {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    align-items: flex-start;
+    padding: 5px 15px; }
+  .ApplicationDetails .logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-grow: 2; }
+
+.ProgressBarContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .ProgressBarContainer ul {
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    font-size: 16px;
+    line-height: 1;
+    margin: 10px auto 20px 0;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .ProgressBarContainer ul strong {
+      font-size: 14px;
+      display: block;
+      line-height: 1.4; }
+    .ProgressBarContainer ul > li {
+      position: relative;
+      display: block;
+      /* border: 1px solid #ddd; */
+      padding: 12px 0px 12px 25px;
+      width: 16.6%;
+      height: 60px; }
+      .ProgressBarContainer ul > li span {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        height: 100%; }
+  .ProgressBarContainer ul > li {
+    float: left;
+    overflow: hidden;
+    color: #ccc;
+    background: #eeeeee; }
+  .ProgressBarContainer ul .completed {
+    color: #fff;
+    background: #6ec895; }
+  .ProgressBarContainer ul .current {
+    color: #fff;
+    background: #65b4ff; }
+  .ProgressBarContainer ul .rejected {
+    color: #fff;
+    background: #ff2d46; }
+  .ProgressBarContainer ul .accepted {
+    color: #fff;
+    background: #6ec895; }
+  .ProgressBarContainer ul .remaining {
+    color: #ccc;
+    background: #eeeeee; }
+  .ProgressBarContainer ul li a {
+    color: inherit; }
+  .ProgressBarContainer ul li > span:after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid transparent;
+    border-left-color: #fff;
+    border-width: 30px;
+    top: -5px;
+    z-index: 1;
+    border-left-color: #fff;
+    border-width: 35px; }
+  .ProgressBarContainer ul li > span:before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid transparent;
+    border-left-color: #fff;
+    border-width: 30px;
+    z-index: 2; }
+  .ProgressBarContainer ul li:first-child {
+    -webkit-border-top-left-radius: 7px;
+    -moz-border-top-left-radius: 7px;
+    -ms-border-top-left-radius: 7px;
+    border-top-left-radius: 7px;
+    -o-border-top-left-radius: 7px;
+    -webkit-border-bottom-left-radius: 7px;
+    -moz-border-bottom-left-radius: 7px;
+    -ms-border-bottom-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    -o-border-bottom-left-radius: 7px; }
+    .ProgressBarContainer ul li:first-child > span:after {
+      display: none; }
+    .ProgressBarContainer ul li:first-child > span:before {
+      display: none; }
+    .ProgressBarContainer ul li:first-child i {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: solid transparent; }
+  .ProgressBarContainer ul li:last-child {
+    -webkit-border-top-right-radius: 7px;
+    -moz-border-top-right-radius: 7px;
+    -ms-border-top-right-radius: 7px;
+    border-top-right-radius: 7px;
+    -o-border-top-right-radius: 7px;
+    -webkit-border-bottom-right-radius: 7px;
+    -moz-border-bottom-right-radius: 7px;
+    -ms-border-bottom-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    -o-border-bottom-right-radius: 7px; }
+    .ProgressBarContainer ul li:last-child i {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: solid transparent; }
+  .ProgressBarContainer ul li.completed + li > span:before {
+    border-left-color: #6ec895; }
+  .ProgressBarContainer ul li.current + li > span:before {
+    border-left-color: #65b4ff; }
+  .ProgressBarContainer ul li.rejected + li > span:before {
+    border-left-color: #ff2d46; }
+  .ProgressBarContainer ul li.accepted + li > span:before {
+    border-left-color: #6ec895; }
+  .ProgressBarContainer ul li.remaining + li > span:before {
+    border-left-color: #eeeeee; }
+  .ProgressBarContainer ul li + li > span:before {
+    border-left-color: #eeeeee; }
+
+.ApplicationStatusContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: left;
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .ApplicationStatusContainer .ApplicationStatus {
+    flex-grow: 2;
+    margin-right: 20px; }
+  .ApplicationStatusContainer .ApplicationStatusValue {
+    clear: both;
+    background-color: #fff;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 15px;
+    font-size: 18px;
+    font-family: "GTWalsheimPro", sans-serif;
+    color: #000;
+    text-align: center; }
+    .ApplicationStatusContainer .ApplicationStatusValue strong span {
+      font-family: "GTWalsheimProBold", sans-serif;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Rejected {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #ff2d46;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Checkingdocuments {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #fbb40a;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .UnderReview {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #e7750a;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Confirmed {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #65b4ff;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Awaiting {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #000;
+      background-color: #e9f2ff;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .InValuation {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #283282;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Accepted {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #6ec895;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+    .ApplicationStatusContainer .ApplicationStatusValue .Completed {
+      font-family: "GTWalsheimProBold", sans-serif;
+      color: #fff;
+      background-color: #6ec895;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      border-radius: 7px;
+      -o-border-radius: 7px;
+      padding: 3px 15px; }
+  .ApplicationStatusContainer .descriptionContainer {
+    background-color: #fff;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 15px; }
+
+.ApplicationContactDetails {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -o-border-radius: 7px;
+  align-items: flex-start;
+  padding: 15px; }
+  .ApplicationContactDetails a {
+    color: #283282; }
+
+.copyrightContainer {
+  margin-top: 15px !important; }
+  .copyrightContainer h4 {
+    margin-bottom: 0; }
+
+#stepApplicationReceived #step1 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepApplicationReceived #step1 + li > span:before {
+    border-left-color: #65b4ff; }
+
+#statusApplicationReceived .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #e7750a; }
+
+#stepAwaitingconfirmation #step1 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepAwaitingconfirmation #step1 + li > span:before {
+    border-left-color: #65b4ff; }
+
+#statusAwaitingconfirmation .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #e7750a; }
+
+#stepCheckingdocuments #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepCheckingdocuments #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepCheckingdocuments #step2 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepCheckingdocuments #step2 + li > span:before {
+    border-left-color: #65b4ff; }
+
+#statusCheckingdocuments .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #fbb40a; }
+
+#stepApplicationconfirmed #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationconfirmed #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationconfirmed #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationconfirmed #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationconfirmed #step3 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepApplicationconfirmed #step3 + li > span:before {
+    border-left-color: #65b4ff; }
+
+#statusApplicationconfirmed .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #65b4ff; }
+
+#stepAwaitingfinaldecision #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepAwaitingfinaldecision #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepAwaitingfinaldecision #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepAwaitingfinaldecision #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepAwaitingfinaldecision #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepAwaitingfinaldecision #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepAwaitingfinaldecision #step4 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepAwaitingfinaldecision #step4 + li > span:before {
+    border-left-color: #65b4ff; }
+
+#statusAwaitingfinaldecision .ApplicationStatusValue span {
+  color: #000;
+  background-color: #e9f2ff; }
+
+#stepApplicationrejected #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationrejected #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationrejected #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationrejected #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationrejected #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationrejected #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationrejected #step4 {
+  color: #fff;
+  background: #ff2d46; }
+  #stepApplicationrejected #step4 + li > span:before {
+    border-left-color: #ff2d46; }
+
+#statusApplicationrejected .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #ff2d46; }
+
+#stepApplicationrejectedandreferredtoDfT #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationrejectedandreferredtoDfT #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationrejectedandreferredtoDfT #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationrejectedandreferredtoDfT #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationrejectedandreferredtoDfT #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationrejectedandreferredtoDfT #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationrejectedandreferredtoDfT #step4 {
+  color: #fff;
+  background: #ff2d46; }
+  #stepApplicationrejectedandreferredtoDfT #step4 + li > span:before {
+    border-left-color: #ff2d46; }
+
+#statusApplicationrejectedandreferredtoDfT .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #ff2d46; }
+
+#stepApplicationwithdrawn #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationwithdrawn #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationwithdrawn #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationwithdrawn #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationwithdrawn #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationwithdrawn #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationwithdrawn #step4 {
+  color: #fff;
+  background: #ff2d46; }
+  #stepApplicationwithdrawn #step4 + li > span:before {
+    border-left-color: #ff2d46; }
+
+#statusApplicationwithdrawn .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #ff2d46; }
+
+#stepExpired #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepExpired #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepExpired #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepExpired #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepExpired #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepExpired #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepExpired #step4 {
+  color: #fff;
+  background: #ff2d46; }
+  #stepExpired #step4 + li > span:before {
+    border-left-color: #ff2d46; }
+
+#statusExpired .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #ff2d46; }
+
+#stepAccepted #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepAccepted #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepAccepted #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepAccepted #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepAccepted #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepAccepted #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepAccepted #step4 {
+  color: #fff;
+  background: #6ec895; }
+  #stepAccepted #step4 + li > span:before {
+    border-left-color: #6ec895; }
+
+#statusAccepted .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #6ec895; }
+
+#stepInvaluation #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepInvaluation #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepInvaluation #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepInvaluation #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepInvaluation #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepInvaluation #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepInvaluation #step4 {
+  color: #fff;
+  background: #6ec895; }
+  #stepInvaluation #step4 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepInvaluation #step5 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepInvaluation #step5 + li > span:before {
+    border-left-color: #65b4ff; }
+
+#statusInvaluation .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #283282; }
+
+#stepInvaluation #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepInvaluation #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepInvaluation #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepInvaluation #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepInvaluation #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepInvaluation #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepInvaluation #step4 {
+  color: #fff;
+  background: #6ec895; }
+  #stepInvaluation #step4 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepInvaluation #step5 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepInvaluation #step5 + li > span:before {
+    border-left-color: #65b4ff; }
+
+#statusInvaluation .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #283282; }
+
+#stepPropertyacquisitionprocess #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepPropertyacquisitionprocess #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepPropertyacquisitionprocess #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepPropertyacquisitionprocess #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepPropertyacquisitionprocess #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepPropertyacquisitionprocess #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepPropertyacquisitionprocess #step4 {
+  color: #fff;
+  background: #6ec895; }
+  #stepPropertyacquisitionprocess #step4 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepPropertyacquisitionprocess #step5 {
+  color: #fff;
+  background: #6ec895; }
+  #stepPropertyacquisitionprocess #step5 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepPropertyacquisitionprocess #step6 {
+  color: #fff;
+  background: #6ec895; }
+  #stepPropertyacquisitionprocess #step6 + li > span:before {
+    border-left-color: #6ec895; }
+
+#statusPropertyacquisitionprocess .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #6ec895; }
+
+#stepApplicationcompletedandpropertyacquired #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationcompletedandpropertyacquired #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationcompletedandpropertyacquired #step2 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationcompletedandpropertyacquired #step2 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationcompletedandpropertyacquired #step3 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationcompletedandpropertyacquired #step3 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationcompletedandpropertyacquired #step4 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationcompletedandpropertyacquired #step4 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationcompletedandpropertyacquired #step5 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationcompletedandpropertyacquired #step5 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationcompletedandpropertyacquired #step6 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationcompletedandpropertyacquired #step6 + li > span:before {
+    border-left-color: #6ec895; }
+
+#statusApplicationcompletedandpropertyacquired .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #6ec895; }
+
+.Contact .Link {
+  background-color: #6ec895;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 10px; }
+  .Contact .Link:hover {
+    background-color: #65b4ff;
+    transition: 0.3s ease-in all; }
+
+.Getintouch .mailLink {
+  color: #000;
+  font-weight: bold; }
+
+.Getintouch .Link {
+  background-color: #6ec895;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 10px; }
+  .Getintouch .Link:hover {
+    background-color: #65b4ff;
+    transition: 0.3s ease-in all; }
+
+.Getintouch h1 {
+  color: #000; }
+
+.Getintouch address {
+  font-style: normal; }
+
+.Forgot .Link {
+  background-color: #6ec895;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 10px; }
+
+.Forgot .icon {
+  background-color: #6ec895;
+  color: #fff;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 100%;
+  *display: inline;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  -o-border-radius: 50px;
+  padding: 5px 15px;
+  margin: 0 10px;
+  width: 50px;
+  height: 70px; }
+
+.Forgot .list {
+  max-width: 900px;
+  text-align: left;
+  margin: 0 auto; }
+  .Forgot .list li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 40px; }
+    .Forgot .list li:before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0;
+      background-image: url(../../assets/images/EWRBullets.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px;
+      width: 18px;
+      height: 18px; }
+
+.Denied .icon {
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px;
+  -o-border-radius: 60px;
+  color: #fff;
+  background-color: #ff2d46;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  font-size: 16px; }
+
+.Login .LoginImage {
+  background-color: #283282;
+  color: #fff;
+  vertical-align: top;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 100%;
+  *display: inline;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  -o-border-radius: 50px;
+  padding: 5px;
+  margin: 25px;
+  width: 40px;
+  height: 40px; }
+
+.Login .spinner {
+  max-width: 50px;
+  margin: 15px auto; }
+
+.Logout .icon {
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px;
+  -o-border-radius: 60px;
+  color: #fff;
+  background-color: #6ec895;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  font-size: 16px; }
+
+.megamenuToggle {
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  margin: 14px 25px 0; }
+  .megamenuToggle h3 {
+    color: #fff; }
+
+.Megamenu {
+  width: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 320px;
+  width: 100%;
+  background: #283282;
+  color: #fff;
+  height: 100%;
+  z-index: 9999;
+  overflow: hidden;
+  transition: max-width 0.3s ease;
+  /* Adjust the duration and easing as needed */ }
+  .Megamenu h3 {
+    display: block;
+    padding: 10px 20px 0;
+    color: #fff;
+    margin: 10px 0; }
+  .Megamenu a {
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid #121951; }
+  .Megamenu .icon {
+    cursor: pointer;
+    margin: 0 10px 0 0; }
+
+.Megamenu.hidden {
+  max-width: 0; }
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-size: cover !important;
+    font-size: 16px; }
+  main .formContainer {
+    margin-top: 25px !important;
+    padding: 20px !important; }
+  .Login .LoginImage {
+    margin: 5px; }
+  main .logo img {
+    max-width: 220px; }
+  .Denied .icon {
+    width: 40px;
+    height: 40px; }
+  .Forgot .Link {
+    display: block;
+    text-align: center;
+    margin: 10px 0; }
+  .Getintouch .Link {
+    display: block;
+    text-align: center;
+    margin: 10px 0; }
+  .Forgot .icon {
+    width: 20px;
+    height: 40px; }
+  .Contact .Link {
+    display: block;
+    text-align: center;
+    margin: 10px 0; }
+  .Contact .row {
+    width: 100% !important;
+    padding-right: 0 !important; }
+  .ApplicationStatusValue span {
+    display: block; }
+  .nav .logoutlink {
+    padding: 5px 4px !important; }
+  .btn {
+    padding: 10px 15px; }
+  button {
+    font-size: 16px; }
+  body input[type="text"],
+  body input[type="password"],
+  body input[type="tel"],
+  body input[type="number"],
+  body input[type="email"],
+  body textarea {
+    padding: 12px 30px 12px 45px;
+    font-size: 16px; }
+  body main .row .icon {
+    top: 12px; }
+  .ProgressBarContainer ul {
+    margin-left: 3px;
+    display: none; }
+  .ProgressBarContainer ul > li {
+    margin-left: -3px; } }
+
+@media only screen and (min-width: 1340px) {
+  .ApplicationStatusContainer .descriptionContainer {
+    min-height: 260px; } }
+
+@media only screen and (max-width: 1340px) {
+  body {
+    background-size: cover !important;
+    background-position: 50% 162%; }
+  .ApplicationDetails .logo {
+    display: none; }
+  .ApplicationDetails {
+    justify-content: flex-start; }
+    .ApplicationDetails .ApplicationStatusCaseManager {
+      flex-grow: 2;
+      margin-right: 0;
+      margin-bottom: 15px; }
+    .ApplicationDetails .ApplicationStatusLoggedInUser {
+      margin-bottom: 15px; } }
+
+@media only screen and (max-width: 767px) {
+  .ApplicationDetails .logo {
+    display: none; }
+  .ApplicationDetails {
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .ApplicationDetails > div {
+      width: 100%;
+      margin-right: 0 !important;
+      margin-bottom: 15px; }
+  .ApplicationStatusContainer .descriptionContainer {
+    margin: 0 0 20px 0; }
+  .ApplicationDetails .ApplicationLogmeOut {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; }
+  .ProgressBarContainer ul {
+    margin: 0; }
+    .ProgressBarContainer ul > li {
+      position: relative;
+      display: block;
+      /* border: 1px solid #ddd; */
+      padding: 12px 20px;
+      width: 50%;
+      margin-bottom: 20px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-border-radius: 4px; }
+      .ProgressBarContainer ul > li > span:after {
+        content: "";
+        border-width: 33px; }
+      .ProgressBarContainer ul > li > span:before {
+        content: "";
+        display: block;
+        border-width: 28px; }
+      .ProgressBarContainer ul > li > li:nth-child(2n) {
+        -webkit-border-top-right-radius: 4px;
+        -moz-border-top-right-radius: 4px;
+        -ms-border-top-right-radius: 4px;
+        border-top-right-radius: 4px;
+        -o-border-top-right-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -moz-border-bottom-right-radius: 4px;
+        -ms-border-bottom-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        -o-border-bottom-right-radius: 4px; } }
+
+@media only screen and (max-width: 1024px) {
+  .ApplicationStatusContainer {
+    flex-direction: column; }
+    .ApplicationStatusContainer .ApplicationStatusValue strong {
+      display: block;
+      width: 100%;
+      padding: 2px 0;
+      font-size: 16px; }
+      .ApplicationStatusContainer .ApplicationStatusValue strong span {
+        display: block; }
+    .ApplicationStatusContainer .ApplicationStatus {
+      margin-right: 0;
+      width: 100%; }
+      .ApplicationStatusContainer .ApplicationStatus .ApplicationStatusValue {
+        width: 100%; }
+    .ApplicationStatusContainer .ApplicationContactDetails {
+      width: 100%; }
+    .ApplicationStatusContainer .descriptionContainer {
+      width: 100%;
+      margin: 0 0 25px; } }
+
+@media only screen and (max-height: 800px) {
+  main .logo img {
+    max-width: 220px; }
+  body main .formContainer {
+    margin-top: 30px;
+    padding: 30px; }
+  .Login .LoginImage {
+    margin: 10px; } }
+
+@media only screen and (max-width: 400px) {
+  .logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; } }

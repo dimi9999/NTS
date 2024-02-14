@@ -1,0 +1,171 @@
+{
+    "value": [
+        {
+            "analytics": null,
+            "contentType": {
+                "additionalData": {},
+                "backingStore": {
+                    "returnOnlyChangedValues": false,
+                    "initializationCompleted": false
+                },
+                "id": "0x01001D5AEB745AC4964D8A024A4C50B43D1B",
+                "name": "Item",
+                "odataType": null
+            },
+            "documentSetVersions": null,
+            "driveItem": null,
+            "fields": {
+                "additionalData": {
+                    "@odata.etag": "\"4e0fb9cf-9c9a-4a10-bf75-a4d934f034d1,6\"",
+                    "field_1": "Open", //A002
+                    "field_3": "6 Milton Road", //A002B
+                    "field_8": 2.0, //A007
+                    "field_9": "2023-03-20T00:00:00Z",  //A008
+                    "field_10": "2023-03-20T00:00:00Z", //A009
+                    "field_13": "2023-04-02T23:00:00Z", //A012
+                    "field_18": "2023-04-17T23:00:00Z", //A017
+                    "field_25": "2023-05-01T23:00:00Z", //A024
+                    "field_28": "2024-05-01T23:00:00Z", //A027
+                    "field_30": "6, MILTON ROAD, BEDFORD,", //101
+                    "field_31": "MK40 2AY", //101A
+                    "field_32": "CS3 - Bedford North", //101B
+                    "field_34": "Bedford", //101D
+                    "field_35": "Residential", //101E
+                    "field_37": "100080027712", //10100
+                    "field_38": "Mrs",  //102P1A
+                    "field_39": "Soleil", //102P1B
+                    "field_40": "White",    //102P1C
+                    "field_44": "28197 ",   //102P100
+                    "field_45": "Mr",   //102P2A
+                    "field_46": "David",    //102P2B
+                    "field_47": "White",    //102P2C
+                    "field_50": "davewhite81@aol.com",  //102P2F
+                    "field_51": "28197",    //102P100
+                    "field_68": "Free to contact by email", //104
+                    "_x0041_oo4": true,  //A
+                    "_x0041_005": false, //A
+                    "_x0041_010": "2023-03-24T00:00:00Z", //A
+                    "_x0041_020": "Application confirmed", //A
+                    "_x0041_028": "Current", //A
+                    "A002A": "Application completed. Property acquired",
+                    "_x0041_003LookupId": "22", //A
+                    "_x0031_02P2D": "07989972073", //102P2D
+                    "A012A": "Contact made",
+                    "A012B": "2023-07-04T23:00:00Z",
+                    "A026c": "3802-06-29T23:00:00Z",
+                    "A027c": "3802-06-29T23:00:00Z",
+                    "Frontendaccess": "123456789",
+                    "ContentType": "Item",
+                    "Modified": "2024-01-16T10:55:17Z",
+                    "Created": "2023-07-06T09:01:52Z",
+                    "AuthorLookupId": "22",
+                    "EditorLookupId": "36",
+                    "_UIVersionString": "6.0",
+                    "Attachments": false,
+                    "Edit": "",
+                    "ItemChildCount": "0",
+                    "FolderChildCount": "0",
+                    "_ComplianceFlags": "",
+                    "_ComplianceTag": "",
+                    "_ComplianceTagWrittenTime": "",
+                    "_ComplianceTagUserId": ""
+                },
+                "backingStore": {
+                    "returnOnlyChangedValues": false,
+                    "initializationCompleted": false
+                },
+                "id": "61",
+                "odataType": null
+            },
+            "sharepointIds": null,
+            "versions": null,
+            "createdBy": {
+                "additionalData": {},
+                "application": null,
+                "backingStore": {
+                    "returnOnlyChangedValues": false,
+                    "initializationCompleted": false
+                },
+                "device": null,
+                "odataType": null,
+                "user": {
+                    "additionalData": {
+                        "email": "tim.miles-busin@eastwestrail.co.uk"
+                    },
+                    "backingStore": {
+                        "returnOnlyChangedValues": false,
+                        "initializationCompleted": false
+                    },
+                    "displayName": "Tim Miles- Busin",
+                    "id": "2b1cb0a6-52bb-42ac-9f95-e3db3a5ec50b",
+                    "odataType": null
+                }
+            },
+            "createdByUser": null,
+            "createdDateTime": "2023-07-06T09:01:52+00:00",
+            "description": null,
+            "eTag": "\"4e0fb9cf-9c9a-4a10-bf75-a4d934f034d1,6\"",
+            "lastModifiedBy": {
+                "additionalData": {},
+                "application": null,
+                "backingStore": {
+                    "returnOnlyChangedValues": false,
+                    "initializationCompleted": false
+                },
+                "device": null,
+                "odataType": null,
+                "user": {
+                    "additionalData": {
+                        "email": "dimitris.papakonstantinou@eastwestrail.co.uk"
+                    },
+                    "backingStore": {
+                        "returnOnlyChangedValues": false,
+                        "initializationCompleted": false
+                    },
+                    "displayName": "Dimitris Papakonstantinou",
+                    "id": "87ce66f1-9831-49c1-a173-a5e7b1d71cdd",
+                    "odataType": null
+                }
+            },
+            "lastModifiedByUser": null,
+            "lastModifiedDateTime": "2024-01-16T10:55:17+00:00",
+            "name": null,
+            "parentReference": {
+                "additionalData": {},
+                "backingStore": {
+                    "returnOnlyChangedValues": false,
+                    "initializationCompleted": false
+                },
+                "driveId": null,
+                "driveType": null,
+                "id": "a4d92bbd-1f3d-472c-b8c8-9805822bc622",
+                "name": null,
+                "odataType": null,
+                "path": null,
+                "shareId": null,
+                "sharepointIds": null,
+                "siteId": "eastwestrailwaycouk.sharepoint.com,e54ee2e7-169b-4719-bb86-13a6bdd93dc9,417c9f06-764f-4ae5-8b73-eaefae871556"
+            },
+            "webUrl": "https://eastwestrailwaycouk.sharepoint.com/sites/NTS6weeksprint/Lists/Application/61_.000",
+            "additionalData": {
+                "@odata.etag": "\"4e0fb9cf-9c9a-4a10-bf75-a4d934f034d1,6\"",
+                "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('eastwestrailwaycouk.sharepoint.com%2Ce54ee2e7-169b-4719-bb86-13a6bdd93dc9%2C417c9f06-764f-4ae5-8b73-eaefae871556')/lists('a3dc8575-bd83-4f59-8e47-7ef59170b95c')/items('61')/fields/$entity"
+            },
+            "backingStore": {
+                "returnOnlyChangedValues": false,
+                "initializationCompleted": false
+            },
+            "id": "61",
+            "odataType": "#microsoft.graph.listItem"
+        }
+    ],
+    "additionalData": {
+        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites('eastwestrailwaycouk.sharepoint.com%2Ce54ee2e7-169b-4719-bb86-13a6bdd93dc9%2C417c9f06-764f-4ae5-8b73-eaefae871556')/lists('a3dc8575-bd83-4f59-8e47-7ef59170b95c')/items(fields())"
+    },
+    "backingStore": {
+        "returnOnlyChangedValues": false,
+        "initializationCompleted": true
+    },
+    "odataCount": null,
+    "odataNextLink": null
+}
