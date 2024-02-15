@@ -57,22 +57,14 @@ import { useReducer } from "react";
                         You case manager will arrange a callback with you to verify your identity and authorise a PIN reset request. 
                         You will then receive your new PIN from your case manager.</p>
                     </div>
-
-                    {/*
                     <div className="row">
                         <div className="seperator"> Or </div>
                     </div>
-
-                     */}
-                    {/*  
                     <div className="row">
                       <p> 
                         Alternatively complete the following form to request a new pin
                       </p>
                     </div>
-                  
-
-                    {/* Last Name  
                     <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faPerson} className="icon" />
                       <input
@@ -82,8 +74,6 @@ import { useReducer } from "react";
                         required
                       />
                     </div>
-
-                      {/* First Name  
                       <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faPerson} className="icon" />
                       <input
@@ -93,8 +83,6 @@ import { useReducer } from "react";
                         required
                       />
                     </div>
-
-                     {/* Case Manager  
                      <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faAddressBook} className="icon" />
                       <input
@@ -104,8 +92,7 @@ import { useReducer } from "react";
                  
                       />
                     </div>
-
-                    {/* Email Address  
+ 
                     <div className="row float-left halfwidth padding-right">
                       <FontAwesomeIcon icon={faMailForward} className="icon" />
                       <input
@@ -115,14 +102,10 @@ import { useReducer } from "react";
                         required
                       />
                     </div>
-
-                   
-                    {/* Comments  
+                    
                     <div className="row float-left fullwidth padding-right">
                       <textarea name="message" cols="30" rows="5" placeholder="* Any comments you would like to add"></textarea>
                     </div>
-
-                    {/* Message  
                     {Message ? (
                       <div> 
                         <div className="row float-left fullwidth padding-right"> 
@@ -138,18 +121,13 @@ import { useReducer } from "react";
                         </div>
                       </div>
                     ) : null}
-                    
 
-                    {/* Submit Button  
                     <div className="row float-left fullwidth padding-right">
                       <button type="submit" className="btn btn-primary block">
                         Email us to request a new PIN
                       </button>
                     </div>
-                     */}
                   </form>
-
-                  
               </div>
               </section>
             </div>

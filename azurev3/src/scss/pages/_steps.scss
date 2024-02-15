@@ -84,6 +84,10 @@
         align-items: center;
         padding:5px 15px;
         min-height: 70px;
+
+        & strong {
+            font-size: 19px;
+        }
     }
  
     & .logo {
@@ -415,7 +419,7 @@ ul {
         @include border-radius(7px);
         align-items: flex-start;
         padding:15px;  
-        width: 480px;
+        width: 550px;
 
         & h3 {
             font-size: 19px;

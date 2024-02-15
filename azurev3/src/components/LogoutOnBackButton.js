@@ -8,8 +8,7 @@ const LogoutOnBackButton = () => {
 
   useEffect(() => {
     const handleBackButton = () => {
-      if (user.isAuthenticated) {
-        alert("test");
+      if (user?.isAuthenticated) {
         logout();
         navigate("/");
       }

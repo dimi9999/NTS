@@ -1,31 +1,19 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 import { RenderHeader } from "../components/Header";
-import RenderMegamenu from "../components/Megamenu";
+import   RenderMegamenu    from "../components/Megamenu";
 import { RenderMenu, RenderRoutes } from "../components/RenderNavigation";
 import { RenderFooter } from "../components/Footer";
+
+
+/* *********************** USE Graph API to Merge your Changes START *************************** */
+
+import pins from "../api/pins.json"; // Import the PINs JSON file
 
 const AuthContext = createContext();
 export const AuthData = () => useContext(AuthContext);
 
 export const AuthWrapper = () => {
   const [user, setUser] = useState({ name: "", isAuthenticated: false });
-
-  useEffect(() => {
-    const disableBackButton = (e) => {
-      e.preventDefault();
-      window.history.forward();
-    };
-
-    if (user.isAuthenticated) {
-      window.history.pushState(null, null, window.location.pathname);
-      window.addEventListener("popstate", disableBackButton);
-    }
-
-    return () => {
-      window.removeEventListener("popstate", disableBackButton);
-    };
-  }, [user.isAuthenticated]);
-  
 
   const login = (pin) => {
     return new Promise(async (resolve, reject) => {
@@ -39,16 +27,27 @@ export const AuthWrapper = () => {
               setUser({ ...matchingUser, isAuthenticated: true});
               resolve("Got User");
             } else {
-              reject("Sorry! You have entered an incorrect PIN. Please try again");
+              reject("You have entered an incorrect PIN. Please try again");
             }
           }
         )
+
+      /*const matchingUser = pins.find((user) => user.pin === pin);
+  
+      if (matchingUser) {
+        setUser({ ...matchingUser, isAuthenticated: true });
+        resolve("success");
+      } else {
+        reject("You have entered an Incorrect PIN. Please try again.");
+      }*/
     });
   };
 
   const logout = () => {
     setUser({ ...user, isAuthenticated: false });
   };
+
+  /* *********************** USE Graph API to Merge your Changes END *************************** */
 
   return (
     <AuthContext.Provider value={{ user, login, logout }}>

@@ -70,13 +70,19 @@ export const RenderMenu = () => {
 
       {user.isAuthenticated ? (
         <div className="menuItem">
+
+          {/* View Status Button */}
+          <Link className="statuslink" to={"/Step"}>
+          <FontAwesomeIcon icon={faUser} /> &nbsp; View your Status
+          </Link>
+          
+          {/* Logout Button */}
           <Link className="logoutlink" to={"/Logout"} onClick={logout}>
-          <FontAwesomeIcon icon={faSignOut} /> Log out
+          <FontAwesomeIcon icon={faSignOut} /> &nbsp; Log out
           </Link>
         </div>
       ) : (
         <div className="menuItem">
-           
         </div>
       )}
     </nav>

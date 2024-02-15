@@ -19,6 +19,10 @@
         flex-grow:2;
     }
 
+    & .menuItem {
+        @include flexbox;
+    }
+
     & ul {
         list-style-type: none;
         justify-content: flex-end;
@@ -49,6 +53,29 @@
     & .logoutlink {
         @include flexbox;
         flex-direction: column;
+        background-color:$red;
+        color:$white;
+        @include boxsizing;
+        @include border-radius(7px); 
+        align-items: center;
+        padding:5px 15px;
+        margin-right:0;
+        flex-direction: row;
+        margin-left:10px;
+
+        & * {
+            color:$white;
+        }
+
+        &:hover {
+            @include transition(3s);
+            background-color:$tomato;
+        }
+    }
+
+    & .statuslink {
+        @include flexbox;
+        flex-direction: column;
         background-color:$green;
         color:$white;
         @include boxsizing;
@@ -64,7 +91,7 @@
 
         &:hover {
             @include transition(3s);
-            background-color:$red;
+            background-color:$lightblue;
         }
     }
  }

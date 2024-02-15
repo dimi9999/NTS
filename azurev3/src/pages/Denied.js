@@ -22,7 +22,7 @@ export const Denied = () => {
                 <div className="row">
                     <div className="row">
                         <h1>Access Denied</h1>
-                        <p>You need to be logged in with our PIN in order to access this content</p>
+                        <p>You need to be logged in with your PIN in order to access this content</p>
                     </div>
                 </div>
                 <div className="row">
