@@ -1,0 +1,70 @@
+/*
+Popup Windows
+-------------
+*/
+
+.PopupContainer {
+    position: relative;
+    z-index: 9999;
+    text-align: center;
+    display: none;
+
+    & .modal-dialog {
+        position: absolute;
+        width: 90%;
+        margin: 80px auto;
+        max-width: 900px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%);
+
+        & .icon {
+            @include border-radius(60px);
+            color:$white;
+            background-color:$red;
+            width:60px;
+            height:60px;
+            padding:15px;
+            font-size:16px;
+            margin:0 0 20px;
+        }
+    }
+
+    & button {
+        width: auto!important;
+        background: none !important;
+        color: $black !important;
+        position: absolute;
+        top:10px;
+        right:10px;
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+
+        & span {
+                font-size: 38px;
+                top: -10px;
+                left: 34px;
+                position: absolute;
+            }
+        }
+     
+
+    & .modal-footer {
+        & button {
+                position: relative!important;
+                background: $green!important;
+                color: $white!important;
+                width:100%!important;
+                top:0;
+                left:0;
+
+                &:hover {
+                    background-color: $lightblue!important;
+                }
+            }
+        }
+    }
+ 

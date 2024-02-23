@@ -1,0 +1,50 @@
+
+/* custom radio buttons */
+.formContainer {
+	input[type="radio"] {
+		position: absolute;
+		left: -9999px;
+		+ {
+			label {
+				position: relative;
+				cursor: pointer;
+				padding: 0px 0 0 45px;
+				display: inline-block;
+				vertical-align: middle;
+				font-weight: 500;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					border: 2px solid $green;
+					width: 25px;
+					height: 25px;
+					background: $white;
+					display: inline-block;
+					vertical-align: middle;
+					border-radius: 50px;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: 5px;
+					left: 5px;
+					width: 15px;
+					height: 15px;
+					background: $green;
+					opacity: 0;
+					transform: scale(3);
+					transition: transform 0.3s linear, opacity 0.3s linear;
+					border-radius: 50px;
+				}
+			}
+		}
+		&:checked+label {
+			&:after {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+}

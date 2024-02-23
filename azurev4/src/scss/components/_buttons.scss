@@ -1,0 +1,105 @@
+// Buttons
+.btn,
+button[type="submit"],
+input[type="submit"],
+input[type="reset"],
+button[type="reset"],
+input[type="button"],
+button[type="button"]
+{
+    border: none;
+    color: $white;
+    text-decoration: none;
+    padding: 10px 30px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s linear;
+    background-color: $blue;
+    @include border-radius(7px); 
+
+    &:hover {
+        background-color:$green;
+    }
+}
+
+input[type="reset"],
+button[type="reset"] {
+    margin-bottom:10px;
+    background-color: $lightblue;
+}
+// Error Message
+.errMsg {
+    background: transparent;
+    color:$red;
+    border:2px solid $red;
+    text-decoration: none;
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s linear;
+    @include border-radius(7px); 
+    display: block;
+}
+
+// Success Message
+.successMsg {
+    background: transparent;
+    color:$green;
+    border:2px solid $green;
+    text-decoration: none;
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s linear;
+    @include border-radius(7px); 
+    display: block;
+}
+
+.offscreen {
+    display: none;
+}
+
+// Primary
+.btn-primary {
+    background: $blue;
+    &:hover {
+        background:$lightblue;
+        color:$white;
+    }
+
+    &:focus {
+        background:$green;
+        color:$white;
+    }
+}
+
+// Secondary
+    .btn-secondary {
+        background: $green;
+        &:hover {
+            background:$lightblue;
+            color:$white;
+        }
+
+        &:focus {
+            background:$green;
+            color:$white;
+    }
+}
+
+// Secondary
+.btn-error {
+    background: transparent;
+    color:$red;
+    border:2px solid $red;
+}
+ 
+
+// Logout Message
+.logout {
+    background-color: $green;
+    color:$white;
+    @include border-radius(5px);
+    padding:5px 15px;
+}
+
