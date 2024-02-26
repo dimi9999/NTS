@@ -16,7 +16,7 @@ export const Popup = () => {
     const { user, logout } = AuthData();
     return (
       <div>
-        <div className="overlay" onClick={logout}></div>
+        <div className="PopupOverlay" onClick={logout}></div>
         <div className="PopupContainer" onClick={logout}>
           <div className="modal-dialog" role="document" onClick={logout}>
             <div className="modal-content" onClick={logout}>

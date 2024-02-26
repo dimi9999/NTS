@@ -50,7 +50,7 @@ export const Getintouch = () => {
   return (
     <div className="Getintouch">
       {/* If sessions has ended then display popup and overlay */}
-      <Popup />
+  
       <main>
         <div className="wrapper">
           <div className="container">

@@ -74,6 +74,18 @@ const RenderMegamenu = () => {
                   Home
                 </Link>
               </div>
+              <div>
+                <Link to="/Terms" className="menu-item">
+                  <FontAwesomeIcon icon={faFileContract} className="icon" /> Terms
+                  &amp; Privacy
+                </Link>   
+              </div>
+              <div>
+                <Link to="/Getintouch" className="menu-item">
+                  <FontAwesomeIcon icon={faEnvelope} className="icon" />
+                  Contact us
+                </Link>
+              </div>
             </div>
           )}
         </div>
@@ -81,18 +93,6 @@ const RenderMegamenu = () => {
           <Link to="/Step" className="menu-item">
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
             View your Status
-          </Link>
-        </div>
-        <div>
-          <Link to="/Terms" className="menu-item">
-            <FontAwesomeIcon icon={faFileContract} className="icon" /> Terms
-            &amp; Privacy
-          </Link>
-        </div>
-        <div>
-          <Link to="/Getintouch" className="menu-item">
-            <FontAwesomeIcon icon={faEnvelope} className="icon" />
-            Contact us
           </Link>
         </div>
       </div>

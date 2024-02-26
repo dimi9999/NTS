@@ -17,15 +17,15 @@ function App() {
 
   // 4. Disable refresh and right click
   useEffect(() => {
-    const disableRightClick = (e) => {
-      e.preventDefault();
+  const disableRightClick = (e) => {
+  e.preventDefault();
   };
 
   window.addEventListener("contextmenu", disableRightClick);
-   return () => {
-       window.removeEventListener("contextmenu", disableRightClick);
-     };
-   }, []);
+  return () => {
+  window.removeEventListener("contextmenu", disableRightClick);
+  };
+  }, []);
 
   return (
     <div className="App">

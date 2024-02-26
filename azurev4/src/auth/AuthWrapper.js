@@ -23,8 +23,9 @@ export const AuthWrapper = () => {
       const timeoutId = setTimeout(() => {
          
         // ADD DISPLAY POPUP ALERT IN THE FUTURE displayAlert();
-        alert('Your session has timed out. Please log back in to view your application status');
-        logout(); 
+        // alert('Your session has timed out. Please log back in to view your application status');
+        displayAlert();
+        //logout(); 
       }, 600000); // 10 minutes TIMEOUT
       
       return () => clearTimeout(timeoutId);
@@ -36,7 +37,6 @@ export const AuthWrapper = () => {
   }, [user.isAuthenticated]);
 
  
-
   const login = (pin) => {
     return new Promise(async (resolve, reject) => {
       //Replace with environment variable for azure function uri
@@ -61,12 +61,12 @@ export const AuthWrapper = () => {
   // Display Alerts and Overlays
   const displayAlert = () => {
     const popupContainer = document.querySelector('.PopupContainer');
-    const overlay = document.querySelector('.overlay');
+    const popupoverlay = document.querySelector('.PopupOverlay');
     if (popupContainer) {
       popupContainer.style.display = 'block';
     }
-    if (overlay) {
-      overlay.style.visibility = 'visible';
+    if (popupoverlay) {
+      popupoverlay.style.visibility = 'visible';
     }
   };
 
