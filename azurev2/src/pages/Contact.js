@@ -1,6 +1,6 @@
 // 1. Importing Components
 import { useRef, useState } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import Logos from "../../src/components/Logos";
 import NavBar from "../../src/components/Navbar";
@@ -17,30 +17,30 @@ import {
 import { useReducer } from "react";
 
 // export default function Contact() {
-  export const Contact = () => {
+export const Contact = () => {
+  const [Message, setMessage] = useState(null);
+  const form = useRef();
 
-    const [Message, setMessage] = useState(null);
-    const form = useRef()
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs
-        .sendForm('service_ehr7f59', 'template_ty15vh5', form.current, {
-          publicKey: 'AzGz4b9yswpTcLCD4',
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!');
-            setMessage("Your request has been sent");
-            {}
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
-        e.target.reset();
-    };
+    emailjs
+      .sendForm("service_ehr7f59", "template_ty15vh5", form.current, {
+        publicKey: "AzGz4b9yswpTcLCD4",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setMessage("Your request has been sent");
+          {
+          }
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    e.target.reset();
+  };
 
   return (
     <div className="Contact">
@@ -50,15 +50,27 @@ import { useReducer } from "react";
             <div className="formContainer">
               <Logos />
               <section>
-              <div className="buttonsContainerfullwidth">
+                <div className="buttonsContainerfullwidth">
                   <form ref={form} onSubmit={sendEmail}>
                     <div className="row">
-                      <p> If you cannot locate your case manager’s email, please email <a className="Link" href="mailto:needtosell@eastwestrail.co.uk"> needtosell@eastwestrail.co.uk </a> to request a new PIN. 
-                        You case manager will arrange a callback with you to verify your identity and authorise a PIN reset request. 
-                        You will then receive your new PIN from your case manager.</p>
+                      <p>
+                        {" "}
+                        If you cannot locate your case manager’s email, please
+                        email{" "}
+                        <a
+                          className="Link"
+                          href="mailto:needtosell@eastwestrail.co.uk"
+                        >
+                          {" "}
+                          needtosell@eastwestrail.co.uk{" "}
+                        </a>{" "}
+                        to request a new PIN. You case manager will arrange a
+                        callback with you to verify your identity and authorise
+                        a PIN reset request. You will then receive your new PIN
+                        from your case manager.
+                      </p>
                     </div>
 
-                    
                     {/*
                     <div className="row">
                         <div className="seperator"> Or </div>
@@ -149,9 +161,7 @@ import { useReducer } from "react";
                     </div>
                      */}
                   </form>
-
-                  
-              </div>
+                </div>
               </section>
             </div>
           </div>
@@ -159,4 +169,4 @@ import { useReducer } from "react";
       </main>
     </div>
   );
-}
+};

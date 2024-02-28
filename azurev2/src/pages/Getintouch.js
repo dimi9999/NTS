@@ -16,8 +16,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useReducer } from "react";
 
+// 3. Import Authwrapper
+import { Popup } from "../../src/components/Popup";
+import { AuthData } from "../auth/AuthWrapper";
+
 // export default function Contact() {
 export const Getintouch = () => {
+  const { user } = AuthData();
   const [Message, setMessage] = useState(null);
   const form = useRef();
 
@@ -44,13 +49,15 @@ export const Getintouch = () => {
 
   return (
     <div className="Getintouch">
+      {/* If sessions has ended then display popup and overlay */}
+  
       <main>
         <div className="wrapper">
           <div className="container">
             <div className="formContainer">
               <Logos />
               <section>
-                <div className="buttonsContainerfullwidth">
+                <div className="buttonsContainerfullwidth align-left">
                   <div className="row">
                     <h1>Contact Us</h1>
                     <p>
@@ -59,14 +66,13 @@ export const Getintouch = () => {
                     </p>
                   </div>
                   <div className="row">
-                    <div class="responsiveTbl">
+                    <div>
                       <table>
                         <tbody>
                           <tr>
-                            <td className="align-right valign-top">
+                            <td className="align-left valign-top nopaddingleft">
                               <strong> Email </strong>
-                            </td>
-                            <td className="align-left valign-top">
+                              <br />
                               <a
                                 href="mailto:needtosell@eastwestrail.co.uk"
                                 className="mailLink"
@@ -77,10 +83,9 @@ export const Getintouch = () => {
                             </td>
                           </tr>
                           <tr>
-                            <td className="align-right valign-top">
+                            <td className="align-left valign-top nopaddingleft">
                               <strong> Address </strong>
-                            </td>
-                            <td className="align-left valign-top">
+                              <br />
                               <address>
                                 East West Railway Company Ltd <br />
                                 The Quadrant <br />
@@ -94,11 +99,7 @@ export const Getintouch = () => {
                       </table>
                     </div>
                   </div>
-                  <div className="row">
-                    <Link to="/" className="btn btn-secondary block">
-                      Back to the Login Page.
-                    </Link>
-                  </div>
+                  
                 </div>
               </section>
             </div>

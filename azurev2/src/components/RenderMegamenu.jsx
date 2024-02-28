@@ -25,7 +25,7 @@ const RenderMegamenu = () => {
     <div>
       <div className="megamenuToggle" onClick={toggleMenu}>
         <h3>
-          <FontAwesomeIcon icon={faBars} className="icon" />  
+          <FontAwesomeIcon icon={faBars} className="icon" />
         </h3>
       </div>
       <div className={`Megamenu ${menuVisible ? "visible" : "hidden"}`}>

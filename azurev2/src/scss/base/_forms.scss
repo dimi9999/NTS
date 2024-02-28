@@ -5,10 +5,11 @@ body {
 & input[type="tel"],
 & input[type="number"],
 & input[type="email"],
+& select,
 & textarea {
     @include border-radius (7px);
     background:$white;
-    padding: 16px 30px 16px 45px;
+    padding: 16px 30px 16px 16px;
     width:100%;
     border:none;
     font-size: 18px;
@@ -19,10 +20,36 @@ body {
         @include transition(0.3s ease-in all);
     }
  }
+
+ & fieldset {
+    border-style:solid;
+    border-color: $green;
+    margin: 20px 0;
+    padding: 10px 20px;
+ }
+
+ & legend {
+    font-weight: bold;
+    color: $blue;
+    margin: 20px 0;
+    padding: 0 20px;
+    font-size: 25px;
+ }
+
+ & label {
+    @include inline-block;
+    margin:0 0 5px;
+ }
  textarea {
     padding:15px;
     resize: none;
  }
+
+ & .form-group,
+ & .input-group,
+ & .input-group-btn {
+    margin: 10px 0;
+}
 
 main {
 
@@ -31,12 +58,10 @@ main {
     padding: 60px;
     text-align: center;
     border-radius: 10px;
-    clear: both;
-    float: left;
     margin: 0 auto;
     @include inline-block;
     width: 100%;
-    margin-top:120px;
+    margin-top:120px; 
 }
 
 & .formContainer.status {
@@ -72,11 +97,7 @@ main {
         
         }
     }
-
-    & label {
-        display: none;
-    }
-
+    
     & .icon {
         position: absolute;
         top:17px;
@@ -85,23 +106,23 @@ main {
         font-size:20px;
     }
 }
-    & .buttonsContainer {
-        max-width: 450px;
-        margin-left:auto;
-        margin-right:auto;
-    }
+            & .buttonsContainer {
+                max-width: 520px;
+                margin-left:auto;
+                margin-right:auto;
+            }
 
-    & .buttonsContainerfullwidth {
-        max-width: 100%;
-        margin-left:auto;
-        margin-right:auto;
-    }
+            & .buttonsContainerfullwidth {
+                max-width: 100%;
+                margin-left:auto;
+                margin-right:auto;
+            }
 
-    & form, & .form {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 900px;
+            & .form {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 900px;
 
-    }
+            }
     }
 }

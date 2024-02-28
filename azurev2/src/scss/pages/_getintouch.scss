@@ -1,9 +1,25 @@
 // Get in touch
 .Getintouch {
-    & .mailLink {
-        color:$black;
-        font-weight: bold;
+
+    & table {
+        border:none;
+        & td {
+            border: none;
+        }
     }
+   
+    user-select: none;
+
+    & input[type="text"],
+    & input[type="password"],
+    & input[type="tel"],
+    & input[type="number"],
+    & input[type="email"],
+    & textarea {
+        padding: 16px 30px 16px 45px;
+    }
+    
+    
     & .Link {
         background-color: $green;
         color:$white;

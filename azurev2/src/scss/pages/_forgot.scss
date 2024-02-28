@@ -1,6 +1,18 @@
 
 // Forgotten
 .Forgot {
+    
+    user-select: none;
+
+    & input[type="text"],
+    & input[type="password"],
+    & input[type="tel"],
+    & input[type="number"],
+    & input[type="email"],
+    & textarea {
+        padding: 16px 30px 16px 45px;
+    }
+    
     & .Link {
         background-color: $green;
         color:$white;

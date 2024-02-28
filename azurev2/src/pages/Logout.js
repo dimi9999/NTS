@@ -19,10 +19,10 @@ export const Logout = () => {
               <FontAwesomeIcon icon={faAddressBook} className="icon" />
               <div className="buttonsContainer">
                 <div className="row">
-                    <div className="row">
-                        <h1>Logout Succesfull</h1>
-                        <p>You have logged out from NTS.</p>
-                    </div>
+                  <div className="row">
+                    <h1>Logout Succesfull</h1>
+                    <p>You have logged out from NTS.</p>
+                  </div>
                 </div>
                 <div className="row">
                   <Link to="/" className="btn btn-primary block">

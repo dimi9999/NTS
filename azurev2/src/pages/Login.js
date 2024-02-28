@@ -4,9 +4,9 @@ import React, { useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthData } from "../auth/AuthWrapper";
 import { Link } from "react-router-dom";
-import Logos from '../components/Logos';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faKey, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import Logos from "../components/Logos";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faKey, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import spinner from "../assets/images/loading.gif";
 
 export const Login = () => {
@@ -45,8 +45,8 @@ export const Login = () => {
               <h1>Welcome to NTS Portal</h1>
 
               {/* Form Begins */}
-              <div className='form'>
-                <div className="row">Please enter your pin to login</div>
+              <div className="form">
+                <div className="row">Please enter your PIN to login.</div>
                 <div className="buttonsContainer">
                   {/* PIN Input */}
                   <div className="row">
@@ -54,30 +54,35 @@ export const Login = () => {
                     <FontAwesomeIcon icon={faKey} className="icon" />
                     <input
                       value={formData.password}
-                      onChange={(e) => setFormData({ password: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ password: e.target.value })
+                      }
                       type="password"
-                      placeholder="Please Enter your PIN" required
+                      placeholder="Please Enter your PIN"
+                      required
                     />
                   </div>
                   {/* Add spinner images while log in */}
-                   {/* Conditionally render spinner image while logging in */}
-                   {loading && (
+                  {/* Conditionally render spinner image while logging in */}
+                  {loading && (
                     <div className="row">
-                      <img className="spinner" src={spinner} alt="Spinner"/>
+                      <img className="spinner" src={spinner} alt="Spinner" />
                     </div>
                   )}
                   {/* Error appears here if you input a wrong PIN */}
                   <div className="row">
                     {errorMessage ? (
-                      <span className="errMsg">
-                        {errorMessage}
-                      </span>
+                      <span className="errMsg">{errorMessage}</span>
                     ) : null}
                   </div>
 
                   {/* Login */}
                   <div className="row">
-                    <button type="submit" className="btn btn-primary block" onClick={doLogin}>
+                    <button
+                      type="submit"
+                      className="btn btn-primary block"
+                      onClick={doLogin}
+                    >
                       Login to see your status
                     </button>
                   </div>

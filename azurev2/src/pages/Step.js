@@ -3,6 +3,7 @@ import NavBar from "../../src/components/Navbar";
 import Logos from "../../src/components/Logos";
 import React, { createContext, useContext, useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Popup } from "../../src/components/Popup";
 import Copyright from "../../src/components/Copyright";
 
 // 2. Import FontAwesome Icons
@@ -22,9 +23,10 @@ import { AuthData } from "../auth/AuthWrapper";
 //export default function Step() {
 export const Step = () => {
   const { user } = AuthData();
-
   return (
     <div>
+      {/* If sessions has ended then display popup and overlay */}
+      <Popup />
       <main>
         <div className="wrapper" /*key={record.pin}*/>
           {/* Display user-specific data */}
@@ -39,9 +41,7 @@ export const Step = () => {
                 {/* Case Manager */}
                 <div className="ApplicationStatusCaseManager">
                   <h3> Case Manager: </h3>
-                  <div className="block">
-                    <strong>{user.CM}</strong>
-                  </div>
+                  <strong> &nbsp; {user.CM}</strong>
                 </div>
                 <Logos />
               </div>
@@ -56,13 +56,13 @@ export const Step = () => {
 
                   <li id="step1">
                     <span>
-                      <strong>Awaiting Confirmation</strong>
+                      <strong>Checking Documents</strong>
                     </span>
                     <i></i>
                   </li>
                   <li id="step2">
                     <span>
-                      <strong>Checking Documents</strong>
+                      <strong>Application Review</strong>
                     </span>
                     <i></i>
                   </li>
@@ -106,19 +106,15 @@ export const Step = () => {
                 <div className="ApplicationStatus">
                   {/* Application Status Value */}
                   <h1 className="ApplicationStatusValue">
-                    Your application status is:{" "}
+                    Your application status is: &nbsp;{" "}
                     <strong>
-                      <span>
-                        <strong>{user.Status_Sub} </strong>
-                      </span>
+                      <span>{user.Status_Sub}</span>
                     </strong>
                   </h1>
                   <div className="descriptionContainer">
                     <h3>What does this mean?</h3>
                     {/* Application Status Description */}
-                    <div className="description">
-                      {user.Status_Desc}
-                    </div>
+                    <div className="description">{user.Status_Desc}</div>
                   </div>
                 </div>
 
@@ -130,20 +126,20 @@ export const Step = () => {
                     <FontAwesomeIcon icon={faPerson} className="icon" />{" "}
                     {user.CM}
                     <br />
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      className="icon"
-                    />{" "}
+                    <FontAwesomeIcon icon={faEnvelope} className="icon" />{" "}
+                    {/*
                     <a href="mailto:{CaseManagerEmail}">{user.CM_UPN}</a>
+                    */}
+                     <a class="Link" href="mailto:needtosell@eastwestrail.co.uk">needtosell@eastwestrail.co.uk</a>
                     <br />
                     <FontAwesomeIcon icon={faPhone} className="icon" />{" "}
                     {user.CM_Phone}
                     <br />
                     <p>
-                    The Quadrant <br/>
-                    Elder Gate  <br/>
-                    Milton Keynes <br/>
-                    MK9 1EN 
+                      The Quadrant <br />
+                      Elder Gate <br />
+                      Milton Keynes <br />
+                      MK9 1EN
                     </p>
                   </div>
                 </div>

@@ -9,8 +9,10 @@ import { Privacy } from "../pages/Privacy";
 import { Terms } from "../pages/Terms";
 import { Account } from "../pages/Account";
 import { Denied } from "../pages/Denied";
-import { Getintouch} from "../pages/Getintouch";
+import { Getintouch } from "../pages/Getintouch";
 import { ContactForms } from "../pages/ContactForms";
+import { Typography } from "../pages/Typography";
+import { Notfound } from "../pages/Notfound";
 
 /* Static Steps will be Dynamically merged to Step.js} */
 
@@ -23,6 +25,14 @@ export const nav = [
     path: "/",
     name: "Login",
     element: <Login />,
+    isMenu: false,
+    isPrivate: false,
+  },
+
+  {
+    path: "/Notfound",
+    name: "Notfound",
+    element: <Notfound />,
     isMenu: false,
     isPrivate: false,
   },
@@ -126,5 +136,13 @@ export const nav = [
     isMenu: false,
     isPrivate: false,
   },
-];
 
+  {
+    path: "/Typography",
+    name: "Typography",
+    element: <Typography />,
+    isMenu: false,
+    isPrivate: false,
+  },
+
+];

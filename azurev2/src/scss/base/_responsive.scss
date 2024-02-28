@@ -6,7 +6,17 @@
         background-size:cover!important;
 		font-size: $mobile-base-font-size;
     }
-    
+
+	// navigation
+	nav {
+		flex-direction: column !important;
+    	max-height: 100%!important;
+    	background-size: cover !important;
+
+		& .logo {
+			margin:0 0 20px!important;
+		}
+	}
     main {
         & .formContainer {
             margin-top:25px!important;
@@ -84,7 +94,7 @@
 	body input[type="number"], 
 	body input[type="email"], 
 	body textarea {
-		padding: 12px 30px 12px 45px;
+		padding: 12px 30px 12px 45px!important;
 		font-size: 16px;
 	}
     
@@ -107,7 +117,7 @@
 
 @media only screen and (min-width: $large-screens) {
 	.ApplicationStatusContainer .descriptionContainer {
-		min-height: 260px;
+		min-height: 252px;
 	}
 }
 
@@ -162,6 +172,11 @@
 		margin-bottom:0;
 	}
 
+	// Status
+	.ApplicationStatusContainer .ApplicationStatus .ApplicationStatusValue {
+		text-align: center;
+	 }
+
 	// Logout 
 	
 	.ProgressBarContainer {
@@ -199,43 +214,68 @@
 // TABLETS
 // *******
 
-@media only screen and (max-width:$tablets) {
+@media only screen and (max-width:$tablets) {}
 
+// CUSTOM SIZE
+// ***********
+
+@media only screen and (max-width:1100px) {
 		.ApplicationStatusContainer {
 			flex-direction: column;
 
-			& .ApplicationStatusValue {
-				& strong {
+		& .ApplicationStatusValue {
+			& strong {
+				display: block;
+				width:100%;
+				padding:2px 0;
+				// font-size:$mobile-base-font-size;
+
+				& span {
 					display: block;
-					width:100%;
-					padding:2px 0;
-					font-size:$mobile-base-font-size;
+				}
 
-					& span {
-						display: block;
-					}
+			}
+		}
 
+		& .ApplicationStatus {
+			margin-right:0;
+			width:100%;
+
+			& .ApplicationStatusValue {
+				width:100%;
 				}
 			}
-
-			& .ApplicationStatus {
-				margin-right:0;
+			&  .ApplicationContactDetails {
 				width:100%;
-	
-				& .ApplicationStatusValue {
-					width:100%;
-					}
+
+				& p {
+					margin:0;
 				}
-				&  .ApplicationContactDetails {
-					width:100%;
-				
-				}
-				& .descriptionContainer {
-					width: 100%;
-					margin:0 0 25px;
-				}
-		}
+			
+			}
+			& .descriptionContainer {
+				width: 100%;
+				margin:0 0 20px;
+			}
 	}
+}
+
+@media all and (max-width:1400px) {
+	.ProgressBarContainer ul strong {
+		font-size: 14px;
+	}
+ 
+	.ProgressBarContainer  #stepApplicationwithdrawn #step4 strong:before,  
+	.ProgressBarContainer #stepApplicationunsuccessful #step4 strong:before,  
+	.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong:before,  
+	.ProgressBarContainer #stepExpired #step4 strong:before,  
+	.ProgressBarContainer #stepInvaluation #step4 strong:before,  
+	.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong:before,  
+	.ProgressBarContainer #stepPropertyacquired #step4 strong:before {
+		font-size: 14px!important;
+	}
+
+}
  
  // SMALL SCREENS
  // *************
@@ -267,3 +307,15 @@
 	 }
  }
 
+
+ // Ipad Mini
+ // *********
+
+ @media only screen and (min-width:$ipad) {
+	.ApplicationStatusValue {
+        & strong span {
+            background-color:transparent!important;
+            color:$black!important;
+        }
+	 }
+}
