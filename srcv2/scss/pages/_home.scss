@@ -1,0 +1,30 @@
+// Login Page
+#wrapper {
+    width:100%;
+    position: relative;
+ }
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+// Main and Form Containers
+ main {
+    position:relative;
+    width:100%;
+    height:100%;
+    display:table;
+
+    & .wrapper {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+        padding:0 25px;
+    }
+    
+    & .logo img  {
+        width:250px;
+        margin:15px auto;
+    }
+   
+ }

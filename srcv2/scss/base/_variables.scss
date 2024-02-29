@@ -1,0 +1,68 @@
+// Colours
+$black: #000;
+$white: #fff;
+$blue: #283282;
+$lightblue: #65b4ff;
+$extralightblue: #e0f0ff;
+$paleblue:#e9f2ff;
+$yellow: rgb(251, 180, 10); // #fbb40a
+$orange: rgb(231, 117, 10);
+$red: #ff2d46;
+$tomato: tomato; 
+$green: #6ec895;
+$gray: #eeeeee;
+$darkgray: #ccc;
+// $purple: #a10797;
+
+$base-font-sans-serif: 'GTWalsheimPro', sans-serif;
+$base-font-serif: 'GTWalsheimPro', sans-serif;
+$headings-font: 'GTWalsheimProBold', sans-serif;
+$primary-font: $base-font-sans-serif;
+
+// Body
+$base-text-color: $black  !default;
+$base-background-color: $white !default;
+$base-font-size: 18px !default;
+$base-line-height: 1.4 !default;
+$base-font-family: $primary-font !default;
+$mobile-base-font-size: 16px !default;
+// Footer Font Size
+$footer-font-size: 14px !default;
+
+$vertical-rhythm: ($base-line-height * 1em);
+
+$base-min-width: 320px;
+
+// Liks
+$base-link-color: $black;
+$default-link-color: $black;
+
+// Headers
+$h1-font-size: 40px !default;
+$h2-font-size: 30px !default;
+$h3-font-size: 25px !default;
+$h4-font-size: 18px !default;
+$h5-font-size: 17px !default;
+$h6-font-size: 15px !default;
+
+// Mobile Headers
+$h1-mobile-font-size: 24px !default;
+$h2-mobile-font-size: 21px !default;
+$h3-mobile-font-size: 18px !default;
+$h4-mobile-font-size: 15px !default;
+$h5-mobile-font-size: 12px !default;
+$h6-mobile-font-size: 11px !default;
+
+$headings-font-family: $headings-font !default;
+$headings-color: inherit !default;
+
+// Animation Variables
+$animation-speed: 0.3s; 
+
+// Breaking points (media queries)
+$mobile-phones: 767px;
+$mobile-phones-vertical: 400px;
+$ipad: 768px;
+$tablets: 1024px;
+$large-screens: 1340px;
+$small-screens: 800px;
