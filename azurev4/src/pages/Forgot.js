@@ -40,23 +40,24 @@ export const Forgot = () => {
                   <p>
                     <ul className="list">
                       <li>
-                        If you have forgotten your PIN, please email your case
-                        manager to request a new one.{" "}
+                        If you have forgotten your PIN, please use the bellow email {" "}
                       </li>
                       <li>
-                        They will arrange a callback with you to verify your
+                        We will arrange a callback with you to verify your
                         identity and authorise a PIN reset request.{" "}
                       </li>
                       <li>
-                        You will then receive your new PIN from your case
-                        manager.
+                        You will then receive your new PIN from the NeedToSell Team.
                       </li>
                       <li>
-                        If you cannot locate your case manager’s email, please{" "}
-                        <Link to="/Contact" className="Link">
-                          {" "}
-                          click here{" "}
-                        </Link>
+                      Please contact us using this email address:{" "}
+                              <a
+                                href="mailto:needtosell@eastwestrail.co.uk"
+                                className="Link"
+                              >
+                                {" "}
+                                needtosell@eastwestrail.co.uk{" "}
+                              </a>
                       </li>
                     </ul>
                   </p>

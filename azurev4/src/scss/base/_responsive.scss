@@ -264,6 +264,17 @@
 	.ProgressBarContainer ul strong {
 		font-size: 14px;
 	}
+ 
+	.ProgressBarContainer  #stepApplicationwithdrawn #step4 strong:before,  
+	.ProgressBarContainer #stepApplicationunsuccessful #step4 strong:before,  
+	.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong:before,  
+	.ProgressBarContainer #stepExpired #step4 strong:before,  
+	.ProgressBarContainer #stepInvaluation #step4 strong:before,  
+	.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong:before,  
+	.ProgressBarContainer #stepPropertyacquired #step4 strong:before {
+		font-size: 14px!important;
+	}
+
 }
  
  // SMALL SCREENS

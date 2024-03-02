@@ -7,11 +7,12 @@ import { Router, Routes, Route } from "react-router-dom";
 // 2. Import FontAwesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBan,
   faCircleExclamation,
   faExclamationCircle,
   faExclamationTriangle,
   faKey,
-  faSignOut,
+  faSignOut
 } from "@fortawesome/free-solid-svg-icons";
 
 // export default function Denied() {
@@ -23,7 +24,7 @@ export const Denied = () => {
           <div className="container">
             <div className="formContainer">
               <Logos />
-              <FontAwesomeIcon icon={faExclamationTriangle} className="icon" />
+              <FontAwesomeIcon icon={faBan} className="icon" />
               <div className="buttonsContainer">
                 <div className="row">
                   <div className="row">

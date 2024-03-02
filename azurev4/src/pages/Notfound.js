@@ -3,30 +3,40 @@ import Logos from "../../src/components/Logos";
 import NavBar from "../../src/components/Navbar";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { Router, Routes, Route } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-brands-svg-icons";
-import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 
-// export default function Logout() {
-export const Logout = () => {
+// 2. Import FontAwesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleExclamation,
+  faExclamationCircle,
+  faExclamationTriangle,
+  faKey,
+  faSignOut,
+  faBan
+} from "@fortawesome/free-solid-svg-icons";
+
+// export default function Denied() {
+export const Notfound = () => {
   return (
-    <div className="Logout">
+    <div className="Notfound">
       <main>
         <div className="wrapper">
           <div className="container">
             <div className="formContainer">
               <Logos />
-              <FontAwesomeIcon icon={faAddressBook} className="icon" />
+              <FontAwesomeIcon icon={faExclamationTriangle} className="icon" />
               <div className="buttonsContainer">
                 <div className="row">
                   <div className="row">
-                    <h1>Logout Succesfull</h1>
-                    <p>You have logged out from NTS.</p>
+                    <h1>Page not found</h1>
+                    <p>
+                      Looks like you have entered an invalid URL, the page has moved or the server is currently down.
+                    </p>
                   </div>
                 </div>
                 <div className="row">
                   <Link to="/" className="btn btn-primary block">
-                    Please click here to login again
+                    Go back to the Login Page.
                   </Link>
                 </div>
               </div>

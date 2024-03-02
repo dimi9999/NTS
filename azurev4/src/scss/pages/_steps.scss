@@ -127,7 +127,7 @@
             display: block;
             /* border: 1px solid #ddd; */
             padding:12px 0px 12px 25px;
-            width: 16.6%;
+            width: 16.66%;
             height: 60px;
  
             & span {
@@ -422,9 +422,10 @@ ul {
         @include boxsizing;
         @include border-radius(7px);
         align-items: flex-start;
+        justify-content: flex-start;
         padding:15px;  
         width: 550px;
-
+        min-height:330px;
         & h3 {
             font-size: 19px;
         }
@@ -445,63 +446,37 @@ ul {
  
 // Render the steps based on unordered lists ID
  
-// 1. Application Received
-#stepApplicationReceived {
-   & #step1 {
-        color: $white;
-        background: $lightblue;
- 
-        + {
-            li {
-                >span {
-                    &:before {
-                        border-left-color: $lightblue;
-                    }
-                }
-            }
-        }
-   }
-}
- 
-#statusApplicationReceived {
-    & .ApplicationStatusValue {
-        & span {
-            color:$white;
-            background-color: $lightblue;
-        }
-    }
-}
- 
- 
-// 1.1 Application Confirmation
-#stepAwaitingconfirmation {
-   & #step1 {
-        color: $white;
-        background: $lightblue;
- 
-        + {
-            li {
-                >span {
-                    &:before {
-                        border-left-color: $lightblue;
-                    }
-                }
-            }
-        }
-   }
-}
- 
-#statusAwaitingconfirmation {
-    & .ApplicationStatusValue {
-        & span {
-            color:$white;
-            background-color: $lightblue;
-        }
-    }
-}
- 
-// 2. Checking Documents
+// 1. Application Received (Checking Documents)
 #stepCheckingdocuments {
+   & #step1 {
+        color: $white;
+        background: $lightblue;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+   }
+}
+ 
+#statusCheckingdocuments {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $lightblue;
+        }
+    }
+}
+ 
+ 
+ 
+// 2. Under Review (Awaiting Confirmation)
+#stepAwaitingconfirmation {
     & #step1 {
         color: $white;
         background: $green;
@@ -534,7 +509,50 @@ ul {
 }
  
  
-    #statusCheckingdocuments {
+    #statusAwaitingconfirmation {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $lightblue;
+        }
+    }
+}
+
+// 2.1 (Application Review)
+#stepApplicationreview {
+    & #step1 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step2 {
+        color: $white;
+        background: $lightblue;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+ 
+    #statusApplicationreview {
     & .ApplicationStatusValue {
         & span {
             color:$white;
@@ -603,7 +621,7 @@ ul {
  
  
 // 4. Awaiting Decision
-#stepAwaitingfinaldecision {
+#stepAwaitingdecision {
     & #step1 {
         color: $white;
         background: $green;
@@ -666,7 +684,7 @@ ul {
 }
  
  
-    #statusAwaitingfinaldecision {
+    #statusAwaitingdecision {
     & .ApplicationStatusValue {
         & span {
             color:$white;
@@ -675,8 +693,8 @@ ul {
     }
 }
  
-// 5. Rejected
-#stepApplicationrejected {
+// 5. Application unsuccessful
+#stepApplicationunsuccessful {
     & #step1 {
         color: $white;
         background: $green;
@@ -723,7 +741,7 @@ ul {
     }
  
     & #step4 {
-        color: $white;
+        color: $red;
         background: $red;
  
         + {
@@ -739,13 +757,15 @@ ul {
 }
  
  
-    #statusApplicationrejected {
+    #statusApplicationunsuccessful {
     & .ApplicationStatusValue {
         & span {
             color:$white;
             background-color: $red;
         }
     }
+
+    
 }
  
  
@@ -797,7 +817,7 @@ ul {
     }
  
     & #step4 {
-        color: $white;
+        color: $red;
         background: $red;
  
         + {
@@ -820,6 +840,8 @@ ul {
             background-color: $red;
         }
     }
+
+    
 }
  
 // 5.2 Withdrawn
@@ -870,7 +892,7 @@ ul {
     }
  
     & #step4 {
-        color: $white;
+        color: $red;
         background: $red;
  
         + {
@@ -883,6 +905,7 @@ ul {
             }
         }
     }
+    
 }
  
  
@@ -944,7 +967,7 @@ ul {
     }
  
     & #step4 {
-        color: $white;
+        color: $red;
         background: $red;
  
         + {
@@ -1091,7 +1114,7 @@ ul {
     }
  
     & #step4 {
-        color: $white;
+        color: $green;
         background: $green;
  
         + {
@@ -1180,7 +1203,7 @@ ul {
     }
  
     & #step4 {
-        color: $white;
+        color: $green;
         background: $green;
  
         + {
@@ -1211,7 +1234,7 @@ ul {
    
     & #step6 {
         color: $white;
-        background: $green;
+        background: $lightblue;
  
         + {
             li {
@@ -1230,13 +1253,13 @@ ul {
     & .ApplicationStatusValue {
         & span {
             color:$white;
-            background-color: $green;
+            background-color: $lightblue;
         }
     }
 }
  
 // 11. Application Completed Property Acquired
-#stepApplicationcompletedandpropertyacquired {
+#stepPropertyacquired {
     & #step1 {
         color: $white;
         background: $green;
@@ -1283,7 +1306,7 @@ ul {
     }
  
     & #step4 {
-        color: $white;
+        color: $green;
         background: $green;
  
         + {
@@ -1329,7 +1352,7 @@ ul {
 }
  
  
-    #statusApplicationcompletedandpropertyacquired {
+    #statusPropertyacquired {
     & .ApplicationStatusValue {
         & span {
             color:$white;
@@ -1337,3 +1360,101 @@ ul {
         }
     }
 }
+
+// Change words on rejected states
+
+ // 1. Withdrawn
+ .ProgressBarContainer  #stepApplicationwithdrawn #step4 strong {
+    font-size:0pt;
+ }
+  .ProgressBarContainer  #stepApplicationwithdrawn #step4 strong:before {
+    color: $white!important;
+    content: 'Application Withdrawn';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+// 2. Rejected
+.ProgressBarContainer #stepApplicationunsuccessful #step4 strong {
+    font-size: 0pt;
+}
+ 
+.ProgressBarContainer #stepApplicationunsuccessful #step4 strong:before {
+    content: 'Application Unsuccessful';
+    color: $white!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+// 3. Reffered to DFT
+.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong {
+    font-size:0pt;
+}
+.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong:before {
+    content: 'Application Rejected';
+    color: $white!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+// 4. Expired
+.ProgressBarContainer #stepExpired #step4 strong {
+    font-size: 0pt;
+}
+.ProgressBarContainer #stepExpired #step4 strong:before {
+    content: 'Application Expired';
+    color: #fff!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+} 
+
+// 5. In Valuation
+.ProgressBarContainer #stepInvaluation #step4 strong {
+    font-size:0pt;
+}
+.ProgressBarContainer #stepInvaluation #step4 strong:before {
+    content: 'Application Accepted';
+    color: #fff!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+// 6. Property Acquisition Process
+.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong {
+    font-size:0pt;
+}
+.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong:before {
+    content: 'Application Accepted';
+    color: #fff!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+// 7. Application Completed
+.ProgressBarContainer #stepPropertyacquired #step4 strong {
+    font-size:0pt;
+}
+.ProgressBarContainer #stepPropertyacquired #step4 strong:before {
+    content: 'Application Accepted';
+    color: #fff!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+ 

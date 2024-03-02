@@ -1145,7 +1145,7 @@ main {
     vertical-align: middle;
     padding: 0 25px; }
   main .logo img {
-    width: 320px;
+    width: 250px;
     margin: 15px auto; }
 
 .content {
@@ -1702,39 +1702,29 @@ main {
     margin-bottom: 0;
     font-size: 19px; }
 
-#stepApplicationReceived #step1 {
+#stepCheckingdocuments #step1 {
   color: #fff;
   background: #65b4ff; }
-  #stepApplicationReceived #step1 + li > span:before {
+  #stepCheckingdocuments #step1 + li > span:before {
     border-left-color: #65b4ff; }
 
-#statusApplicationReceived .ApplicationStatusValue span {
+#statusCheckingdocuments .ApplicationStatusValue span {
   color: #fff;
   background-color: #65b4ff; }
 
 #stepAwaitingconfirmation #step1 {
   color: #fff;
-  background: #65b4ff; }
+  background: #6ec895; }
   #stepAwaitingconfirmation #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepAwaitingconfirmation #step2 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepAwaitingconfirmation #step2 + li > span:before {
     border-left-color: #65b4ff; }
 
 #statusAwaitingconfirmation .ApplicationStatusValue span {
-  color: #fff;
-  background-color: #65b4ff; }
-
-#stepCheckingdocuments #step1 {
-  color: #fff;
-  background: #6ec895; }
-  #stepCheckingdocuments #step1 + li > span:before {
-    border-left-color: #6ec895; }
-
-#stepCheckingdocuments #step2 {
-  color: #fff;
-  background: #65b4ff; }
-  #stepCheckingdocuments #step2 + li > span:before {
-    border-left-color: #65b4ff; }
-
-#statusCheckingdocuments .ApplicationStatusValue span {
   color: #fff;
   background-color: #65b4ff; }
 
@@ -1807,7 +1797,7 @@ main {
     border-left-color: #6ec895; }
 
 #stepApplicationrejected #step4 {
-  color: #fff;
+  color: #ff2d46;
   background: #ff2d46; }
   #stepApplicationrejected #step4 + li > span:before {
     border-left-color: #ff2d46; }
@@ -1835,7 +1825,7 @@ main {
     border-left-color: #6ec895; }
 
 #stepApplicationrejectedandreferredtoDfT #step4 {
-  color: #fff;
+  color: #ff2d46;
   background: #ff2d46; }
   #stepApplicationrejectedandreferredtoDfT #step4 + li > span:before {
     border-left-color: #ff2d46; }
@@ -1863,7 +1853,7 @@ main {
     border-left-color: #6ec895; }
 
 #stepApplicationwithdrawn #step4 {
-  color: #fff;
+  color: #ff2d46;
   background: #ff2d46; }
   #stepApplicationwithdrawn #step4 + li > span:before {
     border-left-color: #ff2d46; }
@@ -1891,7 +1881,7 @@ main {
     border-left-color: #6ec895; }
 
 #stepExpired #step4 {
-  color: #fff;
+  color: #ff2d46;
   background: #ff2d46; }
   #stepExpired #step4 + li > span:before {
     border-left-color: #ff2d46; }
@@ -1947,7 +1937,7 @@ main {
     border-left-color: #6ec895; }
 
 #stepInvaluation #step4 {
-  color: #fff;
+  color: #6ec895;
   background: #6ec895; }
   #stepInvaluation #step4 + li > span:before {
     border-left-color: #6ec895; }
@@ -1981,7 +1971,7 @@ main {
     border-left-color: #6ec895; }
 
 #stepPropertyacquisitionprocess #step4 {
-  color: #fff;
+  color: #6ec895;
   background: #6ec895; }
   #stepPropertyacquisitionprocess #step4 + li > span:before {
     border-left-color: #6ec895; }
@@ -2021,7 +2011,7 @@ main {
     border-left-color: #6ec895; }
 
 #stepApplicationcompletedandpropertyacquired #step4 {
-  color: #fff;
+  color: #6ec895;
   background: #6ec895; }
   #stepApplicationcompletedandpropertyacquired #step4 + li > span:before {
     border-left-color: #6ec895; }
@@ -2041,6 +2031,66 @@ main {
 #statusApplicationcompletedandpropertyacquired .ApplicationStatusValue span {
   color: #fff;
   background-color: #6ec895; }
+
+.ProgressBarContainer #stepApplicationwithdrawn #step4 strong:before {
+  color: #fff !important;
+  content: 'Application Withdrawn';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px; }
+
+.ProgressBarContainer #stepApplicationrejected #step4 strong:before {
+  content: 'Application Rejected';
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px; }
+
+.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong:before {
+  content: 'Application Rejected';
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px; }
+
+.ProgressBarContainer #stepExpired #step4 strong:before {
+  content: 'Application Expired';
+  color: #fff !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px !important; }
+
+.ProgressBarContainer #stepInvaluation #step4 strong:before {
+  content: 'Application Accepted';
+  color: #fff !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 26px !important; }
+
+.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong:before {
+  content: 'Application Accepted';
+  color: #fff !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 26px !important; }
+
+.ProgressBarContainer #stepApplicationcompletedandpropertyacquired #step4 strong:before {
+  content: 'Application Accepted';
+  color: #fff !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 26px !important; }
 
 .Contact {
   user-select: none; }
@@ -2196,9 +2246,9 @@ main {
     border-radius: 50px;
     -o-border-radius: 50px;
     padding: 5px;
-    margin: 25px;
-    width: 40px;
-    height: 40px; }
+    margin: 15px;
+    width: 65px;
+    height: 65px; }
   .Login .spinner {
     max-width: 50px;
     margin: 15px auto; }
@@ -2268,7 +2318,7 @@ main {
 .Megamenu.hidden {
   max-width: 0; }
 
-.overlay {
+.overlay, .overlayLogout {
   position: fixed;
   top: 0;
   left: 0;
@@ -2288,6 +2338,16 @@ main {
 Popup Windows
 -------------
 */
+.PopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  visibility: hidden; }
+
 .PopupContainer {
   position: relative;
   z-index: 9999;
@@ -2300,7 +2360,6 @@ Popup Windows
     max-width: 900px;
     background: #fff;
     padding: 20px;
-    border-radius: 10px;
     left: 50%;
     transform: translate(-50%); }
     .PopupContainer .modal-dialog .icon {

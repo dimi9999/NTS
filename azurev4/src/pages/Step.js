@@ -56,13 +56,13 @@ export const Step = () => {
 
                   <li id="step1">
                     <span>
-                      <strong>Awaiting Confirmation</strong>
+                      <strong>Checking Documents</strong>
                     </span>
                     <i></i>
                   </li>
                   <li id="step2">
                     <span>
-                      <strong>Checking Documents</strong>
+                      <strong>Application Review</strong>
                     </span>
                     <i></i>
                   </li>
@@ -122,12 +122,14 @@ export const Step = () => {
                 <div className="ApplicationContactDetails">
                   <h3>Your Case Manager Details</h3>
                   <div>
-                    <h4>Case Manager Name:</h4>
                     <FontAwesomeIcon icon={faPerson} className="icon" />{" "}
                     {user.CM}
                     <br />
                     <FontAwesomeIcon icon={faEnvelope} className="icon" />{" "}
+                    {/*
                     <a href="mailto:{CaseManagerEmail}">{user.CM_UPN}</a>
+                    */}
+                     <a className="Link" href="mailto:needtosell@eastwestrail.co.uk">needtosell@eastwestrail.co.uk</a>
                     <br />
                     <FontAwesomeIcon icon={faPhone} className="icon" />{" "}
                     {user.CM_Phone}
