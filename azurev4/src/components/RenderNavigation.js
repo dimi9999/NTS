@@ -92,12 +92,12 @@ export const RenderMenu = () => {
         <div className="menuItem">
           {/* View Status Button */}
           <Link className="statuslink" to={"/Step"}>
-            <FontAwesomeIcon icon={faUser} /> &nbsp; View your Status
+            <FontAwesomeIcon icon={faUser} /><span> &nbsp;  View your Status </span>
           </Link>
 
           {/* Logout Button */}
           <Link className="logoutlink" to={"/Logout"} onClick={logout}>
-            <FontAwesomeIcon icon={faSignOut} /> &nbsp; Log out
+            <FontAwesomeIcon icon={faSignOut} /><span> &nbsp;  Log out </span>
           </Link>
         </div>
       ) : (

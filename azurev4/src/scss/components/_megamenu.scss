@@ -3,11 +3,14 @@
     cursor: pointer;
     color:$white;
     position: absolute;
-    left:0;
-    margin:14px 25px 0;
+    right:0;
+    padding:12px 20px;
+    background-color: transparent;
 
     & h3 {
         color: $white;
+        margin: 0;
+        border: none;
     }
 
     & a {

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: GTWalsheimPro;
   font-style: normal;
@@ -19,6 +21,9 @@
   src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.eot);
   src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.ttf) format("truetype"); }
 
+/* Custom Fonts */
+/* 1) Roboto */
+/* 2) Montserrat */
 .relative {
   position: relative; }
 
@@ -748,7 +753,7 @@ button[type="reset"] {
   box-sizing: border-box;
   background-color: #6ec895;
   color: #fff;
-  align-items: center;
+  align-items: flex-start;
   justify-content: inherit;
   padding: 10px 25px;
   flex-grow: 1;
@@ -790,7 +795,7 @@ button[type="reset"] {
         text-decoration: underline; }
   .nav .logo img {
     max-width: 190px;
-    margin: 0 40px 0; }
+    margin: 0; }
   .nav .logout {
     color: #fff;
     flex-grow: 2;
@@ -828,7 +833,8 @@ button[type="reset"] {
     padding: 5px 15px;
     margin-right: 0;
     flex-direction: row;
-    margin-left: 10px; }
+    margin-left: 10px;
+    margin-right: 40px; }
     .nav .logoutlink * {
       color: #fff; }
     .nav .logoutlink:hover {
@@ -1151,8 +1157,7 @@ main {
 .content {
   user-select: none;
   text-align: left;
-  white-space: normal;
-  word-break: break-all; }
+  white-space: normal; }
   .content a {
     color: #283282; }
 
@@ -1396,7 +1401,7 @@ main {
       display: block;
       /* border: 1px solid #ddd; */
       padding: 12px 0px 12px 25px;
-      width: 16.6%;
+      width: 16.66%;
       height: 60px; }
       .ProgressBarContainer ul > li span {
         display: -webkit-box;
@@ -1689,8 +1694,10 @@ main {
   border-radius: 7px;
   -o-border-radius: 7px;
   align-items: flex-start;
+  justify-content: flex-start;
   padding: 15px;
-  width: 550px; }
+  width: 550px;
+  min-height: 330px; }
   .ApplicationContactDetails h3 {
     font-size: 19px; }
   .ApplicationContactDetails a {
@@ -1728,6 +1735,22 @@ main {
   color: #fff;
   background-color: #65b4ff; }
 
+#stepApplicationreview #step1 {
+  color: #fff;
+  background: #6ec895; }
+  #stepApplicationreview #step1 + li > span:before {
+    border-left-color: #6ec895; }
+
+#stepApplicationreview #step2 {
+  color: #fff;
+  background: #65b4ff; }
+  #stepApplicationreview #step2 + li > span:before {
+    border-left-color: #65b4ff; }
+
+#statusApplicationreview .ApplicationStatusValue span {
+  color: #fff;
+  background-color: #65b4ff; }
+
 #stepApplicationconfirmed #step1 {
   color: #fff;
   background: #6ec895; }
@@ -1750,59 +1773,59 @@ main {
   color: #fff;
   background-color: #65b4ff; }
 
-#stepAwaitingfinaldecision #step1 {
+#stepAwaitingdecision #step1 {
   color: #fff;
   background: #6ec895; }
-  #stepAwaitingfinaldecision #step1 + li > span:before {
+  #stepAwaitingdecision #step1 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepAwaitingfinaldecision #step2 {
+#stepAwaitingdecision #step2 {
   color: #fff;
   background: #6ec895; }
-  #stepAwaitingfinaldecision #step2 + li > span:before {
+  #stepAwaitingdecision #step2 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepAwaitingfinaldecision #step3 {
+#stepAwaitingdecision #step3 {
   color: #fff;
   background: #6ec895; }
-  #stepAwaitingfinaldecision #step3 + li > span:before {
+  #stepAwaitingdecision #step3 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepAwaitingfinaldecision #step4 {
+#stepAwaitingdecision #step4 {
   color: #fff;
   background: #65b4ff; }
-  #stepAwaitingfinaldecision #step4 + li > span:before {
+  #stepAwaitingdecision #step4 + li > span:before {
     border-left-color: #65b4ff; }
 
-#statusAwaitingfinaldecision .ApplicationStatusValue span {
+#statusAwaitingdecision .ApplicationStatusValue span {
   color: #fff;
   background-color: #65b4ff; }
 
-#stepApplicationrejected #step1 {
+#stepApplicationunsuccessful #step1 {
   color: #fff;
   background: #6ec895; }
-  #stepApplicationrejected #step1 + li > span:before {
+  #stepApplicationunsuccessful #step1 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepApplicationrejected #step2 {
+#stepApplicationunsuccessful #step2 {
   color: #fff;
   background: #6ec895; }
-  #stepApplicationrejected #step2 + li > span:before {
+  #stepApplicationunsuccessful #step2 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepApplicationrejected #step3 {
+#stepApplicationunsuccessful #step3 {
   color: #fff;
   background: #6ec895; }
-  #stepApplicationrejected #step3 + li > span:before {
+  #stepApplicationunsuccessful #step3 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepApplicationrejected #step4 {
+#stepApplicationunsuccessful #step4 {
   color: #ff2d46;
   background: #ff2d46; }
-  #stepApplicationrejected #step4 + li > span:before {
+  #stepApplicationunsuccessful #step4 + li > span:before {
     border-left-color: #ff2d46; }
 
-#statusApplicationrejected .ApplicationStatusValue span {
+#statusApplicationunsuccessful .ApplicationStatusValue span {
   color: #fff;
   background-color: #ff2d46; }
 
@@ -1984,53 +2007,56 @@ main {
 
 #stepPropertyacquisitionprocess #step6 {
   color: #fff;
-  background: #6ec895; }
+  background: #65b4ff; }
   #stepPropertyacquisitionprocess #step6 + li > span:before {
     border-left-color: #6ec895; }
 
 #statusPropertyacquisitionprocess .ApplicationStatusValue span {
   color: #fff;
-  background-color: #6ec895; }
+  background-color: #65b4ff; }
 
-#stepApplicationcompletedandpropertyacquired #step1 {
+#stepPropertyacquired #step1 {
   color: #fff;
   background: #6ec895; }
-  #stepApplicationcompletedandpropertyacquired #step1 + li > span:before {
+  #stepPropertyacquired #step1 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepApplicationcompletedandpropertyacquired #step2 {
+#stepPropertyacquired #step2 {
   color: #fff;
   background: #6ec895; }
-  #stepApplicationcompletedandpropertyacquired #step2 + li > span:before {
+  #stepPropertyacquired #step2 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepApplicationcompletedandpropertyacquired #step3 {
+#stepPropertyacquired #step3 {
   color: #fff;
   background: #6ec895; }
-  #stepApplicationcompletedandpropertyacquired #step3 + li > span:before {
+  #stepPropertyacquired #step3 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepApplicationcompletedandpropertyacquired #step4 {
+#stepPropertyacquired #step4 {
   color: #6ec895;
   background: #6ec895; }
-  #stepApplicationcompletedandpropertyacquired #step4 + li > span:before {
+  #stepPropertyacquired #step4 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepApplicationcompletedandpropertyacquired #step5 {
+#stepPropertyacquired #step5 {
   color: #fff;
   background: #6ec895; }
-  #stepApplicationcompletedandpropertyacquired #step5 + li > span:before {
+  #stepPropertyacquired #step5 + li > span:before {
     border-left-color: #6ec895; }
 
-#stepApplicationcompletedandpropertyacquired #step6 {
+#stepPropertyacquired #step6 {
   color: #fff;
   background: #6ec895; }
-  #stepApplicationcompletedandpropertyacquired #step6 + li > span:before {
+  #stepPropertyacquired #step6 + li > span:before {
     border-left-color: #6ec895; }
 
-#statusApplicationcompletedandpropertyacquired .ApplicationStatusValue span {
+#statusPropertyacquired .ApplicationStatusValue span {
   color: #fff;
   background-color: #6ec895; }
+
+.ProgressBarContainer #stepApplicationwithdrawn #step4 strong {
+  font-size: 0pt; }
 
 .ProgressBarContainer #stepApplicationwithdrawn #step4 strong:before {
   color: #fff !important;
@@ -2038,15 +2064,21 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px; }
+  font-size: 19px; }
 
-.ProgressBarContainer #stepApplicationrejected #step4 strong:before {
-  content: 'Application Rejected';
+.ProgressBarContainer #stepApplicationunsuccessful #step4 strong {
+  font-size: 0pt; }
+
+.ProgressBarContainer #stepApplicationunsuccessful #step4 strong:before {
+  content: 'Application Unsuccessful';
   color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px; }
+  font-size: 19px; }
+
+.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong {
+  font-size: 0pt; }
 
 .ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong:before {
   content: 'Application Rejected';
@@ -2054,7 +2086,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px; }
+  font-size: 19px; }
+
+.ProgressBarContainer #stepExpired #step4 strong {
+  font-size: 0pt; }
 
 .ProgressBarContainer #stepExpired #step4 strong:before {
   content: 'Application Expired';
@@ -2063,7 +2098,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px !important; }
+  font-size: 19px; }
+
+.ProgressBarContainer #stepInvaluation #step4 strong {
+  font-size: 0pt; }
 
 .ProgressBarContainer #stepInvaluation #step4 strong:before {
   content: 'Application Accepted';
@@ -2072,7 +2110,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 26px !important; }
+  font-size: 19px; }
+
+.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong {
+  font-size: 0pt; }
 
 .ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong:before {
   content: 'Application Accepted';
@@ -2081,16 +2122,19 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 26px !important; }
+  font-size: 19px; }
 
-.ProgressBarContainer #stepApplicationcompletedandpropertyacquired #step4 strong:before {
+.ProgressBarContainer #stepPropertyacquired #step4 strong {
+  font-size: 0pt; }
+
+.ProgressBarContainer #stepPropertyacquired #step4 strong:before {
   content: 'Application Accepted';
   color: #fff !important;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 26px !important; }
+  font-size: 19px; }
 
 .Contact {
   user-select: none; }
@@ -2275,14 +2319,47 @@ main {
     padding: 15px;
     font-size: 16px; }
 
+.Notfound {
+  user-select: none; }
+  .Notfound .icon {
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    border-radius: 60px;
+    -o-border-radius: 60px;
+    color: #fff;
+    background-color: #ff2d46;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    font-size: 16px; }
+
+.NewPage {
+  user-select: none; }
+  .NewPage .icon {
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    border-radius: 60px;
+    -o-border-radius: 60px;
+    color: #fff;
+    background-color: #ff2d46;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    font-size: 16px; }
+
 .megamenuToggle {
   cursor: pointer;
   color: #fff;
   position: absolute;
-  left: 0;
-  margin: 14px 25px 0; }
+  right: 0;
+  padding: 12px 20px;
+  background-color: transparent; }
   .megamenuToggle h3 {
-    color: #fff; }
+    color: #fff;
+    margin: 0;
+    border: none; }
   .megamenuToggle a {
     color: #fff; }
 
@@ -2405,14 +2482,20 @@ Popup Windows
     background-size: cover !important;
     font-size: 16px; }
   nav {
-    flex-direction: column !important;
     max-height: 100% !important;
-    background-size: cover !important; }
+    background-size: cover !important;
+    justify-content: center !important;
+    align-items: center !important; }
     nav .logo {
-      margin: 0 0 20px !important; }
+      margin: 0 !important; }
+  .megamenuToggle {
+    padding: 20px; }
+  main .wrapper {
+    padding: 0 !important; }
   main .formContainer {
-    margin-top: 25px !important;
-    padding: 20px !important; }
+    margin-top: 0 !important;
+    padding: 20px !important;
+    border-radius: 0 !important; }
   .Login .LoginImage {
     margin: 5px; }
   main .logo img {
@@ -2440,8 +2523,14 @@ Popup Windows
     padding-right: 0 !important; }
   .ApplicationStatusValue span {
     display: block; }
+  .nav .statuslink {
+    padding: 15px; }
+    .nav .statuslink span {
+      font-size: 0pt; }
   .nav .logoutlink {
-    padding: 5px 4px !important; }
+    padding: 15px; }
+    .nav .logoutlink span {
+      font-size: 0pt; }
   .btn {
     padding: 10px 15px; }
   button {
@@ -2557,7 +2646,15 @@ Popup Windows
 
 @media all and (max-width: 1400px) {
   .ProgressBarContainer ul strong {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .ProgressBarContainer #stepApplicationwithdrawn #step4 strong:before,
+  .ProgressBarContainer #stepApplicationunsuccessful #step4 strong:before,
+  .ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong:before,
+  .ProgressBarContainer #stepExpired #step4 strong:before,
+  .ProgressBarContainer #stepInvaluation #step4 strong:before,
+  .ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong:before,
+  .ProgressBarContainer #stepPropertyacquired #step4 strong:before {
+    font-size: 14px !important; } }
 
 @media only screen and (max-height: 800px) {
   main .logo img {

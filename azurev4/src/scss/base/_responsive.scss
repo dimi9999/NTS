@@ -9,18 +9,30 @@
 
 	// navigation
 	nav {
-		flex-direction: column !important;
+		// flex-direction: column !important;
     	max-height: 100%!important;
     	background-size: cover !important;
-
+		justify-content: center!important;
+		align-items: center !important;
 		& .logo {
-			margin:0 0 20px!important;
+			margin:0!important;
 		}
 	}
+
+	// megamenu toggle button
+	.megamenuToggle {
+		padding:20px;
+	}
+
+	// wrapper 
     main {
+		& .wrapper {
+			padding:0!important;
+		}
         & .formContainer {
-            margin-top:25px!important;
-            padding: 20px!important;
+            margin-top: 0 !important;
+    		padding: 20px !important;
+    		border-radius: 0 !important;
         }
     }
 	// Login Page Icon
@@ -72,10 +84,19 @@
 	.ApplicationStatusValue span {
 		display: block;
 	}
-
+    // View your status
+	.nav .statuslink {
+		padding:15px;
+		& span {
+			font-size:0pt;
+		}
+	}
 	// Logout Link
-	.nav .logoutlink {
-		padding:5px 4px!important;
+	.nav .logoutlink  {
+		padding:15px; 
+		& span {
+		 font-size: 0pt;
+		}
 	}
 
 	// button paddings
@@ -110,6 +131,9 @@
 	.ProgressBarContainer ul > li {
 		margin-left:-3px;
 	}
+
+	// Step view and logout buttons
+
 }
 
 // Large Screens
