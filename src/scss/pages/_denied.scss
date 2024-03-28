@@ -1,4 +1,5 @@
 .Denied {
+    user-select: none;
     & .icon {
         @include border-radius(60px);
         color:$white;
@@ -7,6 +8,5 @@
         height:60px;
         padding:15px;
         font-size:16px;
-
     }
 }

@@ -27,14 +27,14 @@ const RenderMegamenu = () => {
     const body = document.body;
     const overlay = document.getElementsByClassName("overlay");
 
-    // If the menu is visible, push the body to the left by 300px with animation
+    // If the menu is visible, push the body to the right by 300px with animation
     if (!menuVisible) {
       body.style.transition = "margin-left 0.3s ease";
-      body.style.marginLeft = "300px";
+      body.style.marginLeft = "-320px"; // Push the body to the right to show the menu. This does not work use negative values instead
     } else {
-      // If the menu is hidden, reset the margin with animation
+      // Reset the margin with animation to hide the menu
       body.style.transition = "margin-left 0.3s ease";
-      body.style.marginLeft = "0";
+      body.style.marginLeft = "0"; // Reset the margin to its original state
     }
   };
 

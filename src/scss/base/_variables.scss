@@ -1,7 +1,7 @@
 // Colours
 $black: #000;
 $white: #fff;
-$blue: #283282;;
+$blue: #283282;
 $lightblue: #65b4ff;
 $extralightblue: #e0f0ff;
 $paleblue:#e9f2ff;
@@ -56,10 +56,12 @@ $h6-mobile-font-size: 11px !default;
 $headings-font-family: $headings-font !default;
 $headings-color: inherit !default;
 
+// Animation Variables
 $animation-speed: 0.3s; 
 
 // Breaking points (media queries)
 $mobile-phones: 767px;
+$mobile-phones-vertical: 400px;
 $ipad: 768px;
 $tablets: 1024px;
 $large-screens: 1340px;

@@ -1,5 +1,25 @@
 // Contact us
 .Contact {
+     
+    user-select: none;
+
+    & input[type="text"],
+    & input[type="password"],
+    & input[type="tel"],
+    & input[type="number"],
+    & input[type="email"],
+    & textarea {
+        padding: 16px 30px 16px 45px;
+    }
+
+    & textarea {
+        padding-left:16px;
+    }
+
+    & label {
+        display: none;
+    }
+
     & .Link {
         background-color: $green;
         color:$white;

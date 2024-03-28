@@ -7,9 +7,15 @@
     text-align: center;
     font-size: $footer-font-size;
     margin-top:60px;
-	position:relative;
+	  position:relative;
 
      & * {
         color: $white;
+     }
+
+     .copyrightContainer {
+       & h4 {
+         font-size: 19px;
+       }
      }
  }

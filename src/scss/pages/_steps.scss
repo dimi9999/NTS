@@ -1,91 +1,107 @@
- // Steps Page
+// Steps Page
  .largeContainer {
-    max-width:1600px!important;
+    max-width:100%!important;
  }
  .status {
     padding:20px!important;
  }
  
-
+ 
  // Application Details
 .ApplicationDetails {
     @include flexbox;
     text-align: left;
-
+ 
     & h3 {
         margin:0;
         padding:0;
-    }
+        font-size:19px;
 
+        & strong {
+            font-size: 19px;
+        }
+    }
+ 
     & a {
         color:$blue;
-    }
 
+        &:hover {
+            color:$lightblue;
+        }
+    }
+ 
     & .ApplicationStatusCaseNumber {
         @include flexbox;
         flex-direction: column;
         background-color:$white;
         @include boxsizing;
-        @include border-radius(7px); 
+        @include border-radius(7px);
         align-items: flex-start;
         padding:5px 15px;
         margin-right:20px;
     }
-
+ 
     & .ApplicationStatusLoggedInUser {
         @include flexbox;
-        flex-direction: column;
+        align-items: center;
+        flex-direction: row;
         background-color:$green;
         color:$white;
         @include boxsizing;
-        @include border-radius(7px); 
-        align-items: flex-start;
+        @include border-radius(7px);
         padding:5px 15px;
         margin-right:20px;
-
+        min-height:70px;
+ 
         & h3 {
             color:$white;
         }
-
+ 
         & .icon {
             @include inline-block;
+            margin-right:10px;
         }
     }
-
+ 
     & .ApplicationLogmeOut {
         @include flexbox;
         flex-direction: column;
         background-color:$green;
         color:$white;
         @include boxsizing;
-        @include border-radius(7px); 
+        @include border-radius(7px);
         align-items: flex-start;
         padding:5px 15px;
         margin-right:0;
-
+ 
         & * {
             color:$white;
         }
     }
-
+ 
     & .ApplicationStatusCaseManager {
         @include flexbox;
-        flex-direction: column;
+        flex-direction: row;
         background-color:$white;
         @include boxsizing;
-        @include border-radius(7px); 
-        align-items: flex-start;
+        @include border-radius(7px);
+        align-items: center;
         padding:5px 15px;
-    }
+        min-height: 70px;
 
+        & strong {
+            font-size: 19px;
+        }
+    }
+ 
     & .logo {
         @include flexbox;
         flex-grow:2;
     }
 }
-
+ 
  // Progress Bar
-
+ 
  .ProgressBarContainer {
     @include flexbox;
     ul {
@@ -93,25 +109,27 @@
         width:100%;
         padding-left: 0;
         list-style: none;
-        font-size: 16px;
+        font-size: 19px;
         line-height: 1;
-        margin: 10px auto 20px 0;
-        @include border-radius(7px); 
+        margin: 5px auto 20px 0;
+        @include border-radius(7px);
         @include boxsizing;
     & strong {
-            font-size: 14px;
+            font-size: 19px;
             display: block;
             line-height: 1.4;
+            font-style: normal;
+            font-weight: normal;
         }
-    
+   
         &>li {
             position: relative;
             display: block;
             /* border: 1px solid #ddd; */
             padding:12px 0px 12px 25px;
-            width: 16.6%;
+            width: 16.66%;
             height: 60px;
-
+ 
             & span {
                 @include flexbox;
                 height:100%;
@@ -120,171 +138,171 @@
     }
     // Arrows
 ul {
-	>li {
-		float: left;
+    >li {
+        float: left;
         overflow: hidden;
         color: $darkgray;
-		background: $gray;
-	}
-	.completed {
-		color: $white;
-		background: $green;
-	}
-	.current {
-		color: $white;
+        background: $gray;
+    }
+    .completed {
+        color: $white;
+        background: $green;
+    }
+    .current {
+        color: $white;
         background: $lightblue;
-	}
-	.rejected {
-		color:$white;
-		background:$red;
-	}
-	.accepted {
-		color:$white;
-		background:$green;
-	}
-	.remaining {
-		color: $darkgray;
-		background: $gray;
-	}
-	li {
+    }
+    .rejected {
+        color:$white;
+        background:$red;
+    }
+    .accepted {
+        color:$white;
+        background:$green;
+    }
+    .remaining {
+        color: $darkgray;
+        background: $gray;
+    }
+    li {
         & a {
             color:inherit;
         }
-		>span {
-			&:after {
-				content: "";
-				display: block;
-				width: 0px;
-				height: 0px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				border: solid transparent;
-				border-left-color: $white;
-				border-width: 30px;
-				top: -5px;
-				z-index: 1;
-				border-left-color: $white;
-				border-width: 35px;
-			}
-			&:before {
-				content: "";
-				display: block;
-				width: 0px;
-				height: 0px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				border: solid transparent;
-				border-left-color: $white;
-				border-width: 30px;
-				z-index: 2;
-			}
-		}
-		&:first-child {
+        >span {
+            &:after {
+                content: "";
+                display: block;
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: solid transparent;
+                border-left-color: $white;
+                border-width: 30px;
+                top: -5px;
+                z-index: 1;
+                border-left-color: $white;
+                border-width: 35px;
+            }
+            &:before {
+                content: "";
+                display: block;
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: solid transparent;
+                border-left-color: $white;
+                border-width: 30px;
+                z-index: 2;
+            }
+        }
+        &:first-child {
             @include border-top-left-radius(7px);
             @include border-bottom-left-radius(7px);
-
-			>span {
-				&:after {
-					display: none;
-				}
-				&:before {
-					display: none;
-				}
-			}
-			i {
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				border: solid transparent;
-				 
-			}
-		}
-		&:last-child {
+ 
+            >span {
+                &:after {
+                    display: none;
+                }
+                &:before {
+                    display: none;
+                }
+            }
+            i {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: solid transparent;
+                 
+            }
+        }
+        &:last-child {
             @include border-top-right-radius(7px);
             @include border-bottom-right-radius(7px);
-			i {
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				border: solid transparent;
-			}
-		}
-	}
-	li.completed {
-		+ {
-			li {
-				>span {
-					&:before {
-						border-left-color: $green;
-					}
-				}
-			}
-		}
-	}
-	li.current {
-		+ {
-			li {
-				>span {
-					&:before {
-						border-left-color: $lightblue;
-					}
-				}
-			}
-		}
-	}
-	li.rejected{
-		+ {
-			li {
-				>span {
-					&:before {
-						border-left-color: $red;
-					}
-				}
-			}
-		}
-	}
-
-	li.accepted{
-		+ {
-			li {
-				>span {
-					&:before {
-						border-left-color: $green;
-					}
-				}
-			}
-		}
-	}
-
-	li.remaining {
-		+ {
-			li {
-				>span {
-					&:before {
-						border-left-color: $gray;
-					}
-				}
-			}
-		}
-	}
-
+            i {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: solid transparent;
+            }
+        }
+    }
+    li.completed {
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+    li.current {
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+    li.rejected{
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $red;
+                    }
+                }
+            }
+        }
+    }
+ 
+    li.accepted{
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    li.remaining {
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $gray;
+                    }
+                }
+            }
+        }
+    }
+ 
     li {
-		+ {
-			li {
-				>span {
-					&:before {
-						border-left-color: $gray;
-					}
-				}
-			}
-		}
-	}
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $gray;
+                    }
+                }
+            }
+        }
+    }
 }
-
+ 
   }
  
  
@@ -297,7 +315,7 @@ ul {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    
+   
     & .ApplicationStatus {
         flex-grow: 2;
         margin-right:20px;
@@ -307,15 +325,19 @@ ul {
         background-color:$white;
         @include border-radius(7px);
         padding:15px;
-        font-size: 18px;
-        font-family:$base-font-serif;
-        color:$black;
-        text-align: center;
-
+        font-size: 19px;
+        font-family: $headings-font-family;
+        color:$blue;
+        text-align: left;
+        margin-bottom:20px;
+ 
         & strong span {
-            font-family: $headings-font-family;
+            font-family: $base-font-sans-serif;
             @include border-radius(7px);
-            padding: 3px 15px;
+            padding: 3px 0;
+            background-color:inherit;
+            color:$white;
+            font-weight: normal;
         }
         & .Rejected {
             font-family: $headings-font-family;
@@ -324,22 +346,22 @@ ul {
             @include border-radius(7px);
             padding: 3px 15px;
         }
-
-        & .CheckingDocuments {
+ 
+        & .Checkingdocuments {
             font-family: $headings-font-family;
             color:$white;
-            background-color: $yellow;
+            background-color: $lightblue;
             @include border-radius(7px);
             padding: 3px 15px;
         }
         & .UnderReview {
             font-family: $headings-font-family;
             color:$white;
-            background-color: $orange;
+            background-color: $lightblue;
             @include border-radius(7px);
             padding: 3px 15px;
         }
-
+ 
         & .Confirmed {
             font-family: $headings-font-family;
             color:$white;
@@ -347,23 +369,23 @@ ul {
             @include border-radius(7px);
             padding: 3px 15px;
         }
-        
+       
         & .Awaiting {
             font-family: $headings-font-family;
             color:$black;
-            background-color: $paleblue;
+            background-color: $lightblue;
             @include border-radius(7px);
             padding: 3px 15px;
         }
-
+ 
         & .InValuation {
             font-family: $headings-font-family;
             color:$white;
-            background-color: $blue;
+            background-color: $lightblue;
             @include border-radius(7px);
             padding: 3px 15px;
         }
-
+ 
         & .Accepted {
             font-family: $headings-font-family;
             color:$white;
@@ -371,7 +393,7 @@ ul {
             @include border-radius(7px);
             padding: 3px 15px;
         }
-
+ 
         & .Completed {
             font-family: $headings-font-family;
             color:$white;
@@ -380,73 +402,85 @@ ul {
             padding: 3px 15px;
         }
     }
-
+ 
     & .descriptionContainer {
         background-color:$white;
         @include border-radius(7px);
         padding:15px;
+
+        & h3 {
+            font-size: 19px;
+        }
     }
-
-     
+  
 }
-
+ 
 .ApplicationContactDetails {
         @include flexbox;
         flex-direction: column;
         background-color:$white;
         @include boxsizing;
-        @include border-radius(7px); 
+        @include border-radius(7px);
         align-items: flex-start;
-        padding:15px;   
-
+        justify-content: flex-start;
+        padding:15px;  
+        width: 550px;
+        min-height:330px;
+        & h3 {
+            font-size: 19px;
+        }
+ 
         & a {
             color:$blue;
         }
-
+ 
 }
-
+ 
 .copyrightContainer {
     margin-top:15px!important;
     & h4 {
         margin-bottom:0;
+        font-size: 19px;
     }
 }
-
+ 
 // Render the steps based on unordered lists ID
-
-// 1. Application Received 
-#stepApplicationReceived {
+ 
+// 1. Application Received (Checking Documents)
+#stepCheckingdocuments {
    & #step1 {
         color: $white;
         background: $lightblue;
-
+ 
         + {
-			li {
-				>span {
-					&:before {
-						border-left-color: $lightblue;
-					}
-				}
-			}
-		}
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
    }
 }
-
-#statusApplicationReceived {
+ 
+#statusCheckingdocuments {
     & .ApplicationStatusValue {
         & span {
             color:$white;
-            background-color: $orange;
+            background-color: $lightblue;
         }
     }
 }
-
-// 2. Checking Documents
-#stepCheckingDocuments {
+ 
+ 
+ 
+// 2. Under Review (Awaiting Confirmation)
+#stepAwaitingconfirmation {
     & #step1 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -457,11 +491,11 @@ ul {
             }
         }
     }
-
+ 
     & #step2 {
         color: $white;
         background: $lightblue;
-
+ 
         + {
             li {
                 >span {
@@ -473,67 +507,9 @@ ul {
         }
     }
 }
-
-
-    #statusCheckingDocuments {
-    & .ApplicationStatusValue {
-        & span {
-            color:$white;
-            background-color: $yellow;
-        }
-    }
-}
-
-// 3. Application Confirmed
-#stepApplicationConfirmed {
-    & #step1 {
-        color: $white;
-        background: $green;
-
-        + {
-            li {
-                >span {
-                    &:before {
-                        border-left-color: $green;
-                    }
-                }
-            }
-        }
-    }
-
-    & #step2 {
-        color: $white;
-        background: $green;
-
-        + {
-            li {
-                >span {
-                    &:before {
-                        border-left-color: $green;
-                    }
-                }
-            }
-        }
-    }
-
-    & #step3 {
-        color: $white;
-        background: $lightblue;
-
-        + {
-            li {
-                >span {
-                    &:before {
-                        border-left-color: $lightblue;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-    #statusApplicationConfirmed {
+ 
+ 
+    #statusAwaitingconfirmation {
     & .ApplicationStatusValue {
         & span {
             color:$white;
@@ -542,13 +518,12 @@ ul {
     }
 }
 
-
-// 4. Awaiting Decision
-#stepAwaitingDesicion {
+// 2.1 (Application Review)
+#stepApplicationreview {
     & #step1 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -559,41 +534,11 @@ ul {
             }
         }
     }
-
+ 
     & #step2 {
         color: $white;
-        background: $green;
-
-        + {
-            li {
-                >span {
-                    &:before {
-                        border-left-color: $green;
-                    }
-                }
-            }
-        }
-    }
-
-    & #step3 {
-        color: $white;
-        background: $green;
-
-        + {
-            li {
-                >span {
-                    &:before {
-                        border-left-color: $green;
-                    }
-                }
-            }
-        }
-    }
-
-    & #step4 {
-        color: $white;
         background: $lightblue;
-
+ 
         + {
             li {
                 >span {
@@ -605,23 +550,23 @@ ul {
         }
     }
 }
-
-
-    #statusAwaitingDesicion {
+ 
+ 
+    #statusApplicationreview {
     & .ApplicationStatusValue {
         & span {
-            color:$black;
-            background-color: $paleblue;
+            color:$white;
+            background-color: $lightblue;
         }
     }
 }
-
-// 5. Rejected
-#stepRejected {
+ 
+// 3. Application Confirmed
+#stepApplicationconfirmed {
     & #step1 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -632,11 +577,11 @@ ul {
             }
         }
     }
-
+ 
     & #step2 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -647,11 +592,70 @@ ul {
             }
         }
     }
-
+ 
+    & #step3 {
+        color: $white;
+        background: $lightblue;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+ 
+    #statusApplicationconfirmed {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $lightblue;
+        }
+    }
+}
+ 
+ 
+// 4. Awaiting Decision
+#stepAwaitingdecision {
+    & #step1 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step2 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
     & #step3 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -662,11 +666,84 @@ ul {
             }
         }
     }
-
+ 
     & #step4 {
         color: $white;
+        background: $lightblue;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $lightblue;
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+ 
+    #statusAwaitingdecision {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $lightblue;
+        }
+    }
+}
+ 
+// 5. Application unsuccessful
+#stepApplicationunsuccessful {
+    & #step1 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step2 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step3 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step4 {
+        color: $red;
         background: $red;
-
+ 
         + {
             li {
                 >span {
@@ -678,9 +755,161 @@ ul {
         }
     }
 }
+ 
+ 
+    #statusApplicationunsuccessful {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $red;
+        }
+    }
 
+    
+}
+ 
+ 
+// 5.1 Rejected
+#stepApplicationrejectedandreferredtoDfT {
+    & #step1 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step2 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step3 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step4 {
+        color: $red;
+        background: $red;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+ 
+    #statusApplicationrejectedandreferredtoDfT {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $red;
+        }
+    }
 
-    #statusRejected {
+    
+}
+ 
+// 5.2 Withdrawn
+#stepApplicationwithdrawn {
+    & #step1 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step2 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step3 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step4 {
+        color: $red;
+        background: $red;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $red;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+ 
+ 
+    #statusApplicationwithdrawn {
     & .ApplicationStatusValue {
         & span {
             color:$white;
@@ -688,13 +917,88 @@ ul {
         }
     }
 }
-
+ 
+ 
+// 5.3 Expired
+#stepExpired {
+    & #step1 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step2 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step3 {
+        color: $white;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+ 
+    & #step4 {
+        color: $red;
+        background: $red;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+ 
+    #statusExpired {
+    & .ApplicationStatusValue {
+        & span {
+            color:$white;
+            background-color: $red;
+        }
+    }
+}
+ 
+ 
 // 6. Accepted
 #stepAccepted {
     & #step1 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -705,11 +1009,11 @@ ul {
             }
         }
     }
-
+ 
     & #step2 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -720,11 +1024,11 @@ ul {
             }
         }
     }
-
+ 
     & #step3 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -735,11 +1039,11 @@ ul {
             }
         }
     }
-
+ 
     & #step4 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -751,8 +1055,8 @@ ul {
         }
     }
 }
-
-
+ 
+ 
     #statusAccepted {
     & .ApplicationStatusValue {
         & span {
@@ -761,13 +1065,13 @@ ul {
         }
     }
 }
-
+ 
 // 7. In Valuation
-#stepInValuation {
+#stepInvaluation {
     & #step1 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -778,11 +1082,11 @@ ul {
             }
         }
     }
-
+ 
     & #step2 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -793,11 +1097,11 @@ ul {
             }
         }
     }
-
+ 
     & #step3 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -808,11 +1112,11 @@ ul {
             }
         }
     }
-
+ 
     & #step4 {
-        color: $white;
+        color: $green;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -823,11 +1127,11 @@ ul {
             }
         }
     }
-	
-	& #step5 {
+   
+    & #step5 {
         color: $white;
         background: $lightblue;
-
+ 
         + {
             li {
                 >span {
@@ -839,23 +1143,24 @@ ul {
         }
     }
 }
-
-
-    #statusInValuation {
+ 
+ 
+    #statusInvaluation {
     & .ApplicationStatusValue {
         & span {
             color:$white;
-            background-color: $blue;
+            background-color: $lightblue;
         }
     }
 }
-
-// 8 + 9. Completed
-#stepInValuation {
+ 
+ 
+// 8 + 9. Property acquisition process
+#stepPropertyacquisitionprocess {
     & #step1 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -866,11 +1171,11 @@ ul {
             }
         }
     }
-
+ 
     & #step2 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -881,11 +1186,11 @@ ul {
             }
         }
     }
-
+ 
     & #step3 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -896,11 +1201,26 @@ ul {
             }
         }
     }
-
+ 
     & #step4 {
+        color: $green;
+        background: $green;
+ 
+        + {
+            li {
+                >span {
+                    &:before {
+                        border-left-color: $green;
+                    }
+                }
+            }
+        }
+    }
+   
+    & #step5 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -911,39 +1231,39 @@ ul {
             }
         }
     }
-	
-	& #step5 {
+   
+    & #step6 {
         color: $white;
         background: $lightblue;
-
+ 
         + {
             li {
                 >span {
                     &:before {
-                        border-left-color: $lightblue;
+                        border-left-color: $green;
                     }
                 }
             }
         }
     }
 }
-
-
-    #statusInValuation {
+ 
+ 
+    #statusPropertyacquisitionprocess {
     & .ApplicationStatusValue {
         & span {
             color:$white;
-            background-color: $blue;
+            background-color: $lightblue;
         }
     }
 }
-
-// 8 + 9. Completed
-#stepCompleted {
+ 
+// 11. Application Completed Property Acquired
+#stepPropertyacquired {
     & #step1 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -954,11 +1274,11 @@ ul {
             }
         }
     }
-
+ 
     & #step2 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -969,11 +1289,11 @@ ul {
             }
         }
     }
-
+ 
     & #step3 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -984,11 +1304,11 @@ ul {
             }
         }
     }
-
+ 
     & #step4 {
-        color: $white;
+        color: $green;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -999,11 +1319,11 @@ ul {
             }
         }
     }
-	
-	& #step5 {
+   
+    & #step5 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -1014,11 +1334,11 @@ ul {
             }
         }
     }
-	
-	& #step6 {
+   
+    & #step6 {
         color: $white;
         background: $green;
-
+ 
         + {
             li {
                 >span {
@@ -1030,9 +1350,9 @@ ul {
         }
     }
 }
-
-
-    #statusCompleted {
+ 
+ 
+    #statusPropertyacquired {
     & .ApplicationStatusValue {
         & span {
             color:$white;
@@ -1040,3 +1360,101 @@ ul {
         }
     }
 }
+
+// Change words on rejected states
+
+ // 1. Withdrawn
+ .ProgressBarContainer  #stepApplicationwithdrawn #step4 strong {
+    font-size:0pt;
+ }
+  .ProgressBarContainer  #stepApplicationwithdrawn #step4 strong:before {
+    color: $white!important;
+    content: 'Application Withdrawn';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+// 2. Rejected
+.ProgressBarContainer #stepApplicationunsuccessful #step4 strong {
+    font-size: 0pt;
+}
+ 
+.ProgressBarContainer #stepApplicationunsuccessful #step4 strong:before {
+    content: 'Application Unsuccessful';
+    color: $white!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+// 3. Reffered to DFT
+.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong {
+    font-size:0pt;
+}
+.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong:before {
+    content: 'Application Rejected';
+    color: $white!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+// 4. Expired
+.ProgressBarContainer #stepExpired #step4 strong {
+    font-size: 0pt;
+}
+.ProgressBarContainer #stepExpired #step4 strong:before {
+    content: 'Application Expired';
+    color: #fff!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+} 
+
+// 5. In Valuation
+.ProgressBarContainer #stepInvaluation #step4 strong {
+    font-size:0pt;
+}
+.ProgressBarContainer #stepInvaluation #step4 strong:before {
+    content: 'Application Accepted';
+    color: #fff!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+// 6. Property Acquisition Process
+.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong {
+    font-size:0pt;
+}
+.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong:before {
+    content: 'Application Accepted';
+    color: #fff!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+// 7. Application Completed
+.ProgressBarContainer #stepPropertyacquired #step4 strong {
+    font-size:0pt;
+}
+.ProgressBarContainer #stepPropertyacquired #step4 strong:before {
+    content: 'Application Accepted';
+    color: #fff!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+ 

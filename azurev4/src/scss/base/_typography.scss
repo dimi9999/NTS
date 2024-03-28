@@ -88,7 +88,6 @@ a {
   transition: color 0.3s linear;
   &:hover,
   &:focus {
-    text-decoration:none;
     /* color: darken($default-link-color, 15%); */
 	color:$lightblue;
   }

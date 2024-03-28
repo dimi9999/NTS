@@ -3,6 +3,7 @@ import NavBar from "../../src/components/Navbar";
 import Logos from "../../src/components/Logos";
 import React, { createContext, useContext, useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Popup } from "../../src/components/Popup";
 import Copyright from "../../src/components/Copyright";
 
 // 2. Import FontAwesome Icons
@@ -64,6 +65,8 @@ export const Step = () => {
   /* *********************** USE Graph API to Merge your Changes END *************************** */
   return (
     <div>
+      {/* If sessions has ended then display popup and overlay */}
+      <Popup />
       <main>
         {/* *********************** USE Graph API to Merge your Changes START *************************** */}
         {userRecords.map((record) => (

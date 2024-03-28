@@ -1,4 +1,4 @@
-.Denied {
+.NewPage {
     user-select: none;
     & .icon {
         @include border-radius(60px);
@@ -9,4 +9,6 @@
         padding:15px;
         font-size:16px;
     }
+
+    // Rest of your css here
 }

@@ -79,15 +79,15 @@ h6 {
 
 p {
   margin: 0 0 25px;
+  white-space: normal;
 }
 
 a {
-  color: $white;
+  color: $blue;
   text-decoration: none;
   transition: color 0.3s linear;
   &:hover,
   &:focus {
-    text-decoration: none;
     /* color: darken($default-link-color, 15%); */
 	color:$lightblue;
   }
@@ -139,7 +139,7 @@ dd {
 	padding: 0 0 0.5em 0;
 }
 
-button {
+input,button {
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	font-family: $base-font-sans-serif;

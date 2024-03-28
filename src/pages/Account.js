@@ -10,10 +10,10 @@ import { faKey, faSignOut, faSmile } from "@fortawesome/free-solid-svg-icons";
 
 // export default function Forgot() {
 export const Account = () => {
-    const { user } = AuthData();
-    
-    return (
-     <div className="Account">
+  const { user } = AuthData();
+
+  return (
+    <div className="Account">
       <main>
         <div className="wrapper">
           <div className="container">
@@ -22,9 +22,9 @@ export const Account = () => {
               <FontAwesomeIcon icon={faSmile} className="icon" />
               <div className="buttonsContainer">
                 <div className="row">
-                    <div className="row">
-                        <h1>Welcome to your Account</h1>
-                    </div>
+                  <div className="row">
+                    <h1>Welcome to your Account</h1>
+                  </div>
                 </div>
               </div>
             </div>
@@ -32,5 +32,5 @@ export const Account = () => {
         </div>
       </main>
     </div>
-    );
+  );
 };

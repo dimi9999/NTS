@@ -1,6 +1,14 @@
 .content {
+  
+    user-select: none;
     text-align: left;
+    white-space: normal;
     & a {
         color:$blue;
+        text-decoration: underline;
+        &:hover {
+            color:$blue;
+            text-decoration: none;
+        }
     }
 }

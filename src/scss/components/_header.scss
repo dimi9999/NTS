@@ -1,12 +1,13 @@
  // Header (Nav)
+
  .nav {
     @include flexbox;
     @include boxsizing;
     background-color:$green;
     color:$white;
-    align-items: center;
+    align-items: flex-start;
     justify-content: inherit;
-    padding:10px;
+    padding:10px 25px;
     flex-grow: 1;
     background-image:url(../../assets/images/EWRStickyHeader.PNG);
     background-repeat: no-repeat;
@@ -16,6 +17,10 @@
     & .logo {
         margin:0 0 0 0;
         flex-grow:2;
+    }
+
+    & .menuItem {
+        @include flexbox;
     }
 
     & ul {
@@ -37,7 +42,7 @@
 
     & .logo img {
         max-width: 190px;
-        margin: 0 40px 0;
+        margin: 0;
     }
     & .logout {
         color: $white;
@@ -46,6 +51,30 @@
     }
 
     & .logoutlink {
+        @include flexbox;
+        flex-direction: column;
+        background-color:$red;
+        color:$white;
+        @include boxsizing;
+        @include border-radius(7px); 
+        align-items: center;
+        padding:5px 15px;
+        margin-right:0;
+        flex-direction: row;
+        margin-left:10px;
+        margin-right:40px;
+
+        & * {
+            color:$white;
+        }
+
+        &:hover {
+            @include transition(3s);
+            background-color:$tomato;
+        }
+    }
+
+    & .statuslink {
         @include flexbox;
         flex-direction: column;
         background-color:$green;
@@ -63,7 +92,7 @@
 
         &:hover {
             @include transition(3s);
-            background-color:$red;
+            background-color:$lightblue;
         }
     }
  }

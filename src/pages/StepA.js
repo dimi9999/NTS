@@ -1,9 +1,10 @@
 // 1. Importing Components
 import NavBar from "../../src/components/Navbar";
 import Logos from "../../src/components/Logos";
-import React from "react";
-import Copyright from "../../src/components/Copyright";
+import React, { createContext, useContext, useState } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Popup } from "../../src/components/Popup";
+import Copyright from "../../src/components/Copyright";
 
 // 2. Import FontAwesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,97 +17,74 @@ import {
   faPerson,
 } from "@fortawesome/free-solid-svg-icons";
 
-// 3. Import Case Numbers
-const CaseNumber = [
-  {
-    key: 1,
-    number: "AX18939",
-  },
-];
+// STEP NUMBER (1). Import AuthWrapper
+import { AuthData } from "../auth/AuthWrapper";
 
-// 4. Import Case Managers
-const CaseManager = `
-  Robert Powell
-`;
-
-const CaseManagerEmail = `robert.powel@eastwestrail.co.uk`;
-const CaseManagerPhone = `01279 8765 4321`;
-const CaseManagerAddress = `99 High Street ,
-London,
-NW11 7SU`;
-
-// 5. Application Status
-
-const statusValue = "Rejected";
-// 6. Import Description
-const CaseDescription = `
-The NTS Panel has rejected NTS application due to insufficient documentation or other reasons. 
-`;
-
-// export default function Rejected() {
-export const Rejected = () => {
+//export default function Step() {
+export const Step = () => {
+  const { user } = AuthData();
   return (
-    <div className="Rejected">
+    <div>
+      {/* If sessions has ended then display popup and overlay */}
+      <Popup />
       <main>
-        <div className="wrapper">
+        <div className="wrapper" /*key={record.pin}*/>
+          {/* Display user-specific data */}
           <div className="container largeContainer">
             <div className="formContainer status">
               <div className="ApplicationDetails">
-                {/* Case Number */}
-                {CaseNumber.map((item) => {
-                  return (
-                    <div className="ApplicationStatusCaseNumber">
-                      <h3>Case Number:</h3>
-                      <div className="block">
-                        <strong>{item.number}</strong>
-                      </div>
-                    </div>
-                  );
-                })}
-
+                {/* Logged in Username and Welcome Message */}
+                <div className="ApplicationStatusLoggedInUser">
+                  <FontAwesomeIcon icon={faUser} className="icon" />
+                  <h3>Welcome!</h3>
+                </div>
                 {/* Case Manager */}
                 <div className="ApplicationStatusCaseManager">
                   <h3> Case Manager: </h3>
-                  <div className="block">
-                    <strong>{CaseManager}</strong>
-                  </div>
+                  <strong> &nbsp; {user.CM}</strong>
                 </div>
                 <Logos />
               </div>
               {/* Progress Bar Steps */}
               <div className="ProgressBarContainer">
-                <ul class="steps">
-                  <li class="completed">
-                    <span>
-                      <strong>Application Received</strong>
-                    </span>
-                    <i></i>
-                  </li>
-                  <li class="completed">
+                {/* HERE I DO RENDER MY COLOURS START */}
+                <ul
+                  id={`step${user.Status.replace(/\s+/g, "")}`}
+                  key={user.Status}
+                >
+                  {/* HERE I DO RENDER MY COLOURS END */}
+
+                  <li id="step1">
                     <span>
                       <strong>Checking Documents</strong>
                     </span>
                     <i></i>
                   </li>
-                  <li class="completed">
+                  <li id="step2">
+                    <span>
+                      <strong>Application Review</strong>
+                    </span>
+                    <i></i>
+                  </li>
+                  <li id="step3">
                     <span>
                       <strong>Application Confirmed</strong>
                     </span>
                     <i></i>
                   </li>
-                  <li class="rejected">
+                  <li id="step4">
                     <span>
-                      <strong>REJECTED</strong>
+                      <strong>Awaiting Decision</strong>
                     </span>
                     <i></i>
                   </li>
-                  <li class="remaining">
+                  <li id="step5">
                     <span>
                       <strong>In Valuation</strong>
                     </span>
                     <i></i>
                   </li>
-                  <li class="remaining">
+                  <li id="step6">
                     <span>
                       <strong>
                         Property Acquisition <br />
@@ -118,37 +96,50 @@ export const Rejected = () => {
                 </ul>
               </div>
 
-              <div className="ApplicationStatusContainer">
+              <div
+                id={`status${user.Status.replace(/\s+/g, "")}`}
+                key={user.Status}
+                className="ApplicationStatusContainer"
+              >
                 {/* Application Status Columns */}
 
                 <div className="ApplicationStatus">
                   {/* Application Status Value */}
                   <h1 className="ApplicationStatusValue">
-                    Your application status is:{" "}
-                    <strong class="Rejected"> {statusValue} </strong>
+                    Your application status is: &nbsp;{" "}
+                    <strong>
+                      <span>{user.Status_Sub}</span>
+                    </strong>
                   </h1>
                   <div className="descriptionContainer">
                     <h3>What does this mean?</h3>
                     {/* Application Status Description */}
-                    <div className="description">{CaseDescription}</div>
+                    <div className="description">{user.Status_Desc}</div>
                   </div>
                 </div>
 
                 {/* Application Contact Details Columns */}
                 <div className="ApplicationContactDetails">
-                  <h3>Contact Details</h3>
+                  <h3>Your Case Manager Details</h3>
                   <div>
-                    <h4>Case Manager Name:</h4>
                     <FontAwesomeIcon icon={faPerson} className="icon" />{" "}
-                    {CaseManager}
+                    {user.CM}
                     <br />
                     <FontAwesomeIcon icon={faEnvelope} className="icon" />{" "}
-                    <a href="mailto:{CaseManagerEmail}">{CaseManagerEmail}</a>
+                    {/*
+                    <a href="mailto:{CaseManagerEmail}">{user.CM_UPN}</a>
+                    */}
+                     <a className="Link" href="mailto:needtosell@eastwestrail.co.uk">needtosell@eastwestrail.co.uk</a>
                     <br />
                     <FontAwesomeIcon icon={faPhone} className="icon" />{" "}
-                    {CaseManagerPhone}
+                    {user.CM_Phone}
                     <br />
-                    {CaseManagerAddress}
+                    <p>
+                      The Quadrant <br />
+                      Elder Gate <br />
+                      Milton Keynes <br />
+                      MK9 1EN
+                    </p>
                   </div>
                 </div>
               </div>

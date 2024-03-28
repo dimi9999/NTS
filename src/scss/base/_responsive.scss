@@ -6,11 +6,33 @@
         background-size:cover!important;
 		font-size: $mobile-base-font-size;
     }
-    
+
+	// navigation
+	nav {
+		// flex-direction: column !important;
+    	max-height: 100%!important;
+    	background-size: cover !important;
+		justify-content: center!important;
+		align-items: center !important;
+		& .logo {
+			margin:0!important;
+		}
+	}
+
+	// megamenu toggle button
+	.megamenuToggle {
+		padding:20px;
+	}
+
+	// wrapper 
     main {
+		& .wrapper {
+			padding:0!important;
+		}
         & .formContainer {
-            margin-top:25px!important;
-            padding: 20px!important;
+            margin-top: 0 !important;
+    		padding: 20px !important;
+    		border-radius: 0 !important;
         }
     }
 	// Login Page Icon
@@ -19,7 +41,7 @@
 	}
     // EWR Form Logo
 	main .logo img {
-		max-width:120px;
+		max-width:220px;
 	}
 
 	// Access Denied Icon
@@ -30,6 +52,13 @@
 	
 	// Forgot
 	.Forgot .Link {
+		display: block;
+		text-align: center;
+		margin: 10px 0;
+	}
+
+	// Get in touch
+	.Getintouch .Link {
 		display: block;
 		text-align: center;
 		margin: 10px 0;
@@ -55,10 +84,19 @@
 	.ApplicationStatusValue span {
 		display: block;
 	}
-
+    // View your status
+	.nav .statuslink {
+		padding:15px;
+		& span {
+			font-size:0pt;
+		}
+	}
 	// Logout Link
-	.nav .logoutlink {
-		padding:5px 4px!important;
+	.nav .logoutlink  {
+		padding:15px; 
+		& span {
+		 font-size: 0pt;
+		}
 	}
 
 	// button paddings
@@ -77,18 +115,36 @@
 	body input[type="number"], 
 	body input[type="email"], 
 	body textarea {
-		padding: 12px 30px 12px 45px;
+		padding: 12px 30px 12px 45px!important;
 		font-size: 16px;
 	}
     
 	body main .row .icon {
 		top:12px;
 	}
+
+	// Steps remove line on mobile
+	.ProgressBarContainer ul {
+		margin-left:3px;
+		display: none;
+	}
+	.ProgressBarContainer ul > li {
+		margin-left:-3px;
+	}
+
+	// Step view and logout buttons
+
 }
 
-// 2. Header
+// Large Screens
+// *************
 
-// 3. Hide Steps Logo 
+@media only screen and (min-width: $large-screens) {
+	.ApplicationStatusContainer .descriptionContainer {
+		min-height: 252px;
+	}
+}
+
 @media only screen and (max-width: $large-screens) {
 	body {
 		background-size:cover!important;
@@ -103,6 +159,10 @@
 			flex-grow: 2;
 			margin-right: 0;
 			margin-bottom:15px;
+		}
+
+		& .ApplicationStatusLoggedInUser {
+			margin-bottom: 15px;
 		}
 	}
 }
@@ -128,16 +188,18 @@
 		margin:0 0 20px 0;
 	}
 
-	& .ApplicationStatusValue {
-		// margin-top:10px;
 	}
-}
 	// Logged in 
 	.ApplicationDetails .ApplicationLogmeOut {
 		align-items:center;
 		justify-content: center;
 		margin-bottom:0;
 	}
+
+	// Status
+	.ApplicationStatusContainer .ApplicationStatus .ApplicationStatusValue {
+		text-align: center;
+	 }
 
 	// Logout 
 	
@@ -176,51 +238,75 @@
 // TABLETS
 // *******
 
-@media only screen and (max-width:$tablets) {
+@media only screen and (max-width:$tablets) {}
 
+// CUSTOM SIZE
+// ***********
+
+@media only screen and (max-width:1100px) {
 		.ApplicationStatusContainer {
 			flex-direction: column;
 
-			& .ApplicationStatusValue {
-				& strong {
+		& .ApplicationStatusValue {
+			& strong {
+				display: block;
+				width:100%;
+				padding:2px 0;
+				// font-size:$mobile-base-font-size;
+
+				& span {
 					display: block;
-					width:100%;
-					padding:2px 0;
-					font-size:$mobile-base-font-size;
+				}
 
-					& span {
-						display: block;
-					}
+			}
+		}
 
+		& .ApplicationStatus {
+			margin-right:0;
+			width:100%;
+
+			& .ApplicationStatusValue {
+				width:100%;
 				}
 			}
-
-			& .ApplicationStatus {
-				margin-right:0;
+			&  .ApplicationContactDetails {
 				width:100%;
-	
-				& .ApplicationStatusValue {
-					width:100%;
-					}
+
+				& p {
+					margin:0;
 				}
-				&  .ApplicationContactDetails {
-					width:100%;
-				
-				}
-				& .descriptionContainer {
-					width: 100%;
-					margin:0 0 25px;
-				}
-		}
+			
+			}
+			& .descriptionContainer {
+				width: 100%;
+				margin:0 0 20px;
+			}
 	}
+}
+
+@media all and (max-width:1400px) {
+	.ProgressBarContainer ul strong {
+		font-size: 14px;
+	}
+ 
+	.ProgressBarContainer  #stepApplicationwithdrawn #step4 strong:before,  
+	.ProgressBarContainer #stepApplicationunsuccessful #step4 strong:before,  
+	.ProgressBarContainer #stepApplicationrejectedandreferredtoDfT #step4 strong:before,  
+	.ProgressBarContainer #stepExpired #step4 strong:before,  
+	.ProgressBarContainer #stepInvaluation #step4 strong:before,  
+	.ProgressBarContainer #stepPropertyacquisitionprocess #step4 strong:before,  
+	.ProgressBarContainer #stepPropertyacquired #step4 strong:before {
+		font-size: 14px!important;
+	}
+
+}
  
  // SMALL SCREENS
  // *************
 
  @media only screen and (max-height:$small-screens)  {
-
 	main .logo img {
-		max-width:120px;
+		max-width:220px;
 	}
 
 	body main .formContainer {
@@ -231,3 +317,29 @@
 		margin:10px;
 	}
  }
+
+
+ // Smart Phones (Vertical viewport)
+ // ********************************
+
+ @media only screen and (max-width:$mobile-phones-vertical) {
+	// Logo
+	.logo {
+		@include flexbox;
+		align-items: center;
+		justify-content: space-between;
+	 }
+ }
+
+
+ // Ipad Mini
+ // *********
+
+ @media only screen and (min-width:$ipad) {
+	.ApplicationStatusValue {
+        & strong span {
+            background-color:transparent!important;
+            color:$black!important;
+        }
+	 }
+}

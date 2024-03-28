@@ -1,3 +1,0 @@
-div#d782c468-400c-4952-bbe1-a65f1a1f970b {
-    margin-top: 0;
-}
