@@ -26,7 +26,7 @@ export const AuthWrapper = () => {
         // alert('Your session has timed out. Please log back in to view your application status');
         displayAlert();
         //logout(); 
-      }, 600000); // 10 minutes TIMEOUT
+      }, 5000); // 10 minutes TIMEOUT
       
       return () => clearTimeout(timeoutId);
     }
