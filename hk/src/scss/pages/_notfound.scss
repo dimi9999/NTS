@@ -1,0 +1,12 @@
+.Notfound {
+    user-select: none;
+    & .icon {
+        @include border-radius(60px);
+        color:$white;
+        background-color:$red;
+        width:60px;
+        height:60px;
+        padding:15px;
+        font-size:16px;
+    }
+}

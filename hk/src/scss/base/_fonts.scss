@@ -1,0 +1,31 @@
+@font-face {
+	font-family: GTWalsheimPro;
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.eot);
+	src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.woff) format("woff"), 
+	url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Regular.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: GTWalsheimProBold;
+	font-style: normal;
+	font-weight: 700;
+	src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.eot);
+	src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Bold.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: GTWalsheimProBlack;
+	font-style: normal;
+	font-weight: 800;
+	src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.eot);
+	src: url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.woff2) format("woff2"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.woff) format("woff"), url(https://eastwestrail.co.uk/resources/themes/ewr/fonts/GTWalsheimPro/GT-Walsheim-Black.ttf) format("truetype")
+}
+
+/* Custom Fonts */
+/* 1) Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* 2) Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 

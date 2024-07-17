@@ -1,0 +1,43 @@
+// Get in touch
+.Getintouch {
+
+    & table {
+        border:none;
+        & td {
+            border: none;
+        }
+    }
+   
+    user-select: none;
+
+    & input[type="text"],
+    & input[type="password"],
+    & input[type="tel"],
+    & input[type="number"],
+    & input[type="email"],
+    & textarea {
+        padding: 16px 30px 16px 45px;
+    }
+    
+    
+    & .Link {
+        background-color: $green;
+        color:$white;
+        @include border-radius(5px);
+        padding:5px 15px;
+        margin:0 10px;
+
+        &:hover {
+            background-color: $lightblue;
+            transition: 0.3s ease-in all;
+        }
+    }
+
+    & h1 {
+        color: $black;       
+    }
+
+    & address {
+        font-style:normal;
+    }
+}

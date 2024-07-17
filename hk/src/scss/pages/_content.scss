@@ -1,0 +1,9 @@
+.content {
+  
+    user-select: none;
+    text-align: left;
+    white-space: normal;
+    & a {
+        color:$blue;
+    }
+}
